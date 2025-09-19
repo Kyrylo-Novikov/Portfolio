@@ -1,1 +1,64 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  font-family: "FiraCode";
+}
+
+@font-face {
+  font-family: "Karla";
+  src: url(assets/fonts/karla/Karla-Regular.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Karla";
+  src: url(assets/fonts/karla/Karla-Italic.ttf);
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Karla";
+  src: url(assets/fonts/karla/Karla-BoldItalic.ttf);
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Karla";
+  src: url(assets/fonts/karla/Karla-Bold.ttf);
+  font-weight: bold;
+  font-style: normal;
+}
+
+// FiraCode
+
+@font-face {
+  font-family: "FiraCode";
+  src: url(assets/fonts/fira-code/FiraCode-Light.otf);
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "FiraCode";
+  src: url(assets/fonts/fira-code/FiraCode-Regular.otf);
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "FiraCode";
+  src: url(assets/fonts/fira-code/FiraCode-Medium.otf);
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "FiraCode";
+  src: url(assets/fonts/fira-code/FiraCode-Bold.otf);
+  font-weight: 700 900;
+  font-style: normal;
+}
