@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.scss',
 })
-export class HeroComponent {}
+export class HeroComponent {
+  isInHoverd: boolean = false;
+  isGitHoverd: boolean = false;
+
+  // marquee-text:[]= [ "fdgdfg"]
+}
