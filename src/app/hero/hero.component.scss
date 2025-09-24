@@ -2,7 +2,19 @@ section {
   background: url(../../assets/imgs/background/Background.png) center center /
     cover no-repeat;
   height: 100vh;
+  width: 100vw;
   color: #ffffff;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content-hero {
+  position: relative;
+  width: 100%;
+  max-width: 1920px;
+  height: 100%;
   .btn-box {
     background-color: #ffffff00;
     color: #ffffff;
@@ -68,7 +80,6 @@ section {
   display: flex;
   flex-direction: column;
   width: 32px;
-  display: flex;
   align-items: center;
   .separator {
     position: absolute;
@@ -152,13 +163,13 @@ section {
   width: 100%;
   bottom: 0px;
   overflow: hidden;
-  min-height: 180px;
+  min-height: 200px;
 }
 
 .marquee {
   position: absolute;
-  bottom: 48px;
-  width: 110%;
+  bottom: 64px;
+  width: 110%; /* etwas breiter als nötig */
   margin-left: -5%;
   height: 62px;
   padding: 12px 32px;
@@ -167,19 +178,28 @@ section {
   transform: rotate(-3deg);
   display: flex;
   align-items: center;
+  gap: 56px;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
-.marquee span {
-  display: inline-block;
-  animation: marquee 6s linear infinite;
+.marquee-content {
+  display: inline-flex;
+  animation: marquee 10s linear infinite;
+  white-space: nowrap;
+  gap: 56px;
+  will-change: transform;
+  font-family: "Karla";
+  font-size: 32px;
+  color: #3dcfb6;
 }
 
 @keyframes marquee {
   from {
-    transform: translateX(105vw);
+    transform: translateX(0.8%);
   }
   to {
-    transform: translateX(-5vw);
+    transform: translateX(-50%);
   }
 }
 

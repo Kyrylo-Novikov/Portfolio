@@ -1,66 +1,73 @@
 <section>
-  <div class="title-box">
-    <h2>Frontend Developer</h2>
-    <div>
-      <h1>Kyrylo Novikov</h1>
-      <div class="btn-box">
-        <a><span>Check my work</span></a>
-        <a><span>Contact me</span></a>
+  <div class="content-hero">
+    <div class="title-box">
+      <h2>Frontend Developer</h2>
+      <div>
+        <h1>Kyrylo Novikov</h1>
+        <div class="btn-box">
+          <a><span>Check my work</span></a>
+          <a><span>Contact me</span></a>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="side-left">
-    <div class="scroll">
-      <img src="/assets/imgs/icon/arrow.png" alt="" />
+    <div class="side-left">
+      <div class="scroll">
+        <img src="/assets/imgs/icon/arrow.png" alt="" />
+      </div>
+      <div class="separator"></div>
     </div>
-    <div class="separator"></div>
-  </div>
-  <div class="side-right">
-    <div class="email">kyrylonovikovATgmail.com</div>
+    <div class="side-right">
+      <div class="email">kyrylonovikovATgmail.com</div>
 
-    <div class="social-icon">
-      <div
-        class="git-icons"
-        (mouseover)="isGitHoverd = true"
-        (mouseleave)="isGitHoverd = false"
-      >
-        <img
-          class="base"
-          [style.opacity]="!isGitHoverd ? 1 : 0"
-          src="/assets/imgs/icon/git-icon.png"
-          alt=""
-        />
-        <img
-          class="hover"
-          src="/assets/imgs/icon/git-icon-hover.png"
-          alt=""
-          [style.opacity]="isGitHoverd ? 1 : 0"
-        />
+      <div class="social-icon">
+        <div
+          class="git-icons"
+          (mouseover)="isGitHoverd = true"
+          (mouseleave)="isGitHoverd = false"
+        >
+          <img
+            class="base"
+            [style.opacity]="!isGitHoverd ? 1 : 0"
+            src="/assets/imgs/icon/git-icon.png"
+            alt=""
+          />
+          <img
+            class="hover"
+            src="/assets/imgs/icon/git-icon-hover.png"
+            alt=""
+            [style.opacity]="isGitHoverd ? 1 : 0"
+          />
+        </div>
+        <div
+          class="in-icons"
+          (mouseover)="isInHoverd = true"
+          (mouseleave)="isInHoverd = false"
+        >
+          <img
+            class="base"
+            [style.opacity]="!isInHoverd ? 1 : 0"
+            src="/assets/imgs/icon/in-icon.png"
+            alt=""
+          />
+          <img
+            class="hover"
+            src="/assets/imgs/icon/in-icon-hover.png"
+            alt=""
+            [style.opacity]="isInHoverd ? 1 : 0"
+          />
+        </div>
       </div>
-      <div
-        class="in-icons"
-        (mouseover)="isInHoverd = true"
-        (mouseleave)="isInHoverd = false"
-      >
-        <img
-          class="base"
-          [style.opacity]="!isInHoverd ? 1 : 0"
-          src="/assets/imgs/icon/in-icon.png"
-          alt=""
-        />
-        <img
-          class="hover"
-          src="/assets/imgs/icon/in-icon-hover.png"
-          alt=""
-          [style.opacity]="isInHoverd ? 1 : 0"
-        />
-      </div>
+      <div class="separator"></div>
     </div>
-    <div class="separator"></div>
-  </div>
-  <div class="marquee-wrapper">
-    <div class="marquee">
-      <span>Text aus array</span>
+
+    <div class="marquee-wrapper">
+      <div class="marquee">
+        <div class="marquee-content">
+          @for (item of marqueenLoop; track $index) {
+          <span>{{ item }}</span
+          ><span> &#183; </span> }
+        </div>
+      </div>
     </div>
   </div>
 </section>

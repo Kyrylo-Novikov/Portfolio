@@ -11,5 +11,12 @@ export class HeroComponent {
   isInHoverd: boolean = false;
   isGitHoverd: boolean = false;
 
-  // marquee-text:[]= [ "fdgdfg"]
+  marqueeText: string[] = [
+    'Based in Berlin',
+    'Frontend Developer',
+    'Open to work',
+    'Available for remote work',
+  ];
+
+  marqueenLoop: string[] = [...this.marqueeText, ...this.marqueeText];
 }
