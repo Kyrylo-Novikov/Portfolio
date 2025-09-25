@@ -1,0 +1,119 @@
+@import "../../../styles";
+header {
+  @extend .d-flex-align-c;
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  justify-content: space-between;
+  padding: 0 96px;
+  height: 98px;
+  .header-left {
+    @extend .d-flex-align-c;
+    gap: 24px;
+    width: 409px;
+    height: 28px;
+    a {
+      position: relative;
+      color: #ffffff;
+      font-size: 20px;
+      &::after {
+        content: "•";
+        position: absolute;
+        bottom: -16px;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0;
+        color: #3dcfb6;
+        transition: 0.2s;
+      }
+      &:hover::after {
+        opacity: 1;
+      }
+    }
+    .header-links {
+      gap: 24px;
+      display: flex;
+      white-space: nowrap;
+    }
+    .language-switch {
+      @extend .d-flex-align-c;
+      font-size: 16px;
+      line-height: 120%;
+      height: 28px;
+      width: 84px;
+      border-radius: 100px;
+      border: 1px solid #3dcfb6;
+      color: #3dcfb680;
+      transition: 0.2s;
+      input[type="radio"] {
+        display: none;
+        &:checked + label {
+          @extend .d-flex-align-c;
+          background-color: #3dcfb6;
+          color: #ffffff;
+          width: 44px;
+          height: 28px;
+          border-radius: 100px;
+          font-weight: 700;
+        }
+      }
+      &:has(input:not(:checked) + label:hover) {
+        color: #3dcfb6;
+        border: 1px solid #ffffff;
+      }
+      label {
+        @extend .d-flex-align-c;
+        justify-content: center;
+        width: 40px;
+      }
+    }
+  }
+  .header-right {
+    @extend .d-flex-align-c;
+    gap: 8px;
+    height: 48px;
+    font-size: 32px;
+    font-weight: bold;
+    .initial {
+      display: flex;
+      flex-direction: column;
+      line-height: 0.7;
+      .rotate-letter {
+        background-color: #3dcfb6;
+        -webkit-text-stroke: 1px #3dcfb6;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: background-color 300ms ease;
+        rotate: 90deg;
+        font-family: "Karla";
+        transform: scaleX(1.3) scaleY(1.2);
+      }
+      .no-rotate-letter {
+        background-color: #3dcfb6;
+        -webkit-text-stroke: 1px #3dcfb6;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: background-color 300ms ease;
+        transform: scaleX(1.44) scaleY(1.2);
+        font-family: "Karla";
+      }
+    }
+    .header-name {
+      letter-spacing: -1px;
+      font-family: "Karla";
+      line-height: 0.8;
+      background-color: #ffffff;
+      -webkit-text-stroke: 1px #ffffff;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      transition: background-color 300ms ease;
+      position: relative;
+    }
+    &:hover .initial .rotate-letter,
+    &:hover .initial .no-rotate-letter,
+    &:hover .header-name {
+      background-color: transparent;
+    }
+  }
+}

@@ -1,12 +1,12 @@
+@import "../../styles";
 section {
+  @extend .d-flex-align-c;
   background: url(../../assets/imgs/background/Background.png) center center /
     cover no-repeat;
   height: 100vh;
   width: 100vw;
   color: #ffffff;
   position: relative;
-  display: flex;
-  align-items: center;
   justify-content: center;
 }
 
@@ -16,22 +16,20 @@ section {
   max-width: 1920px;
   height: 100%;
   .btn-box {
+    @extend .d-flex-align-c;
     background-color: #ffffff00;
     color: #ffffff;
     line-height: 120%;
     font-family: "Karla";
-    display: flex;
-    align-items: center;
     justify-content: center;
     gap: 48px;
     font-size: 18px;
     > a {
+      @extend .d-flex-align-c;
       border: 1px solid #ffffff;
       border-radius: 100px;
       height: 48px;
       padding: 0 24px;
-      display: flex;
-      align-items: center;
       justify-content: center;
       cursor: pointer;
       overflow: hidden;
@@ -46,11 +44,10 @@ section {
     }
   }
   .title-box {
+    @extend .d-flex-align-c;
     color: #d9d9d9;
     height: 268px;
-    display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
     height: 100%;
     gap: 12px;
@@ -72,15 +69,14 @@ section {
   }
 }
 .side-right {
+  @extend .d-flex-align-c;
   position: absolute;
   min-height: 480px;
   bottom: 0;
   right: 96px;
   gap: 24px;
-  display: flex;
   flex-direction: column;
   width: 32px;
-  align-items: center;
   .separator {
     position: absolute;
     bottom: 0;
@@ -129,28 +125,25 @@ section {
 }
 
 .side-left {
+  @extend .d-flex-align-c;
   position: absolute;
   min-height: 312px;
   gap: 24px;
-  display: flex;
   flex-direction: column;
   height: 0px;
   bottom: 0;
   left: 96px;
-  align-items: center;
   .separator {
-    bottom: 0;
     height: 240px;
     width: 1px;
     background-color: #3dcfb6;
   }
   .scroll {
+    @extend .d-flex-align-c;
     height: 48px;
     width: 30px;
     border: 1px solid #3dcfb6;
     border-radius: 32px;
-    display: flex;
-    align-items: center;
     justify-content: center;
     img {
       animation: scrollBtnAnimation 500ms linear 10s infinite alternate;
@@ -169,15 +162,13 @@ section {
 .marquee {
   position: absolute;
   bottom: 64px;
-  width: 110%; /* etwas breiter als nötig */
+  width: 110%;
   margin-left: -5%;
   height: 62px;
   padding: 12px 32px;
   background-color: #ffffff2c;
   backdrop-filter: blur(5.3px);
   transform: rotate(-3deg);
-  display: flex;
-  align-items: center;
   gap: 56px;
   white-space: nowrap;
   overflow: hidden;
@@ -185,7 +176,7 @@ section {
 
 .marquee-content {
   display: inline-flex;
-  animation: marquee 10s linear infinite;
+  animation: marquee 30s linear infinite;
   white-space: nowrap;
   gap: 56px;
   will-change: transform;
