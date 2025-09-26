@@ -5,6 +5,17 @@
   font-family: "FiraCode";
 }
 
+:root {
+  --fontSize-1: 16px;
+  --fontSize-2: 18px;
+  --fontSize-3: 20px;
+  --fontSize-4: 32px;
+  --fontSize-5: 40px;
+  --color-1: #3dcfb6;
+  --color-2: #ffffff;
+  --color-3: #1c1c1c;
+}
+
 .d-flex-align-c {
   display: flex;
   align-items: center;

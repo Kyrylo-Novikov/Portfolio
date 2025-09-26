@@ -1,0 +1,23 @@
+@import "../../styles";
+section {
+  @extend .d-flex-align-c;
+  justify-content: center;
+  width: 100%;
+  padding: 120px 96px;
+  background-color: var(--color-3);
+  .about-me-wrapper {
+    @extend .d-flex-align-c;
+    gap: 112px;
+    width: calc(100% - 192px);
+    max-width: calc(1920px - 192px);
+    height: 708px;
+    background-color: aqua;
+    > img {
+      height: 568px;
+      width: 568px;
+      border-radius: 30px;
+      &:hover {
+      }
+    }
+  }
+}
