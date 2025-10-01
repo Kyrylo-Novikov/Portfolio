@@ -63,14 +63,12 @@ section {
     .info-wrapper {
       width: 50%;
       display: flex;
-      align-self: self-end;
       min-height: 708px;
       .about-me-info {
-        display: flex;
+        @extend .d-flex-dirc-c;
         align-self: self-end;
         color: var(--color-1);
         gap: 20px;
-        flex-direction: column;
         > p {
           font-weight: 500;
           font-size: 24px;
@@ -82,19 +80,16 @@ section {
           border: 1px solid var(--color-1);
           padding: 32px;
           width: 568px;
-          display: flex;
-          flex-direction: column;
+          @extend .d-flex-dirc-c;
           gap: 40px;
           .about-me-descrption {
-            display: flex;
-            flex-direction: column;
+            @extend .d-flex-dirc-c;
             gap: 32px;
             font-size: 18px;
             font-weight: 400;
             color: var(--color-2);
             > div {
-              display: flex;
-              flex-direction: column;
+              @extend .d-flex-dirc-c;
               gap: 16px;
             }
             .highlights {

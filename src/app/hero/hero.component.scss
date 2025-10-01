@@ -8,6 +8,7 @@ section {
   color: var(--color-2);
   position: relative;
   justify-content: center;
+  font-family: "Karla";
 }
 
 .content-hero {
@@ -19,7 +20,6 @@ section {
     @extend .d-flex-align-c;
     background-color: #ffffff00;
     line-height: 120%;
-    font-family: "Karla";
     justify-content: center;
     gap: 48px;
     font-size: var(--fontSize-2);
@@ -59,12 +59,12 @@ section {
   h1 {
     font-size: 128px;
     font-weight: 700;
-    font-family: "Karla";
     letter-spacing: -2px;
   }
   h2 {
     font-size: var(--fontSize-5);
     font-weight: 400;
+    font-family: "FiraCode";
   }
 }
 .side-right {
@@ -175,21 +175,20 @@ section {
 
 .marquee-content {
   display: inline-flex;
-  animation: marquee 30s linear infinite;
+  animation: marquee 10s linear infinite;
   white-space: nowrap;
   gap: 56px;
   will-change: transform;
-  font-family: "Karla";
   font-size: var(--fontSize-4);
   color: var(--color-1);
 }
 
 @keyframes marquee {
   from {
-    transform: translateX(0.8%);
+    transform: translateX(3%);
   }
   to {
-    transform: translateX(-50%);
+    transform: translateX(-30.8%);
   }
 }
 

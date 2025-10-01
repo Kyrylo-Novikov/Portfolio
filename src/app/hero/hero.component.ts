@@ -18,5 +18,9 @@ export class HeroComponent {
     'Available for remote work',
   ];
 
-  marqueenLoop: string[] = [...this.marqueeText, ...this.marqueeText];
+  marqueenLoop: string[] = [
+    ...this.marqueeText,
+    ...this.marqueeText,
+    ...this.marqueeText,
+  ];
 }
