@@ -1,10 +1,4 @@
-@import "../../../styles";
-
-.name-hov-prep {
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: background-color 300ms ease;
-}
+@use "./../../shared/styles/index" as *;
 header {
   @extend .d-flex-align-c;
   z-index: 1;
@@ -77,12 +71,10 @@ header {
     }
   }
   .header-right {
-    font-family: "Karla";
+    @include font(Karla, var(--fontSize-6), bold, var(--color-2));
     @extend .d-flex-align-c;
     gap: 8px;
     height: 48px;
-    font-size: var(--fontSize-4);
-    font-weight: bold;
     .initial {
       @extend.d-flex-dirc-c;
       line-height: 0.7;

@@ -1,4 +1,4 @@
-@import "../../styles";
+@use "../../styles" as *;
 section {
   @extend .d-flex-align-c;
   background: url(../../assets/imgs/background/Background.png) center center /
@@ -16,23 +16,10 @@ section {
   width: 100%;
   max-width: 1920px;
   height: 100%;
-  .btn-box {
+  .btn-container {
     @extend .d-flex-align-c;
-    background-color: #ffffff00;
-    line-height: 120%;
-    justify-content: center;
-    gap: 48px;
-    font-size: var(--fontSize-2);
-    > a {
+    > .btn {
       @extend .d-flex-align-c;
-      border: 1px solid var(--color-2);
-      border-radius: 100px;
-      height: 48px;
-      padding: 0 24px;
-      justify-content: center;
-      cursor: pointer;
-      overflow: hidden;
-      transition: all 300ms ease-in;
       &:hover {
         border: 1px solid var(--color-1);
         color: var(--color-1);
@@ -62,7 +49,7 @@ section {
     letter-spacing: -2px;
   }
   h2 {
-    font-size: var(--fontSize-5);
+    font-size: var(--fontSize-6);
     font-weight: 400;
     font-family: "FiraCode";
   }
@@ -179,53 +166,6 @@ section {
   white-space: nowrap;
   gap: 56px;
   will-change: transform;
-  font-size: var(--fontSize-4);
+  font-size: var(--fontSize-5);
   color: var(--color-1);
-}
-
-@keyframes marquee {
-  from {
-    transform: translateX(3%);
-  }
-  to {
-    transform: translateX(-30.8%);
-  }
-}
-
-@keyframes heroBtnAnimation {
-  from {
-    transform: translateX(0);
-    opacity: 1;
-  }
-  30% {
-    transform: translateX(-120%);
-    opacity: 1;
-  }
-  45% {
-    transform: translateX(-130%);
-    opacity: 0;
-  }
-  55% {
-    transform: translateX(130%);
-    opacity: 0;
-  }
-  70% {
-    transform: translateX(120%);
-    opacity: 1;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes scrollBtnAnimation {
-  from {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  to {
-    transform: translateY(50%);
-    opacity: 1;
-  }
 }

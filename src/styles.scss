@@ -1,3 +1,4 @@
+@use "app/shared/styles/index" as *;
 * {
   margin: 0;
   scroll-behavior: smooth;
@@ -13,83 +14,4 @@ body {
 html::-webkit-scrollbar,
 body::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Opera */
-}
-
-:root {
-  --fontSize-1: 16px;
-  --fontSize-2: 18px;
-  --fontSize-3: 20px;
-  --fontSize-4: 32px;
-  --fontSize-5: 40px;
-  --color-1: #3dcfb6;
-  --color-2: #ffffff;
-  --color-3: #1c1c1c;
-}
-
-.d-flex-align-c {
-  display: flex;
-  align-items: center;
-}
-
-.d-flex-dirc-c {
-  display: flex;
-  flex-direction: column;
-}
-
-@font-face {
-  font-family: "Karla";
-  src: url(assets/fonts/karla/Karla-Regular.ttf);
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "Karla";
-  src: url(assets/fonts/karla/Karla-Italic.ttf);
-  font-weight: normal;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Karla";
-  src: url(assets/fonts/karla/Karla-BoldItalic.ttf);
-  font-weight: bold;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Karla";
-  src: url(assets/fonts/karla/Karla-Bold.ttf);
-  font-weight: bold;
-  font-style: normal;
-}
-
-// FiraCode
-
-@font-face {
-  font-family: "FiraCode";
-  src: url(assets/fonts/fira-code/FiraCode-Light.otf);
-  font-weight: 100;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "FiraCode";
-  src: url(assets/fonts/fira-code/FiraCode-Regular.otf);
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: "FiraCode";
-  src: url(assets/fonts/fira-code/FiraCode-Medium.otf);
-  font-weight: 600;
-  font-style: medium;
-}
-
-@font-face {
-  font-family: "FiraCode";
-  src: url(assets/fonts/fira-code/FiraCode-Bold.otf);
-  font-weight: 700 900;
-  font-style: normal;
 }

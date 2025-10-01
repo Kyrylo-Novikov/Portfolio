@@ -1,4 +1,4 @@
-@import "../../styles";
+@use "../../styles" as *;
 section {
   font-family: "Karla";
   @extend .d-flex-align-c;

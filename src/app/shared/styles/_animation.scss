@@ -1,0 +1,46 @@
+@keyframes marquee {
+  from {
+    transform: translateX(3%);
+  }
+  to {
+    transform: translateX(-30.8%);
+  }
+}
+
+@keyframes heroBtnAnimation {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  30% {
+    transform: translateX(-120%);
+    opacity: 1;
+  }
+  45% {
+    transform: translateX(-130%);
+    opacity: 0;
+  }
+  55% {
+    transform: translateX(130%);
+    opacity: 0;
+  }
+  70% {
+    transform: translateX(120%);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes scrollBtnAnimation {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(50%);
+    opacity: 1;
+  }
+}
