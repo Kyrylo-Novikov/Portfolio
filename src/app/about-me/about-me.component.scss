@@ -1,15 +1,12 @@
-@use "../../styles" as *;
+@use "./../shared/styles/index" as *;
 section {
   font-family: "Karla";
   @extend .d-flex-align-c;
   justify-content: center;
-  height: 100vh;
-  width: 100%;
+  padding: 144px 12px;
   background-color: var(--color-3);
   h1 {
-    font-family: "FiraCode";
-    font-weight: 700;
-    font-size: 64px;
+    @include font(FiraCode, 64px, 700, var(--color-1));
   }
   .about-me-wrapper {
     @extend .d-flex-align-c;
@@ -27,7 +24,6 @@ section {
         height: 568px;
         width: 568px;
         border-radius: 30px;
-
         > img {
           object-fit: cover;
           height: 100%;
@@ -70,9 +66,7 @@ section {
         color: var(--color-1);
         gap: 20px;
         > p {
-          font-weight: 500;
-          font-size: 24px;
-          font-style: medium;
+          @include font(Karla, var(--fontSize-4), 500, var(--color-1));
         }
         .about-me-text {
           background-color: #3dcfb61a;
@@ -84,10 +78,8 @@ section {
           gap: 40px;
           .about-me-descrption {
             @extend .d-flex-dirc-c;
+            @include font(Karla, var(--fontSize-2), 400, var(--color-2));
             gap: 32px;
-            font-size: 18px;
-            font-weight: 400;
-            color: var(--color-2);
             > div {
               @extend .d-flex-dirc-c;
               gap: 16px;
