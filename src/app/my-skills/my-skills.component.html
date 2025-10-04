@@ -1,1 +1,31 @@
-<p>my-skills works!</p>
+<section>
+  <div class="tech-info-head">
+    <h3>Technologies</h3>
+    <div class="tech-info">
+      <h1>Skill Set</h1>
+      <div>
+        A short introduction of your skills. Highlight your experience of using
+        different front-end technologies and emphasise your openness to learning
+        and adapting to new technologies. Show how important it is for you to
+        keep up with the rapid changes in web development.
+      </div>
+      <h2><span>You need </span> another skill?</h2>
+      <div>
+        Feel free to contact me. I look forward to expanding on my previous
+        knowledge.
+      </div>
+      <div class="btn-container">
+        <a class="btn"><span>Let's Talk</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="all-techs">
+    @for (tech of techsArr; track $index) {
+    <div class="tech">
+      <img [src]="tech" alt="" />
+      <p>{{ tech.split("/").pop()?.replace(".svg", "") }}</p>
+    </div>
+    }
+  </div>
+</section>
