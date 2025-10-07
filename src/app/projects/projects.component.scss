@@ -1,0 +1,48 @@
+@use "./../shared/styles/index" as *;
+
+section {
+  @extend .d-flex-dirc-c;
+  align-items: center;
+  padding-left: 96px +32px;
+  background-color: var(--color-3);
+  @include font(Karla, var(--fontSize-4), 400, var(--color-2));
+  // height: 100vh;
+  padding-bottom: 8vh;
+  gap: 41px;
+  .portfolio-header {
+    @extend .d-flex-dirc-c;
+    gap: 20px;
+    width: 100%;
+    h1 {
+      @include font(FiraCode, var(--fontSize-7), 700, var(--color-1));
+    }
+    h2 {
+      @include font($color: var(--color-1));
+    }
+  }
+  .project-instruct {
+    width: 100%;
+    p {
+      width: 40%;
+      @include font($size: var(--fontSize-2));
+    }
+  }
+  .projects {
+    width: 100%;
+  }
+  .project {
+    @include font($size: var(--fontSize-2), $weight: 400);
+    @extend .d-flex-align-c;
+    width: 880px;
+    justify-content: space-between;
+    padding: 40px 32px;
+    border-width: 1px 0px 1px 0px;
+    border-style: solid;
+
+    border-color: #3dcfb6;
+
+    .project-name {
+      @include font(FiraCode, var(--fontSize-4), 700);
+    }
+  }
+}
