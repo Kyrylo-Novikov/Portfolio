@@ -1,0 +1,47 @@
+<section>
+  <h1>What my colleagues say about me</h1>
+  <div class="references">
+    <div class="referenc">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis sed
+        alias eos quo explicabo, saepe, consequatur labore voluptatibus repellat
+        laudantium veritatis eaque quisquam nemo obcaecati dolor ratione facilis
+        fugit. Vero?
+      </p>
+      <div>
+        <div class="line"></div>
+        <p>Klaus Helmer</p>
+      </div>
+    </div>
+  </div>
+  <div class="slide-menu">
+    <div
+      (mouseover)="isHoveredLeft = true"
+      (mouseleave)="isHoveredLeft = false"
+    >
+      <img
+        [src]="
+          isHoveredLeft
+            ? 'assets/imgs/icon-interactiv/left-arrow-hover.png'
+            : 'assets/imgs/icon-interactiv/left-arrow.png'
+        "
+      />
+    </div>
+    <div>•</div>
+    <div>•</div>
+    <div>•</div>
+    <div
+      (mouseover)="isHoveredRight = true"
+      (mouseleave)="isHoveredRight = false"
+    >
+      <img
+        [src]="
+          isHoveredRight
+            ? 'assets/imgs/icon-interactiv/right-arrow-hover.png'
+            : 'assets/imgs/icon-interactiv/right-arrow.png'
+        "
+        alt=""
+      />
+    </div>
+  </div>
+</section>
