@@ -6,8 +6,9 @@ section {
   align-items: center;
   justify-content: space-between;
   .references {
+    max-width: 1920px;
     @include font(Karla, var(--fontSize-2), 400, var(--color-2));
-    height: 274px;
+    height: 276px;
     width: 36%;
     .referenc {
       @extend .d-flex-dirc-c;

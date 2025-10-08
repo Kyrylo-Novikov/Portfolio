@@ -1,0 +1,116 @@
+@use "./../shared/styles/index" as *;
+
+h1 {
+  @include font(FiraCode, var(--fontSize-7), 700, var(--color-1));
+}
+
+section {
+  color: var(--color-2);
+  padding: 80px 96px;
+  height: 702px;
+  background-color: var(--color-3);
+  @extend .d-flex-dirc-c;
+  align-items: center;
+  .contact-wrapper {
+    display: flex;
+    width: 1248px;
+    height: 542px;
+    justify-content: space-between;
+  }
+  .call-to-action-wrapper {
+    @extend .d-flex-dirc-c;
+    gap: 40px;
+    width: 568px;
+    height: 337px;
+    .headline-wrapper h2 {
+      @include font(Karla, var(--fontSize-4), 500, var(--color-1));
+    }
+    .call-to-action {
+      @extend .d-flex-dirc-c;
+      gap: 16px;
+      h2 {
+        @include font(FiraCode, var(--fontSize-4), 700, var(--color-1));
+      }
+      p {
+        @include font(Karla, var(--fontSize-1), 400, var(--color-2));
+        span {
+          font-weight: 700;
+          color: var(--color-1);
+        }
+      }
+    }
+  }
+  form {
+    @extend .d-flex-dirc-c;
+    align-items: center;
+    width: 616px;
+    height: 550px;
+    gap: 40px;
+    .question-wrapper {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    .send-wrapper {
+      @extend .d-flex-dirc-c;
+      gap: 16px;
+      width: 100%;
+      .policy-check {
+        width: 100%;
+      }
+      .btn-container {
+        justify-content: center;
+      }
+    }
+
+    // größe height überlager sich
+    .question {
+      border-width: 1px 0px 1px 0px;
+      border-style: solid;
+      border-color: #3dcfb680;
+      > div {
+        @extend .d-flex-dirc-c;
+        gap: 16px;
+        padding: 32px;
+        width: 352.5px;
+
+        // height: 67px;
+        > h2 {
+          @include font(FiraCode, var(--fontSize-4), 500, #3dcfb6);
+        }
+        > input {
+          @include font(Karla, var(--fontSize-2), 400, var(--color-2));
+          background-color: transparent;
+          border: none;
+          outline: none;
+        }
+      }
+    }
+  }
+  .policy-check {
+    display: flex;
+    gap: 8px;
+    @include font(Karla, var(--fontSize-0), 400, var(--color-2));
+    span {
+      @include font(FiraCode, var(--fontSize-0), 400, var(--color-1));
+      padding: 5px 4px;
+    }
+    .checkbox {
+      @extend .d-flex-align-c;
+      justify-content: center;
+      height: var(--fontSize-4);
+      width: var(--fontSize-4);
+      &:hover {
+        border-radius: 38px;
+        background-color: #3dcfb64d;
+      }
+      > input {
+        height: var(--fontSize-2);
+        width: var(--fontSize-2);
+        border-radius: 2px;
+        appearance: none;
+        border: 1px solid var(--color-1);
+      }
+    }
+  }
+}
