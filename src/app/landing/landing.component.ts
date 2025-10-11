@@ -6,6 +6,7 @@ import { MySkillsComponent } from '../my-skills/my-skills.component';
 import { ProjectsComponent } from '../projects/projects.component';
 import { ReferencesComponent } from '../references/references.component';
 import { ContactComponent } from '../contact/contact.component';
+import { FooterComponent } from '../shared/footer/footer.component';
 
 @Component({
   selector: 'app-landing',
@@ -18,6 +19,7 @@ import { ContactComponent } from '../contact/contact.component';
     ProjectsComponent,
     ReferencesComponent,
     ContactComponent,
+    FooterComponent,
   ],
   templateUrl: './landing.component.html',
   styleUrl: './landing.component.scss',
