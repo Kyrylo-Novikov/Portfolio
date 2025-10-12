@@ -5,19 +5,25 @@
       <div>
         <h1>Kyrylo Novikov</h1>
         <div class="btn-container">
-          <a class="btn"><span>Check my work</span></a>
-          <a class="btn"><span>Contact me</span></a>
+          <a href="#portfolio-section" class="btn"
+            ><span>Check my work</span></a
+          >
+          <a href="#contact-section" class="btn"><span>Contact me</span></a>
         </div>
       </div>
     </div>
     <div class="side-left">
       <div class="scroll">
-        <img src="/assets/imgs/icon-interactiv/arrow.png" alt="" />
+        <a href="#about-me-section"
+          ><img src="/assets/imgs/icon-interactiv/arrow.png" alt=""
+        /></a>
       </div>
       <div class="separator"></div>
     </div>
     <div class="side-right">
-      <div class="email">kyrylonovikovATgmail.com</div>
+      <div class="email">
+        <a href="mailto:kyrylonovikov@gmail.com">kyrylonovikov&#64;gmail.com</a>
+      </div>
 
       <div class="social-icon">
         <div
@@ -25,36 +31,40 @@
           (mouseover)="isGitHoverd = true"
           (mouseleave)="isGitHoverd = false"
         >
-          <img
-            class="base"
-            [style.opacity]="!isGitHoverd ? 1 : 0"
-            src="/assets/imgs/icon-interactiv/git-icon.png"
-            alt=""
-          />
-          <img
-            class="hover"
-            src="/assets/imgs/icon-interactiv/git-icon-hover.png"
-            alt=""
-            [style.opacity]="isGitHoverd ? 1 : 0"
-          />
+          <a href="https://github.com/Kyrylo-Novikov"
+            ><img
+              class="base"
+              [style.opacity]="!isGitHoverd ? 1 : 0"
+              src="/assets/imgs/icon-interactiv/git-icon.png"
+              alt=""
+            />
+            <img
+              class="hover"
+              src="/assets/imgs/icon-interactiv/git-icon-hover.png"
+              alt=""
+              [style.opacity]="isGitHoverd ? 1 : 0"
+            />
+          </a>
         </div>
         <div
           class="in-icons"
           (mouseover)="isInHoverd = true"
           (mouseleave)="isInHoverd = false"
         >
-          <img
-            class="base"
-            [style.opacity]="!isInHoverd ? 1 : 0"
-            src="/assets/imgs/icon-interactiv/in-icon.png"
-            alt=""
-          />
-          <img
-            class="hover"
-            src="/assets/imgs/icon-interactiv/in-icon-hover.png"
-            alt=""
-            [style.opacity]="isInHoverd ? 1 : 0"
-          />
+          <a href="https://github.com/Kyrylo-Novikov">
+            <img
+              class="base"
+              [style.opacity]="!isInHoverd ? 1 : 0"
+              src="/assets/imgs/icon-interactiv/in-icon.png"
+              alt=""
+            />
+            <img
+              class="hover"
+              src="/assets/imgs/icon-interactiv/in-icon-hover.png"
+              alt=""
+              [style.opacity]="isInHoverd ? 1 : 0"
+            />
+          </a>
         </div>
       </div>
       <div class="separator"></div>

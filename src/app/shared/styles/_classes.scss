@@ -18,6 +18,8 @@
 }
 
 .btn {
+  color: var(--color-2);
+  text-decoration: none;
   @extend .d-flex-align-c;
   border: 1px solid var(--color-2);
   border-radius: 100px;
