@@ -51,7 +51,7 @@ h2 {
   right: 96px;
   gap: 24px;
   flex-direction: column;
-  width: 32px;
+  width: 42px;
   .separator {
     position: absolute;
     bottom: 0;
@@ -74,6 +74,22 @@ h2 {
 .in-icons {
   bottom: 24px;
   position: absolute;
+  a {
+    position: absolute;
+    opacity: 1;
+    left: -14px;
+  }
+  .base {
+    left: 3px;
+    top: 3px;
+  }
+}
+.git-icons {
+  a {
+    position: absolute;
+    opacity: 1;
+    left: -14px;
+  }
 }
 
 .social-icon {
@@ -91,7 +107,7 @@ h2 {
   right: -30px;
 }
 .git-icons > .base {
-  right: -18px;
+  right: -15px;
 }
 
 .in-icons > .base {
@@ -121,7 +137,7 @@ h2 {
     border-radius: 32px;
     justify-content: center;
     img {
-      animation: scrollBtnAnimation 500ms linear 10s infinite alternate;
+      animation: scrollBtnAnimation 500ms ease-in 10ms infinite alternate;
     }
   }
 }

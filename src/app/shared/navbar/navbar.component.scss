@@ -1,0 +1,69 @@
+@use "./../../shared/styles/index" as *;
+nav {
+  @extend .d-flex-align-c;
+  gap: 24px;
+  width: 409px;
+  height: 28px;
+  font-family: "FiraCode";
+  a {
+    text-decoration: none;
+    position: relative;
+    color: #ffffff;
+    font-size: var(--fontSize-3);
+    &::after {
+      content: "•";
+      position: absolute;
+      bottom: -16px;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0;
+      color: var(--color-1);
+      transition: 0.2s;
+    }
+    &.aktiv::after,
+    &:hover::after {
+      opacity: 1;
+    }
+  }
+  .header-links {
+    gap: 24px;
+    display: flex;
+    white-space: nowrap;
+  }
+  .language-switch {
+    @extend .d-flex-align-c;
+    font-size: var(--fontSize-1);
+    line-height: 120%;
+    height: 28px;
+    width: 84px;
+    border-radius: 100px;
+    border: 1px solid var(--color-1);
+    color: #3dcfb680;
+    transition: 0.2s;
+    input[type="radio"] {
+      display: none;
+      &:checked + label {
+        @extend .d-flex-align-c;
+        background-color: var(--color-1);
+        color: var(--color-2);
+        width: 44px;
+        height: 28px;
+        border-radius: 100px;
+        font-weight: 700;
+      }
+    }
+    &:has(input:not(:checked) + label:hover) {
+      color: var(--color-1);
+      border: 1px solid var(--color-2);
+    }
+    label {
+      @extend .d-flex-align-c;
+      justify-content: center;
+      width: 40px;
+    }
+  }
+}
+
+.aktiv {
+  color: var(--color-1) !important;
+}

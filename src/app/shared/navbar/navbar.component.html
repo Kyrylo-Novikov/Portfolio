@@ -1,1 +1,28 @@
-<p>navbar works!</p>
+<nav>
+  <div class="language-switch">
+    <input type="radio" name="language" id="eng-radio" />
+    <label for="eng-radio">EN</label>
+    <input type="radio" checked name="language" id="deu-radio" />
+    <label for="deu-radio">DE</label>
+  </div>
+  <div class="header-links">
+    <a
+      [class.aktiv]="aktivSection === 'about-me'"
+      (click)="setAktiv('about-me')"
+      href="#about-me-section"
+      >About me</a
+    >
+    <a
+      [class.aktiv]="aktivSection === 'skills'"
+      (click)="setAktiv('skills')"
+      href="#skill-section"
+      >Skills</a
+    >
+    <a
+      [class.aktiv]="aktivSection === 'projects'"
+      (click)="setAktiv('projects')"
+      href="#portfolio-section"
+      >Projects</a
+    >
+  </div>
+</nav>
