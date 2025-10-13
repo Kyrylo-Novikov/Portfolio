@@ -136,6 +136,13 @@ h2 {
     border: 1px solid var(--color-1);
     border-radius: 32px;
     justify-content: center;
+    a {
+      width: 30px;
+      height: 48px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
     img {
       animation: scrollBtnAnimation 500ms ease-in 10ms infinite alternate;
     }
