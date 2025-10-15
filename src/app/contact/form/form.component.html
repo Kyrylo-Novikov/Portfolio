@@ -1,0 +1,93 @@
+<form action="" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+  <div class="question-wrapper">
+    <div class="question">
+      <div>
+        <h2>What's your name?</h2>
+        <input
+          formControlName="name"
+          type="text"
+          name="name"
+          placeholder="Your name"
+          #nameInput
+        />
+        @if(nameError){
+        <div [class.error]="error('name')" (click)="fokusInput('name')">
+          Oops! it seems your name is missing
+        </div>
+        }
+      </div>
+    </div>
+    <div class="question">
+      <div>
+        <h2>What's your email?</h2>
+        <input
+          formControlName="email"
+          type="text"
+          name="email"
+          placeholder="youremail@email.com"
+          #emailInput
+        />
+        @if (emailError) { @if(emailRequiredError){
+        <div (click)="fokusInput('email')" [class.error]="error('email')">
+          Hoppla! your email is required
+        </div>
+        } @if(emailFormatError) {
+        <div (click)="fokusInput('email')" [class.error]="error('email')">
+          Please enter a valid email
+        </div>
+        } }
+      </div>
+    </div>
+    <div class="question">
+      <div>
+        <h2>How can I help you ?</h2>
+        <input
+          formControlName="message"
+          type="text"
+          name="message"
+          placeholder="Hello Kyrylo, I am interested in ..."
+          #messageInput
+        />
+        @if (messagError) {
+        <div (click)="fokusInput('message')" [class.error]="error('message')">
+          What do you need to develop?
+        </div>
+        }
+      </div>
+    </div>
+  </div>
+  <div class="send-wrapper">
+    <div class="d-flex-align-c policy-check">
+      <div class="checkbox">
+        <input
+          formControlName="checkbox"
+          type="checkbox"
+          name=""
+          id=""
+          #checkboxInput
+        />
+      </div>
+      <p>
+        I've read the <span>policy</span> nd agree to the processing of my data
+        as outlined.
+      </p>
+    </div>
+    <p
+      class="checkbox-req"
+      [class.required]="checkboxError"
+      [class.error]="error('checkbox')"
+    >
+      Please accept the privacy policy
+    </p>
+    <div class="btn-container">
+      <button
+        (mouseenter)="errorBeforSubmit()"
+        type="submit"
+        class="btn"
+        [disabled]="contactForm.invalid"
+      >
+        <span>Say Heloo ;) </span>
+      </button>
+    </div>
+  </div>
+</form>

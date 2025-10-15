@@ -1,0 +1,108 @@
+@use "./../../shared/styles/index" as *;
+
+form {
+  @extend .d-flex-dirc-c;
+  align-items: center;
+  width: 616px;
+  height: 550px;
+  gap: 40px;
+  .question-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    .question {
+      border-width: 1px 0px 1px 0px;
+      border-style: solid;
+      border-color: #3dcfb680;
+      > div {
+        @extend .d-flex-dirc-c;
+        gap: 16px;
+        padding: 32px;
+        width: 352.5px;
+        position: relative;
+        > h2 {
+          @include font(FiraCode, var(--fontSize-4), 500, #3dcfb6);
+        }
+        > input {
+          @include font(Karla, var(--fontSize-2), 400, var(--color-2));
+          background-color: transparent;
+          border: none;
+          outline: none;
+          width: 400px;
+          cursor: pointer;
+        }
+      }
+      .error {
+        @include font(Karla, var(--fontSize-2), 400, var(--color-4));
+        position: absolute;
+        top: 82px;
+        background-color: var(--color-3);
+        width: 100%;
+      }
+      input:focus + .error {
+        opacity: 0;
+        pointer-events: none;
+      }
+    }
+  }
+  .send-wrapper {
+    @extend .d-flex-dirc-c;
+    gap: 16px;
+    width: 100%;
+    .policy-check {
+      width: 100%;
+    }
+    .btn-container {
+      justify-content: center;
+    }
+    .btn-container > .btn:disabled > span {
+      animation: none;
+      color: var(--color-2);
+    }
+    .btn:disabled:hover {
+      border: 1px solid var(--color-2);
+    }
+    .policy-check {
+      display: flex;
+      gap: 8px;
+      @include font(Karla, var(--fontSize-0), 400, var(--color-2));
+      span {
+        @include font(FiraCode, var(--fontSize-0), 400, var(--color-1));
+        padding: 5px 4px;
+      }
+      .checkbox {
+        @extend .d-flex-align-c;
+        justify-content: center;
+        height: var(--fontSize-4);
+        width: var(--fontSize-4);
+        &:hover {
+          border-radius: 38px;
+          background-color: #3dcfb64d;
+        }
+        > input {
+          cursor: pointer;
+          height: 18px;
+          width: 18px;
+          background-image: url("/assets/imgs/icon-interactiv/uncheck_box.svg");
+          background-repeat: no-repeat;
+          background-position: center;
+          appearance: none;
+          &:checked {
+            background-image: url("/assets/imgs/icon-interactiv/check_box.svg");
+            height: 18px;
+            width: 18px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.checkbox-req {
+  display: none;
+}
+
+.required {
+  display: flex;
+  @include font(Karla, 14px, 400, var(--color-4));
+}
