@@ -47,6 +47,7 @@ section {
     gap: 72px;
     padding-top: 52px;
     .tech {
+      position: relative;
       @include font(FiraCode, var(--fontSize-2), 400, var(--color-2));
       @extend .d-flex-dirc-c;
       align-items: center;
@@ -54,7 +55,10 @@ section {
       height: 116px;
       gap: 8px;
       letter-spacing: -3%;
-      img {
+      p {
+        text-align: center;
+      }
+      > img {
         height: 60px;
         width: 60px;
         transition: all 0.2s ease-in;
@@ -69,4 +73,51 @@ section {
     width: 122px;
     white-space: nowrap;
   }
+}
+
+.future-tech {
+  opacity: 1;
+}
+
+.speech-bubble {
+  position: absolute;
+  height: 129px;
+  width: 188px;
+  opacity: 0;
+  background-image: url(/assets/imgs/icon-interactiv/speech_bubble.png);
+  top: -100%;
+  left: 0%;
+  z-index: 1;
+  transform: translateX(-2%);
+  @extend .d-flex-dirc-c;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  transition: opacity 200ms ease-in;
+  p {
+    @include font(Karla, var(--fontSize-1), 400, var(--color-1));
+  }
+  > div {
+    height: 50px;
+    width: 84px;
+    @extend .d-flex-align-c;
+    justify-content: center;
+    gap: 16px;
+    > div {
+      @extend .d-flex-dirc-c;
+      gap: 5px;
+      width: 33px;
+      > img {
+        width: 32px;
+        height: 32px;
+      }
+      > p {
+        @include font(Karla, 12px, bold, var(--color-1));
+      }
+    }
+  }
+}
+
+.future-tech:hover .speech-bubble {
+  opacity: 1;
 }
