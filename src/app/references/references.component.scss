@@ -1,6 +1,6 @@
 @use "./../shared/styles/index" as *;
 section {
-  height: 452px;
+  height: 542px;
   background-color: var(--color-3);
   @extend .d-flex-dirc-c;
   align-items: center;
@@ -8,52 +8,43 @@ section {
   .references {
     max-width: 1920px;
     @include font(Karla, var(--fontSize-2), 400, var(--color-2));
-    height: 276px;
-    width: 36%;
-    .referenc {
-      @extend .d-flex-dirc-c;
-      justify-content: space-between;
-      background-color: #3dcfb752;
-      border: 1px solid var(--color-1);
-      height: 100%;
-      border-radius: 30px;
-      padding: 46px 32px;
-      > div {
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        .line {
-          @extend .d-flex-align-c;
-          flex: 1;
-          height: 1px;
-          background-color: var(--color-2);
-        }
-        > p {
-          white-space: nowrap;
-          padding: 0 8px;
-        }
-      }
-    }
-  }
-  .slide-menu {
-    @extend .d-flex-align-c;
-    justify-content: center;
-    gap: 20px;
-    width: 184px;
-    height: 40px;
-    color: var(--color-2);
+    height: 380px;
+    display: flex;
+    overflow: hidden;
+    // justify-content: center;
     > div {
       @extend .d-flex-align-c;
+      gap: 48px;
+      max-width: 2420px;
+      // offsett der references
+      position: relative;
+      right: 700px;
+      // bottom: 0;
+    }
+  }
+  h1 {
+    @include font(FiraCode, var(--fontSize-5), 700, var(--color-1));
+  }
+}
+.slide-menu {
+  @extend .d-flex-align-c;
+  justify-content: center;
+  gap: 20px;
+  width: 184px;
+  height: 40px;
+  color: var(--color-2);
+  > div {
+    @extend .d-flex-align-c;
+    width: 40px;
+    height: 40px;
+    > img {
       width: 40px;
       height: 40px;
-      > img {
-        width: 40px;
-        height: 40px;
-      }
     }
   }
 }
 
-h1 {
-  @include font(FiraCode, var(--fontSize-5), 700, var(--color-1));
+.referenc {
+  transition: transform 1s ease-in-out;
+  transform: scale(1);
 }

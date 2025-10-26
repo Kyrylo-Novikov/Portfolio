@@ -1,21 +1,14 @@
 <section>
   <h1>What my colleagues say about me</h1>
   <div class="references">
-    <div class="referenc">
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis sed
-        alias eos quo explicabo, saepe, consequatur labore voluptatibus repellat
-        laudantium veritatis eaque quisquam nemo obcaecati dolor ratione facilis
-        fugit. Vero?
-      </p>
-      <div>
-        <div class="line"></div>
-        <p>Klaus Helmer</p>
-      </div>
+    <div [@slide]="menuState">
+      @for (ref of referenceArray(); track ref.name; let i = $index) {
+      <app-referenc [referenc]="ref" [active]="i === 2"></app-referenc>}
     </div>
   </div>
   <div class="slide-menu">
     <div
+      (click)="slide(+1)"
       (mouseover)="isHoveredLeft = true"
       (mouseleave)="isHoveredLeft = false"
     >
@@ -31,6 +24,7 @@
     <div>•</div>
     <div>•</div>
     <div
+      (click)="slide(-1)"
       (mouseover)="isHoveredRight = true"
       (mouseleave)="isHoveredRight = false"
     >
