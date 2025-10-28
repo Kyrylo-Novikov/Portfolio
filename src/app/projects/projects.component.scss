@@ -20,6 +20,7 @@ section {
       width: 100%;
       h1 {
         @include font(FiraCode, var(--fontSize-7), 700, var(--color-1));
+        height: 28px;
       }
       h2 {
         @include font($color: var(--color-1));
@@ -33,19 +34,74 @@ section {
       }
     }
     .projects {
-      width: 100%;
+      width: 1724px;
+
+      > div {
+        display: flex;
+        position: relative;
+        .project-img-wrapper {
+          width: 295px;
+          height: 192px;
+          position: absolute;
+          &::after {
+            transition: all 0.3s ease;
+            position: absolute;
+            content: "";
+            top: -140px;
+            left: 960px;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(
+              -45deg,
+              transparent,
+              transparent 9px,
+              var(--color-1) 9px,
+              var(--color-1) 10px
+            );
+            transform: translate(24px, 24px);
+            border-radius: 16px;
+            // opacity: 0;
+          }
+          // &:hover::after {
+          //   opacity: 1;
+          // }
+        }
+      }
+      .project-img {
+        position: absolute;
+        width: 295px;
+        height: 192px;
+        border-radius: 16px;
+        object-fit: cover;
+        transition: all 225ms ease-in-out;
+        left: 960px;
+        top: -140px;
+        z-index: 1;
+      }
     }
+
     .project {
       @include font($size: var(--fontSize-2), $weight: 400);
       @extend .d-flex-align-c;
       width: 880px;
       justify-content: space-between;
-      padding: 40px 32px;
+      padding: 0px 32px;
       border-width: 1px 0px 1px 0px;
       border-style: solid;
-
+      transition: all 225ms ease-in-out;
       border-color: #3dcfb6;
-
+      height: 109px;
+      .project-title {
+        @extend .d-flex-align-c;
+        gap: 4px;
+        width: 360px;
+        img {
+          width: 23px;
+          height: 23px;
+          object-fit: none;
+          transition: all 225ms ease-in-out;
+        }
+      }
       .project-name {
         @include font(FiraCode, var(--fontSize-4), 700);
       }

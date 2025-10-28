@@ -11,20 +11,43 @@
           skills in action.
         </p>
       </div>
-      <!-- platzhalter Projekte -->
       <div class="projects">
-        <div class="project">
-          <h2 class="project-name">Join</h2>
-          <div class="tech-for-project">html css javaScript</div>
+        @for (project of projectsArray; track project.name ; let i = $index) {
+        <div>
+          <div
+            class="project"
+            (mouseover)="hoverdIndex = i"
+            (mouseleave)="hoverdIndex = null"
+            [style.background-color]="
+              hoverdIndex === i ? '#3DCFB64D' : 'transparent'
+            "
+          >
+            <div class="project-title">
+              <h2 class="project-name">{{ project.name }}</h2>
+              <img
+                src="/assets/imgs/icon-interactiv/arrow_outward.svg"
+                alt=""
+                [style.opacity]="hoverdIndex === i ? 1 : 1"
+              />
+            </div>
+            <div class="tech-for-project">
+              {{ project.usedTechs }}
+            </div>
+          </div>
         </div>
-        <div class="project">
-          <h2 class="project-name">El Pollo Loco</h2>
-          <div class="tech-for-project">html css javaScript</div>
+        <div>
+          <div
+            class="project-img-wrapper"
+            [style.opacity]="hoverdIndex === i ? 1 : 0"
+            [ngStyle]="{
+              '--left-offset': '960px',
+              '--bottom-offset': i * 25 + -20 + 'px'
+            }"
+          >
+            <img class="project-img" src="{{ project.imgPath }}" alt="" />
+          </div>
         </div>
-        <div class="project">
-          <h2 class="project-name">Pokemon</h2>
-          <div class="tech-for-project">html css javaScript</div>
-        </div>
+        }
       </div>
     </div>
   </div>
