@@ -118,6 +118,10 @@ section {
   }
 }
 
+.speech-bubble {
+  pointer-events: none;
+}
+
 .future-tech:hover .speech-bubble {
   opacity: 1;
 }
