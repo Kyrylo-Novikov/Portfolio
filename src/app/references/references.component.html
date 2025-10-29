@@ -1,6 +1,11 @@
 <section>
   <h1>What my colleagues say about me</h1>
   <div class="references">
+    <img
+      src="/assets/imgs/icon-interactiv/quotes.svg"
+      alt=""
+      class="quotes-icon"
+    />
     <div [@slide]="menuState">
       @for (ref of referenceArray(); track ref.name; let i = $index) {
       <app-referenc [referenc]="ref" [active]="i === 2"></app-referenc>}
@@ -20,9 +25,9 @@
         "
       />
     </div>
-    <div>•</div>
-    <div>•</div>
-    <div>•</div>
+    @for (dot of [0,1,2]; track dot ; let i = $index) {
+    <div class="dot" [class.active]="i === currentIndex % 3">•</div>
+    }
     <div
       (click)="slide(-1)"
       (mouseover)="isHoveredRight = true"

@@ -20,18 +20,11 @@ import { timeout } from 'rxjs';
   imports: [ReferencComponent],
   templateUrl: './references.component.html',
   styleUrl: './references.component.scss',
-  // animations: [
-  //   trigger('slide', [
-  //     state('left', style({ transform: 'translateX(-33%)' })),
-  //     state('right', style({ transform: 'translateX(+33%)' })),
-  //     transition('left <=> right', [animate('1s ease-in')]),
-  //   ]),
-  // ],
 
   animations: [
     trigger('slide', [
-      state('left', style({ transform: 'translateX(-28.3%)' })),
-      state('right', style({ transform: 'translateX(28.3%)' })),
+      state('left', style({ transform: 'translateX(-32%)' })),
+      state('right', style({ transform: 'translateX(32%)' })),
       transition('* => left', [animate('1s ease-in-out')]),
       transition('* => right', [animate('1s ease-in-out')]),
     ]),
@@ -39,7 +32,7 @@ import { timeout } from 'rxjs';
 })
 export class ReferencesComponent {
   protected menuState: 'left' | 'right' | null = null;
-
+  currentIndex: number = 0;
   activIndex = signal(0);
   isHoveredLeft: boolean = false;
   isHoveredRight: boolean = false;
@@ -73,22 +66,18 @@ export class ReferencesComponent {
 
   slide(change: number) {
     this.menuState = change < 0 ? 'right' : 'left';
-
     setTimeout(() => {
-      this.referenceArray.update((arr) =>
-        change < 0
-          ? [arr[arr.length - 1], ...arr.slice(0, -1)]
-          : [...arr.slice(1), arr[0]]
-      );
-      this.menuState = null;
+      this.arrayUpdate(change);
     }, 1000);
-    // const arr = [...this.referenceArray()];
-    // if (change < 0) {
-    //   const last: { name: string; text: string } = arr.pop()!;
-    //   this.referenceArray.set([last, ...arr]);
-    // } else {
-    //   const first = arr.shift()!;
-    //   this.referenceArray.set([...arr, first]);
-    // }
+    this.currentIndex = (this.currentIndex + change + 3) % 3;
+  }
+
+  arrayUpdate(change: number) {
+    this.referenceArray.update((arr) =>
+      change < 0
+        ? [arr[arr.length - 1], ...arr.slice(0, -1)]
+        : [...arr.slice(1), arr[0]]
+    );
+    this.menuState = null;
   }
 }

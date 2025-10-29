@@ -6,20 +6,23 @@ section {
   align-items: center;
   justify-content: space-between;
   .references {
+    position: relative;
     max-width: 1920px;
     @include font(Karla, var(--fontSize-2), 400, var(--color-2));
     height: 380px;
     display: flex;
     overflow: hidden;
-    // justify-content: center;
+    .quotes-icon {
+      position: absolute;
+      left: 32%;
+      top: 28px;
+    }
     > div {
       @extend .d-flex-align-c;
-      gap: 48px;
+      gap: 140px;
       max-width: 2420px;
-      // offsett der references
       position: relative;
-      right: 700px;
-      // bottom: 0;
+      right: 900px;
     }
   }
   h1 {
@@ -47,4 +50,11 @@ section {
 .referenc {
   transition: transform 1s ease-in-out;
   transform: scale(1);
+}
+
+.dot {
+  &.active {
+    color: var(--color-1);
+    scale: 2;
+  }
 }
