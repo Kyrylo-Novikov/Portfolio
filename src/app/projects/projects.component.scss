@@ -99,6 +99,9 @@ section {
           transition: all 0.3s ease;
         }
       }
+      .tech-for-project > span {
+        color: var(--color-1);
+      }
       .project-name {
         @include font(FiraCode, var(--fontSize-4), 700);
       }

@@ -31,7 +31,10 @@
               />
             </div>
             <div class="tech-for-project">
-              {{ project.usedTechs }}
+              @for( tech of project.usedTechs;track tech; let last = $last){
+              {{ tech }}
+              @if(!last){
+              <span>|</span>}}
             </div>
           </div>
         </div>

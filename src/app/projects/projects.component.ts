@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-type Project = { name: string; usedTechs: string; imgPath: string };
+type Project = { name: string; usedTechs: string[]; imgPath: string };
 @Component({
   selector: 'app-projects',
   standalone: true,
@@ -14,17 +14,17 @@ export class ProjectsComponent {
   projectsArray: Project[] = [
     {
       name: 'Join',
-      usedTechs: 'Angular|TypeScript |HTML|CSS|Firebase',
+      usedTechs: ['Angular', 'TypeScript', 'HTML', 'CSS', 'Firebase'],
       imgPath: '/assets/imgs/projects/join.svg',
     },
     {
       name: 'El Pollo Loco',
-      usedTechs: 'HTML|CSS|JavaScript',
+      usedTechs: ['HTML', 'CSS', 'JavaScript'],
       imgPath: '/assets/imgs/projects/el-pollo-loco.svg',
     },
     {
       name: 'Pokemon',
-      usedTechs: 'HTML|CSS|JavaScript',
+      usedTechs: ['HTML', 'CSS', 'JavaScript'],
       imgPath: '/assets/imgs/projects/pokemon-searched.png',
     },
   ];
