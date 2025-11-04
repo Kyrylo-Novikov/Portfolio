@@ -7,7 +7,11 @@ section {
   font-family: "Karla";
   width: 100%;
   height: 695px;
-  background: radial-gradient(circle 320px at center left, #08463bbb, #1c1c1c);
+  background: radial-gradient(
+    circle 320px at center left,
+    var(--color-5),
+    var(--color-3)
+  );
   padding: 0 96px;
   .tech-info-head {
     @extend .d-flex-dirc-c;
@@ -93,7 +97,7 @@ section {
   align-items: center;
   gap: 8px;
   padding: 8px;
-  transition: opacity 200ms ease-in;
+  transition: all 200ms ease-in;
   p {
     @include font(Karla, var(--fontSize-1), 400, var(--color-1));
   }
@@ -118,10 +122,19 @@ section {
   }
 }
 
+p {
+  transition: all 200ms ease-in;
+}
+
 .speech-bubble {
   pointer-events: none;
 }
 
-.future-tech:hover .speech-bubble {
-  opacity: 1;
+.future-tech:hover {
+  p {
+    color: var(--color-1);
+  }
+  .speech-bubble {
+    opacity: 1;
+  }
 }
