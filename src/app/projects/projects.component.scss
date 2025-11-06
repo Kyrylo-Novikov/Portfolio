@@ -35,7 +35,7 @@ section {
     }
     .projects {
       width: 1724px;
-
+      z-index: 5;
       > div {
         display: flex;
         position: relative;
@@ -88,6 +88,7 @@ section {
       transition: all 0.3s ease-out;
       border-color: #3dcfb6;
       height: 109px;
+      cursor: pointer;
       .project-title {
         @extend .d-flex-align-c;
         gap: 4px;

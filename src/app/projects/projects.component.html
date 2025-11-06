@@ -15,6 +15,7 @@
         @for (project of projectsArray; track project.name ; let i = $index) {
         <div>
           <div
+            (click)="open(project)"
             class="project"
             (mouseover)="hoverdIndex = i"
             (mouseleave)="hoverdIndex = null"
@@ -30,6 +31,7 @@
                 [style.opacity]="hoverdIndex === i ? 1 : 0"
               />
             </div>
+
             <div class="tech-for-project">
               @for( tech of project.usedTechs;track tech; let last = $last){
               {{ tech }}
@@ -37,6 +39,7 @@
               <span>|</span>}}
             </div>
           </div>
+          <app-project-overlay></app-project-overlay>
         </div>
         <div>
           <div
@@ -46,6 +49,7 @@
             <img class="project-img" src="{{ project.imgPath }}" alt="" />
           </div>
         </div>
+
         }
       </div>
     </div>

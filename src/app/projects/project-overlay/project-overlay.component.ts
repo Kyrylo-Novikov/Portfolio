@@ -15,5 +15,10 @@ export class ProjectOverlayComponent {
 
   close() {
     this.overlay.close();
+    document.body.style.overflow = '';
+  }
+
+  next() {
+    this.overlay.next();
   }
 }

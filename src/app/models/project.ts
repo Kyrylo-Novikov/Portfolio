@@ -1,7 +1,7 @@
 import { TechName } from './tech-name.enum';
 
 export interface Project {
-  id: string;
+  id: number;
   name: string;
   description: string;
   usedTechs: TechName[];

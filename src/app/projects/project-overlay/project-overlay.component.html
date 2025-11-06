@@ -2,13 +2,15 @@
 <section class="project-overlay" (click)="close()">
   <div class="content" (click)="$event.stopPropagation()">
     <div class="left-overlay">
-      <div>
+      <div class="project-header">
         <h1>0{{ data.id }}</h1>
         <h2>{{ data.name }}</h2>
       </div>
-      <div>
-        <h3>What is this project about?</h3>
-        <p>{{ data.description }}</p>
+      <div class="project-information">
+        <div class="project-info-text">
+          <h3>What is this project about?</h3>
+          <p>{{ data.description }}</p>
+        </div>
         <div class="all-techs">
           @for (tech of data.usedTechs; track $index) {
           <div class="tech">
@@ -32,9 +34,11 @@
       </div>
     </div>
     <div class="right-overlay">
-      <div class="close"></div>
-      <div><img src="{{ data.imgPath }}" alt="" /></div>
-      <div class="next-project">
+      <div (click)="close()" class="close"></div>
+      <div class="project-img-wrapper">
+        <img src="{{ data.imgPath }}" alt="" />
+      </div>
+      <div class="next-project" (click)="next()">
         <p>Next project</p>
         <img src="assets/imgs/icon-interactiv/right-arrow-hover.png" alt="" />
       </div>
