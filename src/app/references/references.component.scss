@@ -16,6 +16,7 @@ section {
       position: absolute;
       left: 32%;
       top: 28px;
+      z-index: 1;
     }
     > div {
       @extend .d-flex-align-c;
