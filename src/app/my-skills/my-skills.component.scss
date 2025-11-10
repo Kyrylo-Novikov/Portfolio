@@ -29,7 +29,7 @@ section {
       gap: 40px;
     }
   }
-  h1,
+
   h2,
   h3 {
     @include font(FiraCode, var(--fontSize-4), 700, var(--color-1));
@@ -39,9 +39,6 @@ section {
   }
   h3 {
     width: 520px;
-  }
-  h1 {
-    font-size: 64px;
   }
   .all-techs {
     width: 50%;

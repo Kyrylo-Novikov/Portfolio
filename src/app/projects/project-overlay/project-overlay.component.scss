@@ -42,7 +42,7 @@
           line-height: 100px;
         }
         > h2 {
-          @include font(FiraCode, var(--fontSize-7), 700, var(--color-2));
+          @include font(Karla, var(--fontSize-7), 700, var(--color-2));
           height: 51px;
           line-height: 80%;
           letter-spacing: -3px;

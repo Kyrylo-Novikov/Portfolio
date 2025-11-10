@@ -9,3 +9,7 @@
   font-weight: $weight;
   color: $color;
 }
+
+@mixin green-headline {
+  @include font(FiraCode, var(--fontSize-7), 700, var(--color-1));
+}

@@ -1,3 +1,5 @@
+@use "../../shared/styles/mixins" as *;
+
 .d-flex-align-c {
   display: flex;
   align-items: center;
@@ -6,6 +8,10 @@
 .d-flex-dirc-c {
   display: flex;
   flex-direction: column;
+}
+
+.green-headline-700 {
+  @include green-headline();
 }
 
 .btn-container {

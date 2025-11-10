@@ -1,13 +1,8 @@
 @use "./../shared/styles/index" as *;
-
-h1 {
-  @include font(FiraCode, var(--fontSize-7), 700, var(--color-1));
-}
-
 section {
   color: var(--color-2);
-  padding: 80px 96px;
-  height: 702px;
+  padding: 0 96px;
+  height: 764px;
   background-color: var(--color-3);
   @extend .d-flex-dirc-c;
   align-items: center;

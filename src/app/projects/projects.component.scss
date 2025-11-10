@@ -18,10 +18,6 @@ section {
       @extend .d-flex-dirc-c;
       gap: 20px;
       width: 100%;
-      h1 {
-        @include font(FiraCode, var(--fontSize-7), 700, var(--color-1));
-        height: 28px;
-      }
       h2 {
         @include font($color: var(--color-1));
       }
