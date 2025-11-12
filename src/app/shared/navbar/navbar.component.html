@@ -7,21 +7,24 @@
   </div>
   <div class="header-links">
     <a
+      [routerLink]="['/']"
+      [fragment]="'about-me-section'"
       [class.aktiv]="aktivSection === 'about-me'"
       (click)="setAktiv('about-me')"
-      href="#about-me-section"
       >About me</a
     >
     <a
+      [routerLink]="['/']"
       [class.aktiv]="aktivSection === 'skills'"
       (click)="setAktiv('skills')"
-      href="#skill-section"
+      [fragment]="'skill-section'"
       >Skills</a
     >
     <a
+      [routerLink]="['/']"
       [class.aktiv]="aktivSection === 'projects'"
       (click)="setAktiv('projects')"
-      href="#portfolio-section"
+      [fragment]="'portfolio-section'"
       >Projects</a
     >
   </div>
