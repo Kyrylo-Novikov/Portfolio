@@ -18,6 +18,14 @@ export class ProjectsComponent implements OnInit {
   projectsArray: Project[] = [
     {
       id: 1,
+      name: 'El Pollo Loco',
+      description:
+        'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
+      usedTechs: [TechName.HTML, TechName.CSS, TechName.JavaScript],
+      imgPath: '/assets/imgs/projects/el-pollo-loco.svg',
+    },
+    {
+      id: 2,
       name: 'Join',
       description:
         'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
@@ -30,14 +38,7 @@ export class ProjectsComponent implements OnInit {
       ],
       imgPath: '/assets/imgs/projects/join.svg',
     },
-    {
-      id: 2,
-      name: 'El Pollo Loco',
-      description:
-        'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
-      usedTechs: [TechName.HTML, TechName.CSS, TechName.JavaScript],
-      imgPath: '/assets/imgs/projects/el-pollo-loco.svg',
-    },
+
     {
       id: 3,
       name: 'Pokedex',
