@@ -75,9 +75,7 @@ export class FormComponent implements OnInit {
     key.focus();
   }
 
-  ngOnInit(): void {
-    console.log(this.contactForm);
-  }
+  ngOnInit(): void {}
 
   errorBeforSubmit() {
     this.contactForm.markAllAsTouched();
