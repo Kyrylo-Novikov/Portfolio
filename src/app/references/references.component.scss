@@ -5,6 +5,7 @@ section {
   @extend .d-flex-dirc-c;
   align-items: center;
   justify-content: space-between;
+  padding-bottom: 80px;
   .references {
     position: relative;
     max-width: 1920px;
@@ -37,6 +38,9 @@ section {
   width: 184px;
   height: 40px;
   color: var(--color-2);
+  .ref-slider {
+    cursor: pointer;
+  }
   > div {
     @extend .d-flex-align-c;
     width: 40px;
