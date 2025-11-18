@@ -9,3 +9,20 @@ header {
   padding: 0 96px;
   height: 98px;
 }
+
+app-nav-mobile {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  header {
+    flex-direction: row-reverse;
+
+    app-nav-mobile {
+      display: flex;
+    }
+    app-navbar {
+      display: none;
+    }
+  }
+}

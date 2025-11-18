@@ -1,0 +1,41 @@
+<div class="burgermenu">
+  @if (!isOpen) {
+  <div (click)="toggelNav()">
+    <img src="assets/imgs/icon-interactiv/menu.svg" alt="menu button" />
+  </div>
+  } @else{
+  <div class="overlay-mobile-nav">
+    <nav class="mobile-nav" (click)="$event.stopPropagation()">
+      <div class="language-switch">
+        <input type="radio" name="language" id="eng-radio-small" />
+        <label for="eng-radio-small">EN</label>
+        <input type="radio" checked name="language" id="deu-radio-small" />
+        <label for="deu-radio-small">DE</label>
+      </div>
+      <div class="header-links">
+        <a
+          [routerLink]="['/']"
+          [fragment]="'about-me-section'"
+          [class.aktiv]="aktivSection === 'about-me'"
+          (click)="setAktiv('about-me')"
+          >About me</a
+        >
+        <a
+          [routerLink]="['/']"
+          [class.aktiv]="aktivSection === 'skills'"
+          (click)="setAktiv('skills')"
+          [fragment]="'skill-section'"
+          >Skills</a
+        >
+        <a
+          [routerLink]="['/']"
+          [class.aktiv]="aktivSection === 'projects'"
+          (click)="setAktiv('projects')"
+          [fragment]="'portfolio-section'"
+          >Projects</a
+        >
+      </div>
+    </nav>
+  </div>
+  }
+</div>

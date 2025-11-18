@@ -1,0 +1,97 @@
+@use "./../../shared/styles/index" as *;
+.burgermenu {
+}
+.overlay-mobile-nav {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  line-height: 120%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-color: #00000080;
+  .mobile-nav {
+    position: relative;
+    @extend .d-flex-align-c;
+    flex-direction: column-reverse;
+    gap: 24px;
+    width: 236px;
+    height: 252px;
+    font-family: "FiraCode";
+    left: 50vw;
+    top: 10vh;
+    border-radius: 30px;
+    padding: 40px 77px;
+    border: 1px solid var(--color-1);
+    background-image: linear-gradient(
+      45deg,
+      var(--color-3) 0%,
+      var(--color-3) 40%,
+      var(--color-5) 90%,
+      var(--color-5) 100%
+    );
+    a {
+      text-decoration: none;
+      position: relative;
+      color: #ffffff;
+      font-size: var(--fontSize-3);
+      &::after {
+        content: "•";
+        position: absolute;
+        bottom: -16px;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0;
+        color: var(--color-1);
+        transition: 0.2s;
+      }
+      &.aktiv::after,
+      &:hover::after {
+        opacity: 1;
+      }
+    }
+    .header-links {
+      gap: 24px;
+      @extend .d-flex-align-c;
+      white-space: nowrap;
+      flex-direction: column;
+    }
+    .language-switch {
+      @extend .d-flex-align-c;
+      font-size: var(--fontSize-1);
+      line-height: 120%;
+      height: 28px;
+      width: 84px;
+      border-radius: 100px;
+      border: 1px solid var(--color-1);
+      color: #3dcfb680;
+      transition: 0.2s;
+      input[type="radio"] {
+        display: none;
+        &:checked + label {
+          @extend .d-flex-align-c;
+          background-color: var(--color-1);
+          color: var(--color-2);
+          width: 44px;
+          height: 28px;
+          border-radius: 100px;
+          font-weight: 700;
+        }
+      }
+      &:has(input:not(:checked) + label:hover) {
+        color: var(--color-1);
+        border: 1px solid var(--color-2);
+      }
+      label {
+        @extend .d-flex-align-c;
+        justify-content: center;
+        width: 40px;
+      }
+    }
+  }
+}
+
+.aktiv {
+  color: var(--color-1) !important;
+}
