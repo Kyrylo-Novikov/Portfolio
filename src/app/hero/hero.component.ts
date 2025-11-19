@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { ScreenService } from '../services/screen/screen.service';
 
 @Component({
   selector: 'app-hero',
@@ -10,7 +11,7 @@ import { Component } from '@angular/core';
 export class HeroComponent {
   isInHoverd: boolean = false;
   isGitHoverd: boolean = false;
-
+  screen = inject(ScreenService);
   marqueeText: string[] = [
     'Based in Berlin',
     'Frontend Developer',

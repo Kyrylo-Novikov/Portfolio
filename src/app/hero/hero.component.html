@@ -22,7 +22,15 @@
     </div>
     <div class="side-right">
       <div class="email">
-        <a href="mailto:kyrylonovikov@gmail.com">kyrylonovikov&#64;gmail.com</a>
+        @if (screen.isMobile) {<a href="mailto:kyrylonovikov@gmail.com">
+          <img
+            class="mobile-mail-icon"
+            src="assets/imgs/icon-interactiv/mail.svg"
+            alt="writte me a mail"
+        /></a>
+        } @else {
+        <a href="mailto:kyrylonovikov@gmail.com">kyrylonovikov&#64;gmail.com</a
+        >}
       </div>
 
       <div class="social-icon">

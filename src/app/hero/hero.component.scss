@@ -159,7 +159,7 @@ h2 {
 
 .marquee {
   position: absolute;
-  bottom: 64px;
+  bottom: 38px;
   width: 110%;
   margin-left: -5%;
   height: 62px;
@@ -178,5 +178,69 @@ h2 {
   animation: marquee 10s linear infinite;
   white-space: nowrap;
   gap: 56px;
-  // will-change: transform;
+}
+
+@media (max-width: 1150px) {
+  h1 {
+    font-size: 82px;
+  }
+}
+
+@media (max-width: 800px) {
+  h2 {
+    font-size: var(--fontSize-4);
+  }
+  h1 {
+    font-size: var(--fontSize-7);
+  }
+  .side-left {
+    min-height: 296px;
+    left: 48px;
+    .separator {
+      height: 224px;
+    }
+  }
+  .side-right {
+    min-height: 256px;
+    right: 48px;
+    .separator {
+      height: 112px;
+    }
+    .email {
+      transform: unset;
+      width: unset;
+      left: 2px;
+      bottom: 10px;
+      position: relative;
+    }
+  }
+  .social-icon {
+    height: 76px;
+    bottom: 136px;
+  }
+  .marquee-wrapper {
+    min-height: 118px;
+  }
+}
+@media (max-width: 450px) {
+  h1 {
+    font-size: var(--fontSize-6);
+    text-align: center;
+  }
+  h2 {
+    font-size: var(--fontSize-3);
+  }
+
+  .side-left {
+    left: 16px;
+  }
+  .side-right {
+    right: 16px;
+  }
+  .btn-container {
+    gap: 8px;
+    .btn {
+      padding: 0 12px;
+    }
+  }
 }
