@@ -40,6 +40,7 @@
 
 @media (max-width: 800px) {
   .letter-animation {
+    width: unset;
     .name {
       display: none;
     }

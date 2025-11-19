@@ -4,7 +4,7 @@
     <img src="assets/imgs/icon-interactiv/menu.svg" alt="menu button" />
   </div>
   } @else{
-  <div class="overlay-mobile-nav">
+  <div class="overlay-mobile-nav" (click)="isOpen = false">
     <nav class="mobile-nav" (click)="$event.stopPropagation()">
       <div class="language-switch">
         <input type="radio" name="language" id="eng-radio-small" />

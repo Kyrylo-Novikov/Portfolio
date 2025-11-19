@@ -19,7 +19,7 @@
     width: 236px;
     height: 252px;
     font-family: "FiraCode";
-    left: 50vw;
+    left: 60vw;
     top: 10vh;
     border-radius: 30px;
     padding: 40px 77px;
@@ -94,4 +94,24 @@
 
 .aktiv {
   color: var(--color-1) !important;
+}
+
+@media (max-width: 600px) {
+  // .burgermenu {
+  .overlay-mobile-nav {
+    .mobile-nav {
+      left: 45vw;
+      top: 5vh;
+    }
+    // }
+  }
+}
+@media (max-width: 450px) {
+  // .burgermenu {
+  .overlay-mobile-nav {
+    .mobile-nav {
+      left: 22vw;
+    }
+    // }
+  }
 }
