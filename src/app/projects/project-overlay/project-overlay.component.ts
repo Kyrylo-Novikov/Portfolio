@@ -1,11 +1,10 @@
 import { Component, Input, computed, inject } from '@angular/core';
-import { OverlayService } from '../../services/overlay.service';
-import { NgIf } from '@angular/common';
+import { OverlayService } from '../../services/overlay/overlay.service';
 
 @Component({
   selector: 'app-project-overlay',
   standalone: true,
-  imports: [NgIf],
+  imports: [],
   templateUrl: './project-overlay.component.html',
   styleUrl: './project-overlay.component.scss',
 })

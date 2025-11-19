@@ -1,7 +1,7 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProjectOverlayComponent } from '../projects/project-overlay/project-overlay.component';
-import { OverlayService } from '../services/overlay.service';
+import { OverlayService } from '../services/overlay/overlay.service';
 import { Project } from '../../app/models/project';
 import { TechName } from '../models/tech-name.enum';
 
