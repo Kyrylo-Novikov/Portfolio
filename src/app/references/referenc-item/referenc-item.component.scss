@@ -2,6 +2,7 @@
 
 .referenc {
   @extend .d-flex-dirc-c;
+  justify-content: space-between;
   background-color: #3dcfb725;
   border: 1px solid var(--color-1);
   height: 274px;
@@ -9,7 +10,6 @@
   padding: 48px 40px;
   gap: 44px;
   width: 632px;
-  transform: scale(1);
   transition: transform 0.5s ease;
   > div {
     display: flex;

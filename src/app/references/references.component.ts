@@ -39,28 +39,28 @@ export class ReferencesComponent {
 
   referenceArray = signal<{ name: string; text: string }[]>([
     {
-      name: 'Andrè Zelmer - Team Partner',
-      text: 'Kyrylo has proven to be a reliable group partner. His technical skills and proactive approach were crucial to the success of our project.',
+      name: 'Andrè Zelmer - Team Partner (Join & Kochwelt)',
+      text: 'Mit Kyrylo habe ich an mehreren Projekten zusammengearbeitet. Beim Projekt „Join“ hat er den Bereich zur Erstellung von Aufgaben übernommen und zuverlässig geliefert. Technisch sehr kompetent und menschlich absolut unkompliziert – genau so jemanden wünscht man sich im Team.',
     },
     {
-      name: 'Zeljako Alacovic - Team Partner',
-      text: 'Kyrylo hat unsere Website komplett neu aufgebaut – modern, schnell und intuitiv. Besonders beeindruckt hat mich, wie klar und verständlich die Kommunikation während des Projekts war. Jede Idee wurde ernst genommen und technisch perfekt umgesetzt.',
+      name: 'Zeljako Alacovic - Team Partner (Join)',
+      text: 'Kyrylo übernahm die Verantwortung für die Eingabelogik und sorgte dafür, dass neue Tasks fehlerfrei an die API übertragen wurden. Seine präzise und stabile Implementierung bildete eine verlässliche Grundlage für das störungsfreie Speichern und Weiterverarbeiten der Daten im gesamten System.',
     },
     {
-      name: 'Stefan Krischan - Team Partner',
-      text: 'Kyrylo I had the good fortune of working with Simon in a group project at the Developer Akademie that involved a lot of effort. He always stayed calm, cool, and focused, and made sure our team was set up for success. He super knowledgeable, easy to work with, and Id happily work with him again given the chance.',
+      name: 'Stefan Krischan - Team Partner (Join)',
+      text: 'Die Zusammenarbeit mit Kyrylo war sowohl entspannt als auch sehr produktiv. Besonders hervorzuheben sind seine klare Kommunikation und seine zuverlässige Einhaltung von Deadlines – man weiß bei ihm immer genau, woran man ist. Eine durchweg professionelle Arbeitsweise.',
     },
     {
-      name: 'Andrè Zelmer - Team Partner',
-      text: 'Kyrylo has proven to be a reliable group partner. His technical skills and proactive approach were crucial to the success of our project.',
+      name: 'Andrè Zelmer - Team Partner (Join & Kochwelt)',
+      text: 'Mit Kyrylo habe ich an mehreren Projekten zusammengearbeitet. Beim Projekt „Join“ hat er den Bereich zur Erstellung von Aufgaben übernommen und zuverlässig geliefert. Technisch sehr kompetent und menschlich absolut unkompliziert – genau so jemanden wünscht man sich im Team.',
     },
     {
-      name: 'Zeljako Alacovic - Team Partner',
-      text: 'Kyrylo hat unsere Website komplett neu aufgebaut – modern, schnell und intuitiv. Besonders beeindruckt hat mich, wie klar und verständlich die Kommunikation während des Projekts war. Jede Idee wurde ernst genommen und technisch perfekt umgesetzt.',
+      name: 'Zeljako Alacovic - Team Partner (Join)',
+      text: 'Kyrylo übernahm die Verantwortung für die Eingabelogik und sorgte dafür, dass neue Tasks fehlerfrei an die API übertragen wurden. Seine präzise und stabile Implementierung bildete eine verlässliche Grundlage für das störungsfreie Speichern und Weiterverarbeiten der Daten im gesamten System.',
     },
     {
-      name: 'Stefan Krischan - Team Partner',
-      text: 'Kyrylo I had the good fortune of working with Simon in a group project at the Developer Akademie that involved a lot of effort. He always stayed calm, cool, and focused, and made sure our team was set up for success. He super knowledgeable, easy to work with, and Id happily work with him again given the chance.',
+      name: 'Stefan Krischan - Team Partner (Join)',
+      text: 'Die Zusammenarbeit mit Kyrylo war sowohl entspannt als auch sehr produktiv. Besonders hervorzuheben sind seine klare Kommunikation und seine zuverlässige Einhaltung von Deadlines – man weiß bei ihm immer genau, woran man ist. Eine durchweg professionelle Arbeitsweise.',
     },
   ]);
 
