@@ -55,3 +55,16 @@
 .highlight-legal-words {
   color: var(--color-2);
 }
+
+@media (max-width: 1100px) {
+  .green-headline-700 {
+    font-size: 56px;
+    line-height: 80%;
+  }
+}
+
+@media (max-width: 500px) {
+  .green-headline-700 {
+    font-size: 40px;
+  }
+}
