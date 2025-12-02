@@ -1,48 +1,50 @@
 <section id="skill-section">
-  <div class="tech-info-head">
-    <h3>Technologies</h3>
-    <div class="tech-info">
-      <h1 class="green-headline-700">Skill Set</h1>
-      <div class="tech-text">
-        <div>
-          A short introduction of your skills. Highlight your experience of
-          using different front-end technologies and emphasise your openness to
-          learning and adapting to new technologies. Show how important it is
-          for you to keep up with the rapid changes in web development.
-        </div>
-        <div class="call-to-contact">
-          <h2><span>You need </span> another skill?</h2>
+  <div class="wrapper-skills">
+    <div class="tech-info-head">
+      <h3>Technologies</h3>
+      <div class="tech-info">
+        <h1 class="green-headline-700">Skill Set</h1>
+        <div class="tech-text">
           <div>
-            Feel free to contact me. I look forward to expanding on my previous
-            knowledge.
+            A short introduction of your skills. Highlight your experience of
+            using different front-end technologies and emphasise your openness
+            to learning and adapting to new technologies. Show how important it
+            is for you to keep up with the rapid changes in web development.
+          </div>
+          <div class="call-to-contact">
+            <h2><span>You need </span> another skill?</h2>
+            <div>
+              Feel free to contact me. I look forward to expanding on my
+              previous knowledge.
+            </div>
           </div>
         </div>
-      </div>
-      <div class="btn-container">
-        <a class="btn" href="#contact-section"><span>Let's Talk</span></a>
+        <div class="btn-container">
+          <a class="btn" href="#contact-section"><span>Let's Talk</span></a>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="all-techs">
-    @for (tech of techsArr; track $index) {
-    <div class="tech" [class.future-tech]="tech.name === 'Growth Mindset'">
-      <div class="speech-bubble">
-        <p>I have a special interest in learning</p>
-        <div>
+    <div class="all-techs">
+      @for (tech of techsArr; track $index) {
+      <div class="tech" [class.future-tech]="tech.name === 'Growth Mindset'">
+        <div class="speech-bubble">
+          <p>I have a special interest in learning</p>
           <div>
-            <img src="/assets/imgs/tech-icon/futur/react.svg" alt="" />
-            <p>React</p>
-          </div>
-          <div>
-            <img src="/assets/imgs/tech-icon/futur/Vue Js.svg" alt="" />
-            <p>Vue</p>
+            <div>
+              <img src="/assets/imgs/tech-icon/futur/react.svg" alt="" />
+              <p>React</p>
+            </div>
+            <div>
+              <img src="/assets/imgs/tech-icon/futur/Vue Js.svg" alt="" />
+              <p>Vue</p>
+            </div>
           </div>
         </div>
+        <img [src]="tech.path" alt="{{ tech.name }}" />
+        <p>{{ tech.name }}</p>
       </div>
-      <img [src]="tech.path" alt="{{ tech.name }}" />
-      <p>{{ tech.name }}</p>
+      }
     </div>
-    }
   </div>
 </section>

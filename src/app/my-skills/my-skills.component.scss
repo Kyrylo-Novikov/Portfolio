@@ -3,6 +3,7 @@
 section {
   color: var(--color-2);
   display: flex;
+  justify-content: center;
   align-items: self-start;
   font-family: "Karla";
   padding: 24px 96px 98px;
@@ -11,6 +12,11 @@ section {
     var(--color-5),
     var(--color-3)
   );
+  > div {
+    display: flex;
+    max-width: 1720px;
+    width: 100%;
+  }
   .tech-info-head {
     @extend .d-flex-dirc-c;
     width: 50%;
@@ -157,6 +163,9 @@ p {
   section {
     flex-direction: column;
     padding: 28px;
+    .wrapper-skills {
+      flex-direction: column;
+    }
     .tech-info {
       padding: 32px 24px;
       gap: 32px;
@@ -209,7 +218,7 @@ p {
       }
     }
     .all-techs {
-      justify-content: center;
+      padding: 32px 10px;
       gap: 16px;
       .tech {
         gap: 8px;
