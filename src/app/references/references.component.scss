@@ -1,6 +1,5 @@
 @use "./../shared/styles/index" as *;
 section {
-  height: 542px;
   background-color: var(--color-3);
   @extend .d-flex-dirc-c;
   align-items: center;
@@ -10,25 +9,26 @@ section {
     position: relative;
     max-width: 1920px;
     @include font(Karla, var(--fontSize-2), 400, var(--color-2));
-    height: 380px;
     display: flex;
-    overflow: hidden;
     .quotes-icon {
       position: absolute;
-      left: 32%;
-      top: 28px;
+      left: 30%;
+      top: 10px;
       z-index: 1;
     }
-    > div {
+    > .slide-container {
       @extend .d-flex-align-c;
       gap: 140px;
       max-width: 2420px;
       position: relative;
       right: 900px;
+      padding: 40px 0;
     }
   }
   h1 {
     @include font(FiraCode, var(--fontSize-5), 700, var(--color-1));
+    width: 80vw;
+    text-align: center;
   }
 }
 .slide-menu {
@@ -54,12 +54,76 @@ section {
 
 .referenc {
   transition: transform 1s ease-in-out;
-  // transform: scale(1);
 }
 
 .dot {
   &.active {
     color: var(--color-1);
     scale: 2;
+  }
+}
+
+@media (max-width: 1024px) {
+  section {
+    .references {
+      .slide-container {
+        gap: 80px;
+        right: 450px;
+      }
+      .quotes-icon {
+        left: 34%;
+        top: 8px;
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  section {
+    .references {
+      .slide-container {
+        gap: 40px;
+        right: 120px;
+      }
+      .quotes-icon {
+        left: 38%;
+        top: 8px;
+        height: 52px;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  section {
+    .references {
+      .slide-container {
+        gap: 24px;
+        right: -62px;
+        max-height: 600px;
+      }
+      .quotes-icon {
+        left: 40%;
+        top: -2px;
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  section {
+    h1 {
+      font-size: var(--fontSize-4);
+    }
+    .references {
+      .slide-container {
+        gap: 24px;
+        right: -152px;
+      }
+      .quotes-icon {
+        left: 41.3%;
+        top: 4px;
+      }
+    }
   }
 }

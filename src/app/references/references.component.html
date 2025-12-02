@@ -6,7 +6,15 @@
       alt=""
       class="quotes-icon"
     />
-    <div [@slide]="menuState">
+    <div
+      class="slide-container"
+      [@slide]="{
+        value: menuState,
+        params: {
+          animationDist: animationDist,
+        }
+      }"
+    >
       @for (ref of referenceArray(); track ref.name; let i = $index) {
       <app-referenc [referenc]="ref" [active]="i === 2"></app-referenc>}
     </div>
