@@ -3,7 +3,7 @@
 form {
   @extend .d-flex-dirc-c;
   align-items: center;
-  width: 616px;
+  // max-width: 616px;
   height: 550px;
   gap: 40px;
   .question-wrapper {
@@ -14,21 +14,22 @@ form {
       border-width: 1px 0px 1px 0px;
       border-style: solid;
       border-color: #3dcfb680;
-      > div {
+      > .wrapper-sing-question {
         @extend .d-flex-dirc-c;
         gap: 16px;
         padding: 32px;
-        width: 352.5px;
+        // width: 352.5px;
         position: relative;
         > h2 {
           @include font(FiraCode, var(--fontSize-4), 500, #3dcfb6);
+          white-space: nowrap;
         }
         > input {
           @include font(Karla, var(--fontSize-2), 400, var(--color-2));
           background-color: transparent;
           border: none;
           outline: none;
-          width: 400px;
+          // width: 400px;
           cursor: pointer;
         }
       }
@@ -48,7 +49,7 @@ form {
   .send-wrapper {
     @extend .d-flex-dirc-c;
     gap: 16px;
-    width: 100%;
+    // width: 100%;
     .policy-check {
       width: 100%;
     }
@@ -103,6 +104,28 @@ form {
 }
 
 .required {
+  height: var(--fontSize-6);
   opacity: 1;
   @include font(Karla, 14px, 400, var(--color-4));
+}
+
+@media (max-width: 800px) {
+  form {
+    .question-wrapper {
+      .question {
+        .wrapper-sing-question {
+          padding: 32px 0;
+          h2 {
+            font-size: var(--fontSize-3);
+          }
+          > input {
+            font-size: var(--fontSize-1);
+          }
+        }
+        .error {
+          top: 76px;
+        }
+      }
+    }
+  }
 }

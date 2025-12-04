@@ -82,4 +82,14 @@ export class FormComponent implements OnInit {
   }
 
   onSubmit(): void {}
+
+  submitForm() {
+    if (this.contactForm.valid) {
+      fetch('https://formspree.io/f/mwpgbywv', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(this.contactForm.value),
+      }).then(() => console.log('sent', this.contactForm.value));
+    }
+  }
 }

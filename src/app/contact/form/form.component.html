@@ -1,7 +1,12 @@
-<form action="" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+<form
+  action="https://formspree.io/f/mwpgbywv"
+  method="POST"
+  [formGroup]="contactForm"
+  (ngSubmit)="submitForm()"
+>
   <div class="question-wrapper">
     <div class="question">
-      <div>
+      <div class="wrapper-sing-question">
         <h2>What's your name?</h2>
         <input
           formControlName="name"
@@ -18,7 +23,7 @@
       </div>
     </div>
     <div class="question">
-      <div>
+      <div class="wrapper-sing-question">
         <h2>What's your email?</h2>
         <input
           formControlName="email"
@@ -39,7 +44,7 @@
       </div>
     </div>
     <div class="question">
-      <div>
+      <div class="wrapper-sing-question">
         <h2>How can I help you ?</h2>
         <input
           formControlName="message"
