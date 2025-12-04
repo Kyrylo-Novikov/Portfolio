@@ -1,22 +1,23 @@
 @use "./../shared/styles/index" as *;
 section {
   color: var(--color-2);
-  padding: 0 96px;
-  height: 764px;
+  padding: 20px 96px 260px;
+  // height: 764px;
   background-color: var(--color-3);
   @extend .d-flex-dirc-c;
-  align-items: center;
+  // align-items: center;
   .contact-wrapper {
     display: flex;
-    width: 1248px;
-    height: 542px;
+    gap: 64px;
+    // width: 1248px;
+    // height: 542px;
     justify-content: space-between;
   }
   .call-to-action-wrapper {
     @extend .d-flex-dirc-c;
     gap: 40px;
-    width: 568px;
-    height: 337px;
+    width: 50%;
+    // height: 337px;
     .headline-wrapper h2 {
       @include font(Karla, var(--fontSize-4), 500, var(--color-1));
     }
@@ -33,6 +34,40 @@ section {
           color: var(--color-1);
         }
       }
+    }
+  }
+}
+
+app-form {
+  width: 50%;
+}
+
+@media (max-width: 800px) {
+  section {
+    padding: 20px 56px 260px;
+    .contact-wrapper {
+      flex-direction: column;
+      .call-to-action-wrapper {
+        width: 100%;
+        .call-to-action {
+          h2 {
+            font-size: var(--fontSize-3);
+          }
+        }
+      }
+      app-form {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  section {
+    padding: 20px 0px 260px;
+    align-items: center;
+    .contact-wrapper {
+      width: 90vw;
     }
   }
 }
