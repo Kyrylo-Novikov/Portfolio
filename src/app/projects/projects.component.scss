@@ -105,6 +105,10 @@ section {
   }
 }
 
+app-project-overlay {
+  z-index: 999;
+}
+
 @media (max-width: 1400px) {
   section {
     .content-portfolio {

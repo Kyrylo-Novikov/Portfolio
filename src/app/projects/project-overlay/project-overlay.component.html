@@ -1,47 +1,49 @@
 @if(project(); as data){
 <section class="project-overlay" (click)="close()">
   <div class="content" (click)="$event.stopPropagation()">
-    <div class="left-overlay">
-      <div class="project-header">
-        <h1>0{{ data.id }}</h1>
-        <h2>{{ data.name }}</h2>
-      </div>
-      <div class="project-information">
-        <div class="project-info-text">
-          <h3>What is this project about?</h3>
-          <p>{{ data.description }}</p>
+    <div class="wrapper-both-sids">
+      <div class="left-overlay">
+        <div class="project-header">
+          <h1>0{{ data.id }}</h1>
+          <h2>{{ data.name }}</h2>
         </div>
-        <div class="all-techs">
-          @for (tech of data.usedTechs; track $index) {
-          <div class="tech">
-            <img src="assets/imgs/tech-icon/overlay/{{ tech }}.svg" alt="" />
-            <p>{{ tech }}</p>
+        <div class="project-information">
+          <div class="project-info-text">
+            <h3>What is this project about?</h3>
+            <p>{{ data.description }}</p>
           </div>
-          }
+          <div class="all-techs">
+            @for (tech of data.usedTechs; track $index) {
+            <div class="tech">
+              <img src="assets/imgs/tech-icon/overlay/{{ tech }}.svg" alt="" />
+              <p>{{ tech }}</p>
+            </div>
+            }
+          </div>
+        </div>
+        <div>
+          <div class="btn-container">
+            <a class="btn"
+              >GitHub
+              <img src="assets/imgs/icon-interactiv/arrow_green.svg" alt=""
+            /></a>
+            <div class="btn">
+              Live Test
+              <img src="assets/imgs/icon-interactiv/arrow_green.svg" alt="" />
+            </div>
+          </div>
         </div>
       </div>
-      <div>
-        <div class="btn-container">
-          <a class="btn"
-            >GitHub
-            <img src="assets/imgs/icon-interactiv/arrow_green.svg" alt=""
-          /></a>
-          <div class="btn">
-            Live Test
-            <img src="assets/imgs/icon-interactiv/arrow_green.svg" alt="" />
-          </div>
+      <div class="right-overlay">
+        <div (click)="close()" class="close"></div>
+        <div class="project-img-wrapper">
+          <img src="{{ data.imgPath }}" alt="" />
         </div>
       </div>
     </div>
-    <div class="right-overlay">
-      <div (click)="close()" class="close"></div>
-      <div class="project-img-wrapper">
-        <img src="{{ data.imgPath }}" alt="" />
-      </div>
-      <div class="next-project" (click)="next()">
-        <p>Next project</p>
-        <img src="assets/imgs/icon-interactiv/right-arrow-hover.png" alt="" />
-      </div>
+    <div class="next-project" (click)="next()">
+      <p>Next project</p>
+      <img src="assets/imgs/icon-interactiv/right-arrow-hover.png" alt="" />
     </div>
   </div>
 </section>

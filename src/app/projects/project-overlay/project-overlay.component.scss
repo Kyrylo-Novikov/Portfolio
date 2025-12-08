@@ -3,7 +3,8 @@
   position: fixed;
   width: 100%;
   height: 100%;
-  line-height: 120%;
+  // line-height: 120%;
+  z-index: 999;
   left: 0;
   right: 0;
   bottom: 0;
@@ -12,15 +13,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
   .content {
-    display: flex;
-    justify-content: space-between;
+    @extend .d-flex-dirc-c;
+
     border-radius: 30px;
     border: 1px solid var(--color-1);
     padding: 80px;
-    width: 100%;
-    max-width: 1248px;
-    max-height: 656px;
+    width: 90vw;
+    // gap: 44px;
     background-image: linear-gradient(
       45deg,
       var(--color-3) 0%,
@@ -28,8 +29,12 @@
       var(--color-5) 90%,
       var(--color-5) 100%
     );
+    .wrapper-both-sids {
+      display: flex;
+      gap: 8px;
+    }
     .left-overlay {
-      width: 480px;
+      width: 50%;
       @extend .d-flex-dirc-c;
       gap: 40px;
       .project-header {
@@ -37,8 +42,8 @@
         gap: 24px;
         > h1 {
           @include font(Karla, var(--fontSize-8), 700, var(--color-1));
-          height: 100px;
-          width: 156px;
+          // height: 100px;
+          max-width: 156px;
           line-height: 100px;
         }
         > h2 {
@@ -63,7 +68,9 @@
       .all-techs {
         display: flex;
         @include font(Karla, var(--fontSize-1), 100, var(--color-2));
-        gap: 16px;
+        gap: 12px;
+        flex-wrap: wrap;
+        // justify-content: center;
         .tech {
           display: flex;
           gap: 4px;
@@ -81,19 +88,20 @@
       }
     }
     .right-overlay {
-      width: 540px;
+      width: 50%;
       display: flex;
       flex-direction: column;
       align-items: end;
-      justify-content: space-between;
+      // justify-content: space-between;
       .project-img-wrapper {
-        width: 520px;
+        width: 100%;
         border-radius: 30px;
-        height: 370px;
+        min-height: 370px;
         img {
-          width: 520px;
+          width: 100%;
+          // max-width: 520px;
           border-radius: 30px;
-          height: 370px;
+          min-height: 370px;
         }
       }
       .close {
@@ -109,26 +117,114 @@
             no-repeat;
         }
       }
-      .next-project {
-        @include font(Karla, var(--fontSize-2), 400, var(--color-1));
-        @extend .d-flex-align-c;
-        width: 151px;
-        height: 22px;
-        gap: 8px;
-        transform: translateY(150%);
-        justify-content: center;
-        transition: all 100ms ease-in;
-        cursor: pointer;
-        img {
-          height: 32px;
-          transform: translateY(0);
-          transition: all 100ms ease-in;
+    }
+  }
+}
+
+.next-project {
+  @include font(Karla, var(--fontSize-2), 400, var(--color-1));
+  @extend .d-flex-align-c;
+  // width: 151px;
+  height: 22px;
+  gap: 8px;
+  transform: translateY(150%);
+  justify-content: end;
+  transition: all 100ms ease-in;
+  cursor: pointer;
+  img {
+    height: 32px;
+    transform: translateY(0);
+    transition: all 100ms ease-in;
+  }
+  &:hover {
+    color: var(--color-2);
+    img {
+      scale: 1.2;
+      transform: translateX(10%);
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .project-overlay {
+    .content {
+      padding: 44px 28px;
+      .left-overlay {
+        .project-header {
+          > h2 {
+            white-space: nowrap;
+          }
         }
-        &:hover {
-          color: var(--color-2);
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .project-overlay {
+    .content {
+      padding: 44px 20px;
+      .wrapper-both-sids {
+        flex-direction: column-reverse;
+      }
+      .left-overlay {
+        width: 100%;
+        gap: 16px;
+        .project-header {
+          gap: 14px;
+          > h1 {
+            font-size: var(--fontSize-7-ext);
+          }
+          > h2 {
+            font-size: var(--fontSize-6-ext);
+          }
+        }
+      }
+      .right-overlay {
+        width: 100%;
+        .project-img-wrapper {
+          display: flex;
+          min-height: 200px;
           img {
-            scale: 1.2;
-            transform: translateX(10%);
+            position: relative;
+            width: 100%;
+            align-self: center;
+            min-height: 200px;
+            max-height: 250px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .project-overlay {
+    .content {
+      padding: 44px 20px;
+      .wrapper-both-sids {
+        flex-direction: column-reverse;
+      }
+      .left-overlay {
+        gap: 8px;
+        .project-header {
+          gap: 14px;
+          > h1 {
+            font-size: var(--fontSize-6-ext);
+          }
+          > h2 {
+            font-size: var(--fontSize-6);
+          }
+        }
+      }
+      .right-overlay {
+        .project-img-wrapper {
+          img {
+            position: relative;
+            width: 100%;
+            align-self: center;
+            min-height: 200px;
+            max-height: 250px;
           }
         }
       }
