@@ -8,13 +8,17 @@ section {
   align-items: center;
   .footer-wrapper {
     padding: 0 96px;
-    bottom: 40px;
+    bottom: 42px;
     position: absolute;
     min-height: 126px;
     max-width: calc(1920px - 192px);
     @extend .d-flex-align-c;
     justify-content: space-between;
-    width: calc(100% - 192px);
+    width: 100%;
+    .footer-info {
+      width: 100px;
+      height: 10px;
+    }
     .links-to,
     .info-footer {
       @extend .d-flex-dirc-c;
@@ -23,7 +27,7 @@ section {
     .info-footer {
       position: absolute;
       bottom: 0;
-      left: 0;
+      // left: 0;
     }
     .footer-name > p {
       @include font(FiraCode, var(--fontSize-2), 400, var(--color-1));
@@ -59,5 +63,27 @@ section {
 app-letter-name {
   position: absolute;
   top: 0;
-  left: 0;
+  // left: 0;
+}
+
+@media (max-width: 800px) {
+  section {
+    .footer-wrapper {
+      padding: 0 56px;
+      .footer-name {
+        position: absolute;
+        top: 120%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        min-width: 180px;
+      }
+    }
+  }
+}
+@media (max-width: 400px) {
+  section {
+    .footer-wrapper {
+      padding: 0 18px;
+    }
+  }
 }
