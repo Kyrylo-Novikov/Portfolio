@@ -101,12 +101,11 @@ form {
 
 .checkbox-req {
   opacity: 0;
+  @include font(Karla, 14px, 400, var(--color-4));
 }
 
 .required {
-  height: var(--fontSize-6);
   opacity: 1;
-  @include font(Karla, 14px, 400, var(--color-4));
 }
 
 @media (max-width: 800px) {

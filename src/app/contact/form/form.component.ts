@@ -70,11 +70,6 @@ export class FormComponent implements OnInit {
     return (inputControl?.invalid && inputControl?.touched) ?? false;
   }
 
-  fokusInput(fieldName: FieldName) {
-    const key = this[`${fieldName}Input` as `${FieldName}Input`].nativeElement;
-    key.focus();
-  }
-
   ngOnInit(): void {}
 
   errorBeforSubmit() {

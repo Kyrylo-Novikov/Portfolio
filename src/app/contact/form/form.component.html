@@ -5,7 +5,7 @@
   (ngSubmit)="submitForm()"
 >
   <div class="question-wrapper">
-    <div class="question">
+    <div class="question" (click)="nameInput.focus()">
       <div class="wrapper-sing-question">
         <h2>What's your name?</h2>
         <input
@@ -16,13 +16,13 @@
           #nameInput
         />
         @if(nameError){
-        <div [class.error]="error('name')" (click)="fokusInput('name')">
+        <div [class.error]="error('name')">
           Oops! it seems your name is missing
         </div>
         }
       </div>
     </div>
-    <div class="question">
+    <div class="question" (click)="emailInput.focus()">
       <div class="wrapper-sing-question">
         <h2>What's your email?</h2>
         <input
@@ -33,17 +33,13 @@
           #emailInput
         />
         @if (emailError) { @if(emailRequiredError){
-        <div (click)="fokusInput('email')" [class.error]="error('email')">
-          Hoppla! your email is required
-        </div>
+        <div [class.error]="error('email')">Hoppla! your email is required</div>
         } @if(emailFormatError) {
-        <div (click)="fokusInput('email')" [class.error]="error('email')">
-          Please enter a valid email
-        </div>
+        <div [class.error]="error('email')">Please enter a valid email</div>
         } }
       </div>
     </div>
-    <div class="question">
+    <div class="question" (click)="messageInput.focus()">
       <div class="wrapper-sing-question">
         <h2>How can I help you ?</h2>
         <input
@@ -54,9 +50,7 @@
           #messageInput
         />
         @if (messagError) {
-        <div (click)="fokusInput('message')" [class.error]="error('message')">
-          What do you need to develop?
-        </div>
+        <div [class.error]="error('message')">What do you need to develop?</div>
         }
       </div>
     </div>
