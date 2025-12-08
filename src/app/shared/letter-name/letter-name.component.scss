@@ -39,7 +39,7 @@
 }
 
 @media (max-width: 800px) {
-  .letter-animation {
+  .letter-animation.hide-name-on-mobile {
     width: unset;
     .name {
       display: none;
