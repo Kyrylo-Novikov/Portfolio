@@ -1,0 +1,94 @@
+{
+  "NAV": {
+    "ABOUT_ME": "Über mich",
+    "SKILLS": "Fähigkeiten",
+    "PROJECTS": "Projekte"
+  },
+  "HERO": {
+    "TITEL": "Frontend-Entwickler",
+    "BTN1": "Meine Arbeit",
+    "BTN2": "Kontaktiere mich",
+    "MARQUEE": {
+      "LOCATION": "Standort Berlin",
+      "POSITION": "Frontend Entwickler",
+      "OPEN_TO_WORK": "Offen für neue Projekte",
+      "REMOTE_AVAILABLE": "Verfügbar für Remote-Arbeit"
+    }
+  },
+  "ABOUT_ME": {
+    "HEADLINE": "Wer bin ich",
+    "TITEL": "Über mich",
+    "GENERAL_TEXT": "Hallo, Ich bin Kyrylo! Jedes Mal, wenn ein Projekt von mir Form annimmt und am Ende funktioniert, bekomme ich ein fast kindliches Glücksgefühl. Programmieren ist für mich wie ein leeres Blatt Papier, auf dem jede Idee Wirklichkeit werden kann. Manche Herausforderungen wirken im ersten Moment einschüchternd, doch gerade die vielen möglichen Lösungswege in der IT inspirieren und motivieren mich, immer weiter zu lernen.",
+    "LOCATION": "Ich habe Spaß daran, neue Technologien auszuprobieren und mich immer wieder auf unbekanntes Terrain zu wagen. Jede neue Herausforderung ist eine Gelegenheit, meine Fähigkeiten auszubauen und kreative Lösungsansätze zu entdecken.",
+    "MINDSET": "Bei Problemen analysiere ich die Situation sorgfältig, teste unterschiedliche Ansätze und verfolge die Lösung so lange, bis sie effizient und stimmig ist. Dabei helfen mir analytisches Denken, Ausdauer und Kreativität. Aus jeder Herausforderung nehme ich neue Erkenntnisse mit, die meine Arbeitsweise weiter verbessern.",
+    "PROBLEM_SOLVING": "Programmieren fasziniert mich, weil ich Ideen unmittelbar umsetzen kann und gestalterische Freiheit habe. Die Möglichkeit, komplexe Zusammenhänge zu verstehen und Lösungen zu entwickeln, treibt mich an und motiviert mich, kontinuierlich neue Konzepte zu erlernen."
+  },
+  "MY_SKILLS": {
+    "INTRODUCTION": "Ich bin eine motivierte Frontend-Entwickler mit Erfahrung in HTML, CSS/SCSS, JavaScript, TypeScript und Angular. Mein Fokus liegt auf sauberen, responsiven und wartbaren Benutzeroberflächen sowie auf der kontinuierlichen Verbesserung meines Codes und meiner Arbeitsweise. Ergänzend dazu baue ich mir aktuell Backend-Kenntnisse auf, um ein besseres Verständnis für vollständige Anwendungsarchitekturen zu entwickeln. Offenheit für neue Technologien und das Mitgehen mit den schnellen Veränderungen der Webentwicklung sind für mich essenziell.",
+    "QUESTION_Y": "Sie benötigen ",
+    "QUESTION_A": "andere Fähigkeiten?",
+    "CALL_TO_ACTION": "Kontaktieren Sie mich gerne. Ich freue mich darauf, mein bisheriges Wissen weiter auszubauen.",
+    "BTN": "Lassen Sie uns reden!",
+    "BUBBLE": "Ich habe besonderes Interesse an "
+  },
+  "PROJECTS": {
+    "TITEL": "Projekthighlights",
+    "TEXT": "Entdecken Sie hier eine Auswahl meiner Arbeiten – interagieren Sie mit den Projekten, um meine Fähigkeiten in Aktion zu sehen."
+  },
+  "PROJECTS_OVERLAY": {
+    "EL_POLLO_LOCO": {
+      "TEXT": "Ein Jump-and-Run-Spiel, das auf einem objektorientierten Ansatz basiert. Hilf Pepe, Münzen und Tabasco-Soße zu finden, um gegen das verrückte Huhn zu kämpfen."
+    },
+    "JOIN": {
+      "TEXT": "Ein Task-Manager, inspiriert vom Kanban-System. Aufgaben können per Drag-and-Drop erstellt und organisiert sowie Nutzer:innen und Kategorien zugewiesen werden."
+    },
+    "POKEDEX": {
+      "TEXT": "Ein Frontend-Projekt, das die PokéAPI integriert, um Pokémon-Daten dynamisch darzustellen. Nutzer:innen können Pokémon durchsuchen, ihre Werte vergleichen und ihre Evolutionsketten erkunden."
+    },
+    "QUESTION_OVERLAY": "Worum geht es in diesem Projekt?",
+    "BTN": "Nächstes Projekt"
+  },
+  "REFERENZES": {
+    "TITEL": "Was meine Kollegen über mich sagen",
+    "REF_1": {
+      "NAME": "A.Zelmer - Team Partner (Join & Kochwelt)",
+      "TEXT": "Mit Kyrylo habe ich an mehreren Projekten zusammengearbeitet. Beim Projekt „Join“ hat er den Bereich zur Erstellung von Aufgaben übernommen und zuverlässig geliefert. Technisch sehr kompetent und menschlich absolut unkompliziert – genau so jemanden wünscht man sich im Team."
+    },
+    "REF_2": {
+      "NAME": "Z.Alacovic - Team Partner (Join)",
+      "TEXT": "Kyrylo übernahm die Verantwortung für die Eingabelogik und sorgte dafür, dass neue Tasks fehlerfrei an die API übertragen wurden. Seine präzise und stabile Implementierung bildete eine verlässliche Grundlage für das störungsfreie Speichern und Weiterverarbeiten der Daten im gesamten System."
+    },
+    "REF_3": {
+      "NAME": "S.Krischan - Team Partner (Join)",
+      "TEXT": "Die Zusammenarbeit mit Kyrylo war sowohl entspannt als auch sehr produktiv. Besonders hervorzuheben sind seine klare Kommunikation und seine zuverlässige Einhaltung von Deadlines – man weiß bei ihm immer genau, woran man ist. Eine durchweg professionelle Arbeitsweise."
+    }
+  },
+  "CONTACT": {
+    "HEADER": "Kontaktieren Sie mich",
+    "TITLE": "Lassen Sie uns zusammenarbeiten",
+    "QUESTION_PROBLEM": "Haben Sie ein Problem zu lösen?",
+    "TEXT": "Wenn Sie auf der Suche nach einem motivierten Frontend-Entwickler sind, der Wert auf sauberen Code, gute Usability und kontinuierliches Lernen legt, freue ich mich über Ihre Kontaktaufnahme.",
+    "QUESTION_NEED": "Benötigen Sie eine Frontend-Entwickler? ",
+    "CALL_TO_ACTION": "Lassen Sie uns reden!"
+  },
+  "FORM": {
+    "QUESTION_NAME": "Wie ist Ihr Name?",
+    "QUESTION_EMAIL": "Wie lautet Ihre E-Mail-Adresse?",
+    "QUESTION_TOPIC": "Wie kann ich Ihnen helfen?",
+    "INPUT_NAME_REQ": "Ups! Es scheint, dass Ihr Name fehlt.",
+    "INPUT_EMAIL_REQ": "Hoppla! Ihre E-Mail-Adresse fehlt.",
+    "INPUT_EMAIL_VALIDE": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+    "INPUT_TOPIC": "Was soll entwickelt werden?",
+    "POLICY_CHECK": {
+      "FIRST": "Ich habe die",
+      "SECOND": "Datenschutzbestimmungen",
+      "THIRD": "gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu"
+    },
+    "POLICY_CHECK_REQ": "Bitte akzeptieren Sie die Datenschutzrichtlinie.",
+    "INPUT_TOPIC_REQ": "Was soll entwickelt werden?",
+    "SEND_BTN": "Sag Hallo ;)",
+    "PLACEHOLDER_NAME": "Dein Name",
+    "PLACEHOLDER_EMAIL": "deineemail@email.com",
+    "PLACEHOLDER_TOPIC": "Hallo Kyrylo, ich bin interessiert an …"
+  }
+}

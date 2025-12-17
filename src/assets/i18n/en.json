@@ -1,0 +1,94 @@
+{
+  "NAV": {
+    "ABOUT_ME": "About me",
+    "SKILLS": "Skills",
+    "PROJECTS": "Projects"
+  },
+  "HERO": {
+    "TITEL": "Frontend Developer",
+    "BTN1": "Check my work",
+    "BTN2": "Contact me",
+    "MARQUEE": {
+      "LOCATION": "Based in Berlin",
+      "POSITION": "Frontend Developer",
+      "OPEN_TO_WORK": "Open to work",
+      "REMOTE_AVAILABLE": "Available for remote work"
+    }
+  },
+  "ABOUT_ME": {
+    "HEADLINE": "Who I Am",
+    "TITEL": "About me",
+    "GENERAL_TEXT": "Hello, I’m Kyrylo. Whenever a project I’ve worked on comes together and finally works, I get a childlike sense of joy. Programming feels like a blank sheet of paper where any idea can become reality. Challenges can seem intimidating at first, but the many different solution paths in IT inspire and motivate me to keep learning.",
+    "LOCATION": "I enjoy exploring new technologies and venturing into unfamiliar areas. Every challenge is an opportunity to expand my skills and discover creative approaches.",
+    "MINDSET": "When facing problems, I carefully analyze the situation, test different methods, and pursue solutions until they are both efficient and elegant. Analytical thinking, persistence, and creativity guide me, and I always take lessons from every challenge to refine my approach.",
+    "PROBLEM_SOLVING": "Programming fascinates me because it allows me to turn ideas into reality and exercise creative freedom. Understanding complex systems and developing solutions motivates me to continuously learn new concepts."
+  },
+  "MY_SKILLS": {
+    "INTRODUCTION": "I am a motivated front-end developer with experience in HTML, CSS/SCSS, JavaScript, TypeScript, and Angular. I focus on building clean, responsive, and maintainable user interfaces while continuously improving my code and workflows. Alongside front-end development, I am currently expanding my knowledge of back-end technologies to better understand full application architectures. Staying open to new technologies and keeping up with the fast-changing world of web development is essential to me.",
+    "QUESTION_Y": "You need ",
+    "QUESTION_A": "another skill?",
+    "CALL_TO_ACTION": "Feel free to contact me. I look forward to expanding on my previous knowledge.",
+    "BTN": "Let's Talk",
+    "BUBBLE": "I have a special interest in learning"
+  },
+  "PROJECTS": {
+    "TITEL": "Featured Projects",
+    "TEXT": "Explore a selection of my work here - Interact with projects to see my skills in action."
+  },
+  "PROJECTS_OVERLAY": {
+    "EL_POLLO_LOCO": {
+      "TEXT": "Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen."
+    },
+    "JOIN": {
+      "TEXT": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories."
+    },
+    "POKEDEX": {
+      "TEXT": "A frontend project that integrates the PokéAPI to dynamically display Pokémon data. Users can browse Pokémon, compare their stats, and explore their evolution chains."
+    },
+    "QUESTION_OVERLAY": "What is this project about?",
+    "BTN": "Next project"
+  },
+  "REFERENZES": {
+    "TITEL": "What my colleagues say about me",
+    "REF_1": {
+      "NAME": "A.Zelmer - Team Member (Join & Kochwelt)",
+      "TEXT": "I collaborated with Kyrylo on several projects. In the project „Join“, he took responsibility for the task creation section and delivered reliably. Technically very competent and personally easygoing – exactly the kind of team member you want."
+    },
+    "REF_2": {
+      "NAME": "Z.Alacovic - Team Member (Join)",
+      "TEXT": "Kyrylo took responsibility for the input logic and ensured that new tasks were transmitted to the API without errors. His precise and stable implementation provided a reliable foundation for the seamless storage and further processing of data throughout the system."
+    },
+    "REF_3": {
+      "NAME": "S.Krischan - Team Member (Join)",
+      "TEXT": "Working with Kyrylo was both relaxed and highly productive. His clear communication and reliable adherence to deadlines are particularly noteworthy – you always know exactly where you stand with him. A consistently professional way of working."
+    }
+  },
+  "CONTACT": {
+    "HEADER": "Contact me",
+    "TITLE": "Let's work together",
+    "QUESTION_PROBLEM": "Got a problem to solve ?",
+    "TEXT": "If you are looking for a motivated front-end developer who values clean code, good usability, and continuous learning, I would be happy to hear from you.",
+    "QUESTION_NEED": "Need a Frontend developer? ",
+    "CALL_TO_ACTION": " Let’s talk!"
+  },
+  "FORM": {
+    "QUESTION_NAME": "What's your name?",
+    "QUESTION_EMAIL": "What's your email?",
+    "QUESTION_TOPIC": "How can I help you ?",
+    "INPUT_NAME_REQ": "Oops! it seems your name is missing",
+    "INPUT_EMAIL_REQ": "Hoppla! your email is required",
+    "INPUT_EMAIL_VALIDE": "Please enter a valid email",
+    "INPUT_TOPIC": "What do you need to develop?",
+    "POLICY_CHECK": {
+      "FIRST": "I've read the ",
+      "SECOND": "policy",
+      "THIRD": "and agree to the processing of my data as outlined."
+    },
+    "POLICY_CHECK_REQ": "Please accept the privacy policy",
+    "INPUT_TOPIC_REQ": "What do you need to develop?",
+    "SEND_BTN": "Say Hello ;)",
+    "PLACEHOLDER_NAME": "Your name",
+    "PLACEHOLDER_EMAIL": "yourmail@email.de",
+    "PLACEHOLDER_TOPIC": "Hello Kyrylo, I am interested in ..."
+  }
+}
