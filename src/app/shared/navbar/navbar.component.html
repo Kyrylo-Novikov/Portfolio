@@ -1,9 +1,19 @@
 <nav>
   <div class="language-switch">
-    <input type="radio" name="language" id="eng-radio" />
-    <label for="eng-radio">EN</label>
-    <input type="radio" checked name="language" id="deu-radio" />
-    <label for="deu-radio">DE</label>
+    <input
+      type="radio"
+      name="language-desktop"
+      [checked]="isCurrentLang('en')"
+      id="eng-radio"
+    />
+    <label for="eng-radio" (click)="changeLanguage('en')">EN</label>
+    <input
+      type="radio"
+      name="language-desktop"
+      id="deu-radio"
+      [checked]="isCurrentLang('de')"
+    />
+    <label for="deu-radio" (click)="changeLanguage('de')">DE</label>
   </div>
   <div class="header-links">
     <a
@@ -11,21 +21,21 @@
       [fragment]="'about-me-section'"
       [class.aktiv]="aktivSection === 'about-me'"
       (click)="setAktiv('about-me')"
-      >About me</a
+      >{{ "NAV.ABOUT_ME" | translate }}</a
     >
     <a
       [routerLink]="['/']"
       [class.aktiv]="aktivSection === 'skills'"
       (click)="setAktiv('skills')"
       [fragment]="'skill-section'"
-      >Skills</a
+      >{{ "NAV.SKILLS" | translate }}</a
     >
     <a
       [routerLink]="['/']"
       [class.aktiv]="aktivSection === 'projects'"
       (click)="setAktiv('projects')"
       [fragment]="'portfolio-section'"
-      >Projects</a
+      >{{ "NAV.PROJECTS" | translate }}</a
     >
   </div>
 </nav>
