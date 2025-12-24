@@ -1,9 +1,10 @@
 import { Component, Input } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-referenc',
   standalone: true,
-  imports: [],
+  imports: [TranslateModule],
   templateUrl: './referenc-item.component.html',
   styleUrl: './referenc-item.component.scss',
 })
