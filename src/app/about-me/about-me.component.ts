@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-about-me',
   standalone: true,
-  imports: [],
+  imports: [TranslateModule],
   templateUrl: './about-me.component.html',
   styleUrl: './about-me.component.scss',
 })
@@ -11,15 +12,15 @@ export class AboutMeComponent {
   aboutMeArray: { src: string; text: string }[] = [
     {
       src: '../../assets/imgs/icon-interactiv/location.png',
-      text: 'Hey there, Iam Lukas! Write some information about yourself that is it related. Why are you passionate about coding? What is your source of inspiration for improving your programming skills',
+      text: 'ABOUT_ME.LOCATION',
     },
     {
       src: '../../assets/imgs/icon-interactiv/cognition.png',
-      text: 'Show that you are open-minded. Are you enthusiastic about learning new technologies and continually improving your skills',
+      text: 'ABOUT_ME.MINDSET',
     },
     {
       src: '../../assets/imgs/icon-interactiv/new_releases.png',
-      text: 'A brief description of your problem-solving approach. Do you learn from each challenge as you search for the most efficient or elegant solution? You can include some keywords like: analytical thinking, creativity, persistence and collaboration.',
+      text: 'ABOUT_ME.PROBLEM_SOLVING',
     },
   ];
 }

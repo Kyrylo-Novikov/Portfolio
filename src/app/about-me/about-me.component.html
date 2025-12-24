@@ -7,21 +7,19 @@
     </div>
     <div class="info-wrapper">
       <div class="about-me-info">
-        <p>Who I Am</p>
+        <p>{{ "ABOUT_ME.HEADLINE" | translate }}</p>
         <div class="about-me-text">
-          <h1 class="green-headline-700">About me</h1>
+          <h1 class="green-headline-700">{{ "ABOUT_ME.TITEL" | translate }}</h1>
           <div class="about-me-descrption">
             <p>
-              Hey there, I'm Lukas! Write some information about yourself that
-              is IT related. Why are you passionate about coding? What is your
-              source of inspiration for improving your programming skills
+              {{ "ABOUT_ME.GENERAL_TEXT" | translate }}
             </p>
             <div>
               @for (part of aboutMeArray; track $index) {
               <div class="highlights">
                 <img [src]="part.src" alt="" />
                 <p>
-                  {{ part.text }}
+                  {{ part.text | translate }}
                 </p>
               </div>
               }
