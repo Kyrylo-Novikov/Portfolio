@@ -45,9 +45,6 @@ section {
   h3 {
     align-self: baseline;
     @include font(FiraCode, var(--fontSize-4), 700, var(--color-1));
-    span {
-      color: var(--color-2);
-    }
   }
   h3 {
     width: 520px;
@@ -82,11 +79,12 @@ section {
     }
   }
   .btn {
-    width: 122px;
     white-space: nowrap;
   }
 }
-
+span {
+  color: var(--color-2);
+}
 .future-tech {
   opacity: 1;
 }
@@ -222,6 +220,7 @@ p {
       gap: 16px;
       .tech {
         gap: 8px;
+        margin: 0 auto;
         > p {
           font-size: var(--fontSize-1);
         }

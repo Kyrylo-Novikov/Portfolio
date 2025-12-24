@@ -6,21 +6,22 @@
         <h1 class="green-headline-700">Skill Set</h1>
         <div class="tech-text">
           <div>
-            A short introduction of your skills. Highlight your experience of
-            using different front-end technologies and emphasise your openness
-            to learning and adapting to new technologies. Show how important it
-            is for you to keep up with the rapid changes in web development.
+            {{ "MY_SKILLS.INTRODUCTION" | translate }}
           </div>
           <div class="call-to-contact">
-            <h2><span>You need </span> another skill?</h2>
+            <h2>
+              <span>{{ "MY_SKILLS.QUESTION_Y" | translate }}</span
+              >{{ "MY_SKILLS.QUESTION_A" | translate }}
+            </h2>
             <div>
-              Feel free to contact me. I look forward to expanding on my
-              previous knowledge.
+              {{ "MY_SKILLS.CALL_TO_ACTION" | translate }}
             </div>
           </div>
         </div>
         <div class="btn-container">
-          <a class="btn" href="#contact-section"><span>Let's Talk</span></a>
+          <a class="btn" href="#contact-section"
+            ><span>{{ "MY_SKILLS.BTN" | translate }}</span></a
+          >
         </div>
       </div>
     </div>
@@ -29,7 +30,7 @@
       @for (tech of techsArr; track $index) {
       <div class="tech" [class.future-tech]="tech.name === 'Growth Mindset'">
         <div class="speech-bubble">
-          <p>I have a special interest in learning</p>
+          <p>{{ "MY_SKILLS.BUBBLE" | translate }}</p>
           <div>
             <div>
               <img src="/assets/imgs/tech-icon/futur/react.svg" alt="" />
