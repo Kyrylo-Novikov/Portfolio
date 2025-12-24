@@ -6,6 +6,7 @@ section {
   justify-content: space-between;
   padding-bottom: 80px;
   .references {
+    overflow: hidden;
     position: relative;
     max-width: 1920px;
     @include font(Karla, var(--fontSize-2), 400, var(--color-2));

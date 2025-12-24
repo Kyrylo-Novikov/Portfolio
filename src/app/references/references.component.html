@@ -1,5 +1,5 @@
 <section>
-  <h1>What my colleagues say about me</h1>
+  <h1>{{ "REFERENZES.TITEL" | translate }}</h1>
   <div class="references">
     <img
       src="/assets/imgs/icon-interactiv/quotes.svg"
@@ -15,7 +15,7 @@
         }
       }"
     >
-      @for (ref of referenceArray(); track ref.name; let i = $index) {
+      @for (ref of doubleRefArr(); track ref.name; let i = $index) {
       <app-referenc [referenc]="ref" [active]="i === 2"></app-referenc>}
     </div>
   </div>

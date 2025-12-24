@@ -1,4 +1,4 @@
-import { Component, effect, OnInit, signal } from '@angular/core';
+import { Component, computed, effect, OnInit, signal } from '@angular/core';
 import { ReferencComponent } from './referenc-item/referenc-item.component';
 import {
   trigger,
@@ -14,11 +14,12 @@ import {
 } from '@angular/animations';
 import { timeout } from 'rxjs';
 import { ScreenService } from './/../services/screen/screen.service';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-references',
   standalone: true,
-  imports: [ReferencComponent],
+  imports: [ReferencComponent, TranslateModule],
   templateUrl: './references.component.html',
   styleUrl: './references.component.scss',
 
@@ -58,29 +59,22 @@ export class ReferencesComponent {
 
   referenceArray = signal<{ name: string; text: string }[]>([
     {
-      name: 'A.Zelmer - Team Partner (Join & Kochwelt)',
-      text: 'Mit Kyrylo habe ich an mehreren Projekten zusammengearbeitet. Beim Projekt „Join“ hat er den Bereich zur Erstellung von Aufgaben übernommen und zuverlässig geliefert. Technisch sehr kompetent und menschlich absolut unkompliziert – genau so jemanden wünscht man sich im Team.',
+      name: 'REFERENZES.REF_1.NAME',
+      text: 'REFERENZES.REF_1.TEXT',
     },
     {
-      name: 'Z.Alacovic - Team Partner (Join)',
-      text: 'Kyrylo übernahm die Verantwortung für die Eingabelogik und sorgte dafür, dass neue Tasks fehlerfrei an die API übertragen wurden. Seine präzise und stabile Implementierung bildete eine verlässliche Grundlage für das störungsfreie Speichern und Weiterverarbeiten der Daten im gesamten System.',
+      name: 'REFERENZES.REF_2.NAME',
+      text: 'REFERENZES.REF_2.TEXT',
     },
     {
-      name: 'S.Krischan - Team Partner (Join)',
-      text: 'Die Zusammenarbeit mit Kyrylo war sowohl entspannt als auch sehr produktiv. Besonders hervorzuheben sind seine klare Kommunikation und seine zuverlässige Einhaltung von Deadlines – man weiß bei ihm immer genau, woran man ist. Eine durchweg professionelle Arbeitsweise.',
+      name: 'REFERENZES.REF_3.NAME',
+      text: 'REFERENZES.REF_3.TEXT',
     },
-    {
-      name: 'A.Zelmer - Team Partner (Join & Kochwelt)',
-      text: 'Mit Kyrylo habe ich an mehreren Projekten zusammengearbeitet. Beim Projekt „Join“ hat er den Bereich zur Erstellung von Aufgaben übernommen und zuverlässig geliefert. Technisch sehr kompetent und menschlich absolut unkompliziert – genau so jemanden wünscht man sich im Team.',
-    },
-    {
-      name: 'Z.Alacovic - Team Partner (Join)',
-      text: 'Kyrylo übernahm die Verantwortung für die Eingabelogik und sorgte dafür, dass neue Tasks fehlerfrei an die API übertragen wurden. Seine präzise und stabile Implementierung bildete eine verlässliche Grundlage für das störungsfreie Speichern und Weiterverarbeiten der Daten im gesamten System.',
-    },
-    {
-      name: 'S.Krischan - Team Partner (Join)',
-      text: 'Die Zusammenarbeit mit Kyrylo war sowohl entspannt als auch sehr produktiv. Besonders hervorzuheben sind seine klare Kommunikation und seine zuverlässige Einhaltung von Deadlines – man weiß bei ihm immer genau, woran man ist. Eine durchweg professionelle Arbeitsweise.',
-    },
+  ]);
+
+  doubleRefArr = computed(() => [
+    ...this.referenceArray(),
+    ...this.referenceArray(),
   ]);
 
   slide(change: number) {
@@ -88,7 +82,7 @@ export class ReferencesComponent {
     setTimeout(() => {
       this.arrayUpdate(change);
     }, 1000);
-    this.currentIndex = (this.currentIndex + change + 3) % 3;
+    this.currentIndex = (this.currentIndex + change) % 3;
   }
 
   arrayUpdate(change: number) {
