@@ -1,10 +1,11 @@
 import { Component, inject } from '@angular/core';
 import { ScreenService } from '../services/screen/screen.service';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-hero',
   standalone: true,
-  imports: [],
+  imports: [TranslateModule],
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.scss',
 })
@@ -13,10 +14,10 @@ export class HeroComponent {
   isGitHoverd: boolean = false;
   screen = inject(ScreenService);
   marqueeText: string[] = [
-    'Based in Berlin',
-    'Frontend Developer',
-    'Open to work',
-    'Available for remote work',
+    'HERO.MARQUEE.LOCATION',
+    'HERO.MARQUEE.POSITION',
+    'HERO.MARQUEE.OPEN_TO_WORK',
+    'HERO.MARQUEE.REMOTE_AVAILABLE',
   ];
 
   marqueenLoop: string[] = [

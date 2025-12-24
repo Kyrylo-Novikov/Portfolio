@@ -1,14 +1,16 @@
 <section>
-  <div class="content-hero">
+  <div class="content-hero" id="hero">
     <div class="title-box">
-      <h2>Frontend Developer</h2>
+      <h2>{{ "HERO.TITEL" | translate }}</h2>
       <div>
         <h1>Kyrylo Novikov</h1>
         <div class="btn-container">
           <a href="#portfolio-section" class="btn"
-            ><span>Check my work</span></a
+            ><span>{{ "HERO.BTN1" | translate }}</span></a
           >
-          <a href="#contact-section" class="btn"><span>Contact me</span></a>
+          <a href="#contact-section" class="btn"
+            ><span>{{ "HERO.BTN2" | translate }}</span></a
+          >
         </div>
       </div>
     </div>
@@ -82,7 +84,7 @@
       <div class="marquee">
         <div class="marquee-content">
           @for (item of marqueenLoop; track $index) {
-          <span>{{ item }}</span
+          <span>{{ item | translate }}</span
           ><span> &#183; </span> }
         </div>
       </div>
