@@ -2,6 +2,7 @@
 .letter-animation {
   @include font(Karla, var(--fontSize-6), bold, var(--color-2));
   @extend .d-flex-align-c;
+  cursor: pointer;
   gap: 8px;
   height: 48px;
   width: 180px;
