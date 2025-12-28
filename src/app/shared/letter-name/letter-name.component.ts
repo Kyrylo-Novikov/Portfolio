@@ -1,9 +1,10 @@
 import { Component, Input } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-letter-name',
   standalone: true,
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './letter-name.component.html',
   styleUrl: './letter-name.component.scss',
 })
