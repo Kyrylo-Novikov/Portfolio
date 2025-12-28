@@ -1,11 +1,14 @@
 import { Component } from '@angular/core';
-import { HighlightDirective } from './../shared/direktive/highlight.directive';
+import { TranslateModule } from '@ngx-translate/core';
+import { HighlightPipe } from '../shared/pipes/highlight.pipe';
 
 @Component({
   selector: 'app-legal-notice',
   standalone: true,
-  imports: [HighlightDirective],
+  imports: [TranslateModule, HighlightPipe],
   templateUrl: './legal-notice.component.html',
   styleUrl: './legal-notice.component.scss',
 })
-export class LegalNoticeComponent {}
+export class LegalNoticeComponent {
+  legalWords = ['Portfolios', 'Portfolio', 'Developer Akademie', 'GmbH'];
+}
