@@ -162,9 +162,12 @@ app-project-overlay {
       }
     }
   }
+  .green-headline-700 {
+    font-size: 40px;
+  }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
   section {
     padding: 40px 0;
     .content-portfolio {
@@ -177,7 +180,10 @@ app-project-overlay {
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
+  .green-headline-700 {
+    font-size: var(--fontSize-5);
+  }
   section {
     .content-portfolio {
       width: 100vw;
@@ -200,5 +206,10 @@ app-project-overlay {
         }
       }
     }
+  }
+}
+@media (max-width: 400px) {
+  .green-headline-700 {
+    font-size: var(--fontSize-4);
   }
 }
