@@ -6,4 +6,6 @@ export interface Project {
   description: string;
   usedTechs: TechName[];
   imgPath: string;
+  gitLink: string;
+  url: string;
 }
