@@ -3,7 +3,6 @@
 form {
   @extend .d-flex-dirc-c;
   align-items: center;
-  // max-width: 616px;
   height: 550px;
   gap: 40px;
   .question-wrapper {
@@ -18,7 +17,6 @@ form {
         @extend .d-flex-dirc-c;
         gap: 16px;
         padding: 32px;
-        // width: 352.5px;
         position: relative;
         > h2 {
           @include font(FiraCode, var(--fontSize-4), 500, #3dcfb6);
@@ -29,7 +27,6 @@ form {
           background-color: transparent;
           border: none;
           outline: none;
-          // width: 400px;
           cursor: pointer;
         }
       }
@@ -49,7 +46,7 @@ form {
   .send-wrapper {
     @extend .d-flex-dirc-c;
     gap: 16px;
-    // width: 100%;
+    width: 100%;
     .policy-check {
       width: 100%;
     }
@@ -67,9 +64,10 @@ form {
       display: flex;
       gap: 8px;
       @include font(Karla, var(--fontSize-0), 400, var(--color-2));
-      span {
+      .policy {
         @include font(FiraCode, var(--fontSize-0), 400, var(--color-1));
         padding: 5px 4px;
+        cursor: pointer;
       }
       .checkbox {
         @extend .d-flex-align-c;
