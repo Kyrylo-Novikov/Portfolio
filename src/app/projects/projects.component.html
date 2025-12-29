@@ -3,13 +3,10 @@
     <div class="content-portfolio">
       <div class="portfolio-header">
         <h2>Portfolio</h2>
-        <h1 class="green-headline-700">Featured Projects</h1>
+        <h1 class="green-headline-700">{{ "PROJECTS.TITEL" | translate }}</h1>
       </div>
       <div class="project-instruct">
-        <p>
-          Explore a selection of my work here - Interact with projects to see my
-          skills in action.
-        </p>
+        <p>{{ "PROJECTS.TEXT" | translate }}</p>
       </div>
       <div class="projects">
         @for (project of projectsArray; track project.name ; let i = $index) {

@@ -4,11 +4,12 @@ import { ProjectOverlayComponent } from '../projects/project-overlay/project-ove
 import { OverlayService } from '../services/overlay/overlay.service';
 import { Project } from '../../app/models/project';
 import { TechName } from '../models/tech-name.enum';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [CommonModule, ProjectOverlayComponent],
+  imports: [CommonModule, ProjectOverlayComponent, TranslateModule],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss',
 })
@@ -18,17 +19,17 @@ export class ProjectsComponent implements OnInit {
   projectsArray: Project[] = [
     {
       id: 1,
-      name: 'El Pollo Loco',
-      description:
-        'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
+      name: 'EL pollo loco',
+      description: 'PROJECTS_OVERLAY.EL_POLLO_LOCO.TEXT',
       usedTechs: [TechName.HTML, TechName.CSS, TechName.JavaScript],
       imgPath: '/assets/imgs/projects/el-pollo-loco.svg',
+      gitLink: 'https://github.com/Kyrylo-Novikov/El-pollo-loco',
+      url: 'https://kyrylo-novikov.github.io/El-pollo-loco/',
     },
     {
       id: 2,
       name: 'Join',
-      description:
-        'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
+      description: 'PROJECTS_OVERLAY.JOIN.TEXT',
       usedTechs: [
         TechName.Angular,
         TechName.TypeScript,
@@ -37,15 +38,18 @@ export class ProjectsComponent implements OnInit {
         TechName.Firebase,
       ],
       imgPath: '/assets/imgs/projects/join.svg',
+      gitLink: 'https://github.com/Kyrylo-Novikov/Join',
+      url: 'https://kyrylo-novikov.github.io/Join/',
     },
 
     {
       id: 3,
       name: 'Pokedex',
-      description:
-        'A frontend project that integrates the PokéAPI to dynamically display Pokémon data. Users can browse Pokémon, compare their stats, and explore their evolution chains.',
+      description: 'PROJECTS_OVERLAY.POKEDEX.TEXT',
       usedTechs: [TechName.HTML, TechName.CSS, TechName.JavaScript],
       imgPath: '/assets/imgs/projects/pokedex.png',
+      gitLink: 'https://github.com/Kyrylo-Novikov/Pokedex',
+      url: 'https://kyrylo-novikov.github.io/Pokedex/',
     },
   ];
 
