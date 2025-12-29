@@ -2,22 +2,20 @@
 section {
   color: var(--color-2);
   padding: 20px 96px 260px;
-  // height: 764px;
   background-color: var(--color-3);
   @extend .d-flex-dirc-c;
-  // align-items: center;
+  align-items: center;
   .contact-wrapper {
     display: flex;
     gap: 64px;
-    // width: 1248px;
-    // height: 542px;
+    max-width: 1920px;
+    align-items: center;
     justify-content: space-between;
   }
   .call-to-action-wrapper {
     @extend .d-flex-dirc-c;
     gap: 40px;
     width: 50%;
-    // height: 337px;
     .headline-wrapper h2 {
       @include font(Karla, var(--fontSize-4), 500, var(--color-1));
     }
