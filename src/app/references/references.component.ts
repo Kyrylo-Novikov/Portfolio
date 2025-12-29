@@ -82,7 +82,7 @@ export class ReferencesComponent {
     setTimeout(() => {
       this.arrayUpdate(change);
     }, 1000);
-    this.currentIndex = (this.currentIndex + change) % 3;
+    this.currentIndex = (this.currentIndex + change + 3) % 3;
   }
 
   arrayUpdate(change: number) {
