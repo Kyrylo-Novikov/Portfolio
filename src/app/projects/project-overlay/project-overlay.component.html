@@ -9,8 +9,8 @@
         </div>
         <div class="project-information">
           <div class="project-info-text">
-            <h3>What is this project about?</h3>
-            <p>{{ data.description }}</p>
+            <h3>{{ "PROJECTS_OVERLAY.QUESTION_OVERLAY" | translate }}</h3>
+            <p>{{ data.description | translate }}</p>
           </div>
           <div class="all-techs">
             @for (tech of data.usedTechs; track $index) {
@@ -23,14 +23,14 @@
         </div>
         <div>
           <div class="btn-container">
-            <a class="btn"
+            <a href="{{ data.gitLink }}" class="btn"
               >GitHub
               <img src="assets/imgs/icon-interactiv/arrow_green.svg" alt=""
             /></a>
-            <div class="btn">
+            <a href="{{ data.url }}" class="btn">
               Live Test
               <img src="assets/imgs/icon-interactiv/arrow_green.svg" alt="" />
-            </div>
+            </a>
           </div>
         </div>
       </div>
@@ -42,7 +42,7 @@
       </div>
     </div>
     <div class="next-project" (click)="next()">
-      <p>Next project</p>
+      <p>{{ "PROJECTS_OVERLAY.BTN" | translate }}</p>
       <img src="assets/imgs/icon-interactiv/right-arrow-hover.png" alt="" />
     </div>
   </div>
