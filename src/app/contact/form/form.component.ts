@@ -7,13 +7,15 @@ import {
 } from '@angular/forms';
 import { debounceTime } from 'rxjs/operators';
 import { CommonModule } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
+import { RouterModule } from '@angular/router';
 
 type FieldName = 'name' | 'email' | 'message' | 'checkbox';
 
 @Component({
   selector: 'app-form',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule, TranslateModule, RouterModule],
   templateUrl: './form.component.html',
   styleUrl: './form.component.scss',
 })
@@ -76,7 +78,7 @@ export class FormComponent implements OnInit {
     this.contactForm.markAllAsTouched();
   }
 
-  onSubmit(): void {}
+  // onSubmit(): void {}
 
   submitForm() {
     if (this.contactForm.valid) {
