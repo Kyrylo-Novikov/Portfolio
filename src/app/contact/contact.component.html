@@ -2,17 +2,16 @@
   <div class="contact-wrapper">
     <div class="call-to-action-wrapper">
       <div class="headline-wrapper">
-        <h2>Contact me</h2>
-        <h1 class="green-headline-700">Let's work together</h1>
+        <h2>{{ "CONTACT.HEADER" | translate }}</h2>
+        <h1 class="green-headline-700">{{ "CONTACT.TITLE" | translate }}</h1>
       </div>
       <div class="call-to-action">
-        <h2>Got a problem to solve ?</h2>
+        <h2>{{ "CONTACT.QUESTION_PROBLEM" | translate }}</h2>
+        <p>{{ "CONTACT.TEXT" | translate }}</p>
         <p>
-          Encourage people to contact you and describe what role you are
-          interested in. Show that you will add value to their projects through
-          your work.
+          {{ "CONTACT.QUESTION_NEED" | translate
+          }}<span>{{ "CONTACT.CALL_TO_ACTION" | translate }}</span>
         </p>
-        <p>Need a Frontend developer?<span> Let’s talk!</span></p>
       </div>
     </div>
     <app-form></app-form>
