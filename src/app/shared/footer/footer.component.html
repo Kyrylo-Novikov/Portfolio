@@ -13,14 +13,23 @@
       <p>&copy; Kyrylo Novikov</p>
     </div>
     <div class="links-to">
-      <div><a href="https://github.com/Kyrylo-Novikov">Github</a></div>
+      <div>
+        <a href="https://github.com/Kyrylo-Novikov">Github</a>
+      </div>
       <div>
         <a href="https://www.linkedin.com/in/kyrylo-novikov-831808368"
           >LinkedIn</a
         >
       </div>
       <div><a href="mailto:kyrylonovikov@gmail.com">Email</a></div>
-      <div><a routerLink="/legal-notice">Legal Notice</a></div>
+      <div>
+        <a routerLink="/legal-notice">{{ "LEGAL_NOTICE.TITEL" | translate }}</a>
+      </div>
+      <div>
+        <a class="policy" routerLink="/policy">{{
+          "POLICY.TITEL" | translate
+        }}</a>
+      </div>
     </div>
   </div>
 </section>
