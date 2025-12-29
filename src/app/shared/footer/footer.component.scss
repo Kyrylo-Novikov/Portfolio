@@ -11,7 +11,6 @@ section {
     bottom: 42px;
     position: absolute;
     min-height: 126px;
-    max-width: calc(1920px - 192px);
     @extend .d-flex-align-c;
     justify-content: space-between;
     width: 100%;
@@ -23,11 +22,11 @@ section {
     .info-footer {
       @extend .d-flex-dirc-c;
       gap: 8px;
+      min-width: 180px;
     }
     .info-footer {
       position: absolute;
       bottom: 0;
-      // left: 0;
     }
     .footer-name > p {
       @include font(FiraCode, var(--fontSize-2), 400, var(--color-1));
@@ -63,7 +62,6 @@ section {
 app-letter-name {
   position: absolute;
   top: 0;
-  // left: 0;
 }
 
 @media (max-width: 800px) {
