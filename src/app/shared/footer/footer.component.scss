@@ -68,6 +68,9 @@ app-letter-name {
   section {
     .footer-wrapper {
       padding: 0 56px;
+      .links-to {
+        align-items: end;
+      }
       .footer-name {
         position: absolute;
         top: 120%;
