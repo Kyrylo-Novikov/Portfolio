@@ -31,10 +31,11 @@ export class ProjectsComponent implements OnInit {
       name: 'Join',
       description: 'PROJECTS_OVERLAY.JOIN.TEXT',
       usedTechs: [
-        TechName.Angular,
-        TechName.TypeScript,
+        // TechName.Angular,
+
         TechName.HTML,
         TechName.CSS,
+        TechName.TypeScript,
         TechName.Firebase,
       ],
       imgPath: '/assets/imgs/projects/join.svg',

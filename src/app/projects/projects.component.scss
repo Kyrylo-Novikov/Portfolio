@@ -159,6 +159,9 @@ app-project-overlay {
       padding: 0 0 0 32px;
       .projects {
         width: 72vw;
+        .project-img-wrapper {
+          display: none;
+        }
       }
     }
   }
