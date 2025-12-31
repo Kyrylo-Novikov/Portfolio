@@ -2,11 +2,11 @@
 
 form {
   @extend .d-flex-dirc-c;
-  align-items: center;
-  height: 550px;
+  height: 650px;
   gap: 40px;
   .question-wrapper {
     width: 100%;
+    max-width: 36vw;
     display: flex;
     flex-direction: column;
     .question {
@@ -20,7 +20,6 @@ form {
         position: relative;
         > h2 {
           @include font(FiraCode, var(--fontSize-4), 500, #3dcfb6);
-          white-space: nowrap;
         }
         > input {
           @include font(Karla, var(--fontSize-2), 400, var(--color-2));
@@ -28,20 +27,28 @@ form {
           border: none;
           outline: none;
           cursor: pointer;
+          &::placeholder {
+            color: var(--color-placeholder);
+          }
         }
-      }
-      .error {
-        @include font(Karla, var(--fontSize-2), 400, var(--color-4));
-        position: absolute;
-        top: 82px;
-        background-color: var(--color-3);
-        width: 100%;
+        .input-error-mes {
+          position: absolute;
+          bottom: 20px;
+          background-color: var(--color-3);
+          height: 50px;
+          display: flex;
+          align-items: center;
+        }
       }
       input:focus + .error {
         opacity: 0;
         pointer-events: none;
       }
     }
+  }
+  .error {
+    @include font(Karla, var(--fontSize-2), 400, var(--color-4));
+    width: 100%;
   }
   .send-wrapper {
     @extend .d-flex-dirc-c;
@@ -99,7 +106,7 @@ form {
 
 .checkbox-req {
   opacity: 0;
-  @include font(Karla, 14px, 400, var(--color-4));
+  height: 24px;
 }
 
 .required {
@@ -109,6 +116,7 @@ form {
 @media (max-width: 800px) {
   form {
     .question-wrapper {
+      max-width: 100%;
       .question {
         .wrapper-sing-question {
           padding: 32px 0;
@@ -118,9 +126,6 @@ form {
           > input {
             font-size: var(--fontSize-1);
           }
-        }
-        .error {
-          top: 76px;
         }
       }
     }
