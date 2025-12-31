@@ -49,17 +49,21 @@ export class FormComponent implements OnInit {
 
   get emailError(): boolean {
     const emailControl = this.contactForm.get('email');
-    return (emailControl?.invalid && emailControl?.touched) ?? false;
+    if (emailControl?.invalid && emailControl?.touched) {
+      if (emailControl?.hasError('required')) {
+        return true;
+      }
+      if (emailControl?.hasError('email')) {
+        return true;
+      }
+      return false;
+    }
+    return false;
   }
 
   get emailRequiredError(): boolean {
     const emailControl = this.contactForm.get('email');
     return this.emailError && (emailControl?.hasError('required') ?? false);
-  }
-
-  get emailFormatError(): boolean {
-    const emailControl = this.contactForm.get('email');
-    return this.emailError && (emailControl?.hasError('email') ?? false);
   }
 
   get messagError(): boolean {
@@ -77,8 +81,6 @@ export class FormComponent implements OnInit {
   errorBeforSubmit() {
     this.contactForm.markAllAsTouched();
   }
-
-  // onSubmit(): void {}
 
   submitForm() {
     if (this.contactForm.valid) {

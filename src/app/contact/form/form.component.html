@@ -12,11 +12,12 @@
           formControlName="name"
           type="text"
           name="name"
+          autocomplete="name"
           [placeholder]="'FORM.PLACEHOLDER_NAME' | translate"
           #nameInput
-        />
-        @if(nameError){
-        <div [class.error]="error('name')">
+          [class.error]="nameError"
+        />@if(nameError){
+        <div class="error input-error-mes">
           {{ "FORM.INPUT_NAME_REQ" | translate }}
         </div>
         }
@@ -29,18 +30,18 @@
           formControlName="email"
           type="text"
           name="email"
+          autocomplete="email"
           [placeholder]="'FORM.PLACEHOLDER_EMAIL' | translate"
           #emailInput
-        />
-        @if (emailError) { @if(emailRequiredError){
-        <div [class.error]="error('email')">
+        />@if (emailError) { @if(emailRequiredError){
+        <div class="input-error-mes error">
           {{ "FORM.INPUT_EMAIL_REQ" | translate }}
         </div>
-        } @if(emailFormatError) {
-        <div [class.error]="error('email')">
+        } @else {
+        <div class="input-error-mes error">
           {{ "FORM.INPUT_EMAIL_VALIDE" | translate }}
         </div>
-        } }
+        }}
       </div>
     </div>
     <div class="question" (click)="messageInput.focus()">
@@ -52,9 +53,9 @@
           name="message"
           [placeholder]="'FORM.PLACEHOLDER_TOPIC' | translate"
           #messageInput
-        />
-        @if (messagError) {
-        <div [class.error]="error('message')">
+          [class.error]="messagError"
+        />@if(messagError){
+        <div class="input-error-mes error">
           {{ "FORM.INPUT_TOPIC_REQ" | translate }}
         </div>
         }
@@ -67,8 +68,8 @@
         <input
           formControlName="checkbox"
           type="checkbox"
-          name=""
-          id=""
+          name="checkbox"
+          id="checkbox"
           #checkboxInput
         />
       </div>
