@@ -5,17 +5,23 @@ section {
   background-color: var(--color-3);
   @extend .d-flex-dirc-c;
   align-items: center;
+  .green-headline-700 {
+    white-space: normal;
+    overflow-wrap: break-word;
+  }
+
   .contact-wrapper {
     display: flex;
     gap: 64px;
     max-width: 1920px;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
   }
   .call-to-action-wrapper {
     @extend .d-flex-dirc-c;
     gap: 40px;
-    width: 50%;
+    width: 47%;
     .headline-wrapper h2 {
       @include font(Karla, var(--fontSize-4), 500, var(--color-1));
     }
@@ -37,7 +43,7 @@ section {
 }
 
 app-form {
-  width: 50%;
+  width: 47%;
 }
 
 @media (max-width: 800px) {
