@@ -1,6 +1,6 @@
 <form
-  action="https://formspree.io/f/mwpgbywv"
   method="POST"
+  action="https://formspree.io/f/mwpgbywv"
   [formGroup]="contactForm"
   (ngSubmit)="submitForm()"
 >
@@ -99,4 +99,28 @@
       </button>
     </div>
   </div>
+  @if (overlayService.feedbackSignal(); as data) {
+  <div class="feedback-overlay" (click)="overlayService.closeFeedback()">
+    <div
+      class="feedback-card"
+      [class]="data.type"
+      (click)="$event.stopPropagation()"
+    >
+      <div class="icon-wrapper">
+        @if(data.type === 'success') { <span>✔️</span> } @else {
+        <span>⚠️</span> }
+        <h1>{{ data.titleKey | translate }}</h1>
+      </div>
+
+      <p>{{ data.messageKey | translate }}</p>
+      <button
+        type="button"
+        class="btn"
+        (click)="overlayService.closeFeedback()"
+      >
+        {{ "FORM.CLOSE" | translate }}
+      </button>
+    </div>
+  </div>
+  }
 </form>

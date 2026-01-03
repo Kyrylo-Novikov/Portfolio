@@ -9,6 +9,7 @@ import { debounceTime } from 'rxjs/operators';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 import { RouterModule } from '@angular/router';
+import { OverlayService } from '../../services/overlay/overlay.service';
 
 type FieldName = 'name' | 'email' | 'message' | 'checkbox';
 
@@ -22,15 +23,17 @@ type FieldName = 'name' | 'email' | 'message' | 'checkbox';
 export class FormComponent implements OnInit {
   contactForm!: FormGroup;
   submitted: boolean = false;
+  isSubmitting: boolean = false;
   @ViewChild('nameInput') nameInput!: ElementRef<HTMLInputElement>;
   @ViewChild('emailInput') emailInput!: ElementRef<HTMLInputElement>;
   @ViewChild('messageInput') messageInput!: ElementRef<HTMLInputElement>;
   @ViewChild('checkboxInput') checkboxInput!: ElementRef<HTMLInputElement>;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, public overlayService: OverlayService) {
+    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     this.contactForm = this.fb.group({
       name: ['', [Validators.required, Validators.minLength(2)]],
-      email: ['', [Validators.required, Validators.email]],
+      email: ['', [Validators.required, Validators.pattern(emailPattern)]],
       message: ['', [Validators.required, Validators.minLength(4)]],
       checkbox: ['', Validators.requiredTrue],
     });
@@ -53,7 +56,7 @@ export class FormComponent implements OnInit {
       if (emailControl?.hasError('required')) {
         return true;
       }
-      if (emailControl?.hasError('email')) {
+      if (emailControl?.hasError('pattern')) {
         return true;
       }
       return false;
@@ -83,12 +86,45 @@ export class FormComponent implements OnInit {
   }
 
   submitForm() {
-    if (this.contactForm.valid) {
+    if (this.contactForm.valid && !this.isSubmitting) {
+      this.isSubmitting = true;
+      const { name, email, message } = this.contactForm.value;
+      const dataToSend = { name, email, message };
       fetch('https://formspree.io/f/mwpgbywv', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(this.contactForm.value),
-      }).then(() => console.log('sent', this.contactForm.value));
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify(dataToSend),
+      })
+        .then((respons) => {
+          if (respons.ok) {
+            console.log('Versendet');
+            this.submitSuccess();
+          } else {
+            throw new Error('Die nachricht konnte nicht versendet werden.');
+          }
+        })
+        .catch(() => this.submitError())
+        .finally(() => (this.isSubmitting = false));
     }
+  }
+
+  submitSuccess() {
+    this.overlayService.showFeedback({
+      titleKey: 'FORM.SUCCESS.TITLEKEY',
+      messageKey: 'FORM.SUCCESS.MESSAGEKEY',
+      type: 'success',
+    });
+    this.contactForm.reset();
+  }
+
+  submitError() {
+    this.overlayService.showFeedback({
+      titleKey: 'FORM.ERROR.MESSAGEKEY',
+      messageKey: 'FORM.ERROR.MESSAGEKEY',
+      type: 'error',
+    });
   }
 }
