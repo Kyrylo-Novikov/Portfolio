@@ -89,7 +89,16 @@
     "SEND_BTN": "Sag Hallo ;)",
     "PLACEHOLDER_NAME": "Dein Name",
     "PLACEHOLDER_EMAIL": "deineemail@email.com",
-    "PLACEHOLDER_TOPIC": "Hallo Kyrylo, ich bin interessiert an …"
+    "PLACEHOLDER_TOPIC": "Hallo Kyrylo, ich bin interessiert an …",
+    "CLOSE": "Schließen",
+    "SUCCESS": {
+      "TITLEKEY": "Versendet",
+      "MESSAGEKEY": "Nachricht erfolgreich gesendet! Danke für dein Interesse. Du hörst in Kürze von mir!"
+    },
+    "ERROR": {
+      "TITLEKEY": "Fehlgeschlagen",
+      "MESSAGEKEY": "Hoppla! Da ist wohl etwas schiefgelaufen. Versuche es später noch einmal oder schreib mir einfach direkt eine E-Mail oder eine Nachricht über meine Social-Media-Kanäle."
+    }
   },
   "LEGAL_NOTICE": {
     "TITEL": "Impressum",
