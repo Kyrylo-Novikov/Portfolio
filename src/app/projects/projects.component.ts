@@ -31,8 +31,6 @@ export class ProjectsComponent implements OnInit {
       name: 'Join',
       description: 'PROJECTS_OVERLAY.JOIN.TEXT',
       usedTechs: [
-        // TechName.Angular,
-
         TechName.HTML,
         TechName.CSS,
         TechName.TypeScript,
@@ -56,7 +54,6 @@ export class ProjectsComponent implements OnInit {
 
   open(project: Project) {
     this.overlay.open(project);
-    document.body.style.overflow = 'hidden';
   }
 
   ngOnInit() {
