@@ -3,7 +3,7 @@ section {
   font-family: "Karla";
   @extend .d-flex-align-c;
   justify-content: center;
-  padding: 76px 16px;
+  padding: 76px 96px;
   background-color: var(--color-3);
   width: 100%;
   .about-me-wrapper {
@@ -122,7 +122,7 @@ section {
 
 @media (max-width: 1100px) {
   section {
-    padding: 36px 12px;
+    padding: 36px 60px;
     .about-me-wrapper {
       gap: 24px;
       .img-wrapper,
@@ -141,11 +141,11 @@ section {
   }
 }
 
-@media (max-width: 850px) {
+@media (max-width: 900px) {
   section {
     .about-me-wrapper {
       flex-direction: column;
-      gap: 16px;
+      gap: 32px;
       .info-wrapper {
         min-height: 460px;
         .about-me-info {
@@ -159,14 +159,16 @@ section {
 }
 
 @media (max-width: 600px) {
-  .about-me-text {
-    width: 90vw;
-  }
-  .img-wrapper {
-    .foto {
-      width: 90vw;
-      img {
-        width: 90vw;
+  section {
+    .about-me-wrapper {
+      > .img-wrapper {
+        .foto {
+          width: 80vw;
+          height: 80vw;
+          &:hover::after {
+            transform: translate(-24px, 20px);
+          }
+        }
       }
     }
   }
@@ -176,14 +178,6 @@ section {
   section {
     .about-me-wrapper {
       gap: 40px;
-      .img-wrapper,
-      .img-wrapper {
-        width: 90vw;
-        height: 90vw;
-        .foto {
-          height: 90vw;
-        }
-      }
     }
   }
 }
