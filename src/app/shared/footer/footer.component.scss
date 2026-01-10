@@ -38,7 +38,7 @@ section {
       @include font(Karla, var(--fontSize-1), 400, var(--color-2));
       position: relative;
       text-decoration: none;
-      transition: all 200ms ease-in;
+      transition: all 0.125s ease-in;
       letter-spacing: 0.5px;
       &::before {
         content: "•";
@@ -47,7 +47,7 @@ section {
         top: 0;
         opacity: 0;
         color: var(--color-1);
-        transition: all 200ms ease-in;
+        transition: all 0.125s ease-in;
       }
       &:hover {
         &::before {

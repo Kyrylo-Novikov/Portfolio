@@ -35,7 +35,7 @@
   justify-content: center;
   cursor: pointer;
   overflow: hidden;
-  transition: all 300ms ease-in;
+  transition: all 0.125s ease-in;
   white-space: nowrap;
   &:hover {
     border: 1px solid var(--color-1);
@@ -49,7 +49,7 @@
 .name-hov-prep {
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  transition: background-color 300ms ease;
+  transition: background-color 0.125s ease;
 }
 
 .highlight-legal-words {
