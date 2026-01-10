@@ -9,6 +9,15 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrl: './about-me.component.scss',
 })
 export class AboutMeComponent {
+  /**
+   * List of "About Me" objects displayed in the About Me section.
+   *
+   * Each object consists of:
+   * - `src`: Path to the images used as visual markers next to the text
+   * - `text`: i18n translation key prefixed with `ABOUT_ME.`
+   *
+   * This list is iterated and rendered directly in the template using `@for`.
+   */
   aboutMeArray: { src: string; text: string }[] = [
     {
       src: '../../assets/imgs/icon-interactiv/location.png',
