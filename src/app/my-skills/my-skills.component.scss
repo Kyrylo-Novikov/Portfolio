@@ -70,7 +70,7 @@ section {
       > img {
         height: 60px;
         width: 60px;
-        transition: all 0.2s ease-in;
+        transition: all 0.125s ease-in;
         &:hover {
           height: 64px;
           width: 64px;
@@ -103,7 +103,7 @@ span {
   align-items: center;
   gap: 8px;
   padding: 8px;
-  transition: all 200ms ease-in;
+  transition: all 125ms ease-in;
   p {
     @include font(Karla, var(--fontSize-1), 400, var(--color-1));
   }
@@ -129,7 +129,7 @@ span {
 }
 
 p {
-  transition: all 200ms ease-in;
+  transition: all 125ms ease-in;
 }
 
 .speech-bubble {

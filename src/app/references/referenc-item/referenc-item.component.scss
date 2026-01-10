@@ -10,7 +10,7 @@
   padding: 48px 40px;
   gap: 44px;
   width: 632px;
-  transition: transform 0.5s ease;
+  transition: transform 0.125s ease;
   > div {
     gap: 8px;
     display: flex;
@@ -23,9 +23,6 @@
       background-color: var(--color-2);
       min-width: 10px;
     }
-    // > p {
-    //   white-space: nowrap;
-    // }
   }
 }
 

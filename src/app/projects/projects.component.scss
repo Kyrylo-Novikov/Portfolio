@@ -39,10 +39,10 @@ section {
           width: 295px;
           height: 192px;
           position: absolute;
-          transition: all 0.3s ease;
+          transition: all 0.125s ease;
           &::after {
             z-index: 1;
-            transition: all 0.3s ease;
+            transition: all 0.125s ease;
             position: absolute;
             content: "";
             top: -140px;
@@ -81,7 +81,7 @@ section {
       padding: 0px 32px;
       border-width: 1px 0px 1px 0px;
       border-style: solid;
-      transition: all 0.3s ease-out;
+      transition: all 0.125s ease-out;
       border-color: #3dcfb6;
       height: 109px;
       cursor: pointer;
@@ -92,7 +92,7 @@ section {
           width: 23px;
           height: 23px;
           object-fit: none;
-          transition: all 0.3s ease;
+          transition: all 0.125s ease;
         }
       }
       .tech-for-project > span {

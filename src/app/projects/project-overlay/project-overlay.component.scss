@@ -109,7 +109,7 @@
         width: 48px;
         background: url(/assets/imgs/icon-interactiv/close_small.svg) center
           no-repeat;
-        transition: all 200ms ease-in;
+        transition: all 0.125s ease-in;
         transform: translateY(-100%);
         &:hover {
           background: url(/assets/imgs/icon-interactiv/close.svg) center
