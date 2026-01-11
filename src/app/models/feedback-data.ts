@@ -1,8 +1,8 @@
 /**
- * Definiert die Struktur der Feedback-Nachrichten.
+ * Defines the structure of the feedback text after submitting
  */
 export interface FeedbackData {
-  titleKey: string; // Translation-Key für den Titel
-  messageKey: string; // Translation-Key für die Nachricht
+  titleKey: string;
+  messageKey: string;
   type: 'success' | 'error';
 }
