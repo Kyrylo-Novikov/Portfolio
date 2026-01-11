@@ -17,6 +17,7 @@ form {
         gap: 16px;
         padding: 32px;
         position: relative;
+        cursor: pointer;
         > h2 {
           @include font(FiraCode, var(--fontSize-4), 500, #3dcfb6);
         }

@@ -16,8 +16,8 @@
           autocomplete="name"
           [placeholder]="'FORM.PLACEHOLDER_NAME' | translate"
           #nameInput
-          [class.error]="nameError"
-        />@if(nameError){
+          [class.error]="error('name')"
+        />@if(error('name')){
         <div class="error input-error-mes">
           {{ "FORM.INPUT_NAME_REQ" | translate }}
         </div>
@@ -35,7 +35,7 @@
           autocomplete="email"
           [placeholder]="'FORM.PLACEHOLDER_EMAIL' | translate"
           #emailInput
-        />@if (emailError) { @if(emailRequiredError){
+        />@if (error('email')) { @if(emailRequiredError){
         <div class="input-error-mes error">
           {{ "FORM.INPUT_EMAIL_REQ" | translate }}
         </div>
@@ -56,8 +56,8 @@
           name="message"
           [placeholder]="'FORM.PLACEHOLDER_TOPIC' | translate"
           #messageInput
-          [class.error]="messagError"
-        />@if(messagError){
+          [class.error]="error('message')"
+        />@if(error("message")){
         <div class="input-error-mes error">
           {{ "FORM.INPUT_TOPIC_REQ" | translate }}
         </div>
@@ -86,7 +86,7 @@
     </div>
     <p
       class="checkbox-req"
-      [class.required]="checkboxError"
+      [class.required]="error('checkbox')"
       [class.error]="error('checkbox')"
     >
       {{ "FORM.POLICY_CHECK_REQ" | translate }}
