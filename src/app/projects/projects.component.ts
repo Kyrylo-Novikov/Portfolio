@@ -14,8 +14,29 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrl: './projects.component.scss',
 })
 export class ProjectsComponent implements OnInit {
+  /**
+   * Injects OverlayService
+   * Used for opening the picked project in a overlay
+   */
   private overlay = inject(OverlayService);
+
+  /**
+   * Saves the index of the current hoverd project
+   * Used to show the project image on hover
+   */
   hoverdIndex: number | null = null;
+
+  /**
+   * Array with information about the projects.
+   * each project contains:
+   * -id : project id
+   * -name : project name
+   * -description : description stored as an i18n key
+   * -usedTechs : technologies used for the projects
+   * -imgPath : path to the project image
+   * -gitLink : GitHub repository URL
+   * -url : live demo URL of the project
+   */
   projectsArray: Project[] = [
     {
       id: 1,
@@ -52,10 +73,16 @@ export class ProjectsComponent implements OnInit {
     },
   ];
 
+  /**
+   * Opens the overlay for the selected project
+   */
   open(project: Project) {
     this.overlay.open(project);
   }
 
+  /**
+   * Provides the project list to the OverlayService.
+   */
   ngOnInit() {
     this.overlay.projects = this.projectsArray;
   }
