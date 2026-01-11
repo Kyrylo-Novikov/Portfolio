@@ -10,13 +10,23 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrl: './project-overlay.component.scss',
 })
 export class ProjectOverlayComponent {
+  /**
+   * Injects OverlayService to controle
+   * the current aktive project
+   */
   private overlay = inject(OverlayService);
   project = computed(() => this.overlay.activeProject());
 
+  /**
+   * Closes the overlay.
+   */
   close() {
     this.overlay.close();
   }
 
+  /**
+   * Opens the overlay for the next project.
+   */
   next() {
     this.overlay.next();
   }
