@@ -9,6 +9,14 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrl: './my-skills.component.scss',
 })
 export class MySkillsComponent {
+  /**
+   * Array of technology objects I'm interisted in
+   * Each object has:
+   * -name : Name of the technology
+   * -path :  Path to the technology icon
+   *
+   * Displayed in the template using '@for' and iteration.
+   */
   techsArr: { name: string; path: string }[] = [
     { name: 'HTML', path: 'assets/imgs/tech-icon/current-tech/HTML.svg' },
     { name: 'CSS', path: 'assets/imgs/tech-icon/current-tech/CSS.svg' },
