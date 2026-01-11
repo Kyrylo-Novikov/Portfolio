@@ -1,3 +1,7 @@
+/**
+ * Enum for diffrent technologies
+ * Used as key in Tech_DATA
+ */
 export enum TechName {
   Angular = 'Angular',
   HTML = 'HTML',
@@ -7,6 +11,12 @@ export enum TechName {
   Firebase = 'Firebase',
 }
 
+/**
+ * Objects for each technolofiy
+ * Every object contains:
+ * -name : Name of the technology
+ * -iconPath : Path to the technologi icon.
+ */
 export const Tech_DATA = {
   [TechName.Angular]: {
     name: 'Angular',
