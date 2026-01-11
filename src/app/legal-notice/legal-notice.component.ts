@@ -10,5 +10,8 @@ import { HighlightPipe } from '../shared/pipes/highlight.pipe';
   styleUrl: './legal-notice.component.scss',
 })
 export class LegalNoticeComponent {
+  /**
+   * Array of words that have to be displayed in a different color
+   */
   legalWords = ['Portfolios', 'Portfolio', 'Developer Akademie', 'GmbH'];
 }
