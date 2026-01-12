@@ -1,4 +1,10 @@
-import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  HostListener,
+  ViewChild,
+  OnInit,
+} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './shared/header/header.component';
@@ -18,7 +24,7 @@ import { TranslationService } from './services/translate/translation.service';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'portfolio';
   @ViewChild('shadow', { static: true }) shadowEle!: ElementRef<HTMLDivElement>;
 
@@ -27,7 +33,9 @@ export class AppComponent {
     this.shadowEle.nativeElement.style.top = event.clientY + `px`;
     this.shadowEle.nativeElement.style.left = event.clientX + `px`;
   }
-  constructor(private translateService: TranslationService) {
-    translateService.initLanguage();
+  constructor(private translateService: TranslationService) {}
+
+  ngOnInit(): void {
+    this.translateService.initLanguage();
   }
 }
