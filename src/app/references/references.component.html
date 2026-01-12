@@ -23,12 +23,12 @@
     <div
       class="ref-slider"
       (click)="slide(+1)"
-      (mouseover)="isHoveredLeft = true"
-      (mouseleave)="isHoveredLeft = false"
+      (mouseover)="leftArrowIsHovered = true"
+      (mouseleave)="leftArrowIsHovered = false"
     >
       <img
         [src]="
-          isHoveredLeft
+          leftArrowIsHovered
             ? 'assets/imgs/icon-interactiv/left-arrow-hover.png'
             : 'assets/imgs/icon-interactiv/left-arrow.png'
         "
@@ -40,12 +40,12 @@
     <div
       class="ref-slider"
       (click)="slide(-1)"
-      (mouseover)="isHoveredRight = true"
-      (mouseleave)="isHoveredRight = false"
+      (mouseover)="rightArrowIsHovered = true"
+      (mouseleave)="rightArrowIsHovered = false"
     >
       <img
         [src]="
-          isHoveredRight
+          rightArrowIsHovered
             ? 'assets/imgs/icon-interactiv/right-arrow-hover.png'
             : 'assets/imgs/icon-interactiv/right-arrow.png'
         "
