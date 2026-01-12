@@ -5,20 +5,26 @@ import { FeedbackData } from '../../models/feedback-data';
   providedIn: 'root',
 })
 export class OverlayService {
-  /** Liste aller Projekte für die Navigation */
+  /**
+   * List of all projects for the navigation in the overlay
+   * */
   projects: Project[] = [];
 
-  /** Signal für das aktuell ausgewählte Projekt im Overlay */
+  /**
+   *  Holds the current project for the overlay
+   * */
   activeProject = signal<Project | null>(null);
 
-  /** Signal für Feedback-Meldungen (z.B. nach Formularversand) */
+  /**
+   *  Holds feedback data for the feedback overlay.
+   * */
   feedbackSignal = signal<FeedbackData | null>(null);
 
   constructor() {}
 
   /**
-   * Öffnet das Projekt-Detail-Overlay.
-   * @param project Das anzuzeigende Projekt-Objekt.
+   * Sets the activ project and opens the project overlay.
+   * @param project Project to show.
    */
   open(project: Project) {
     this.activeProject.set(project);
@@ -26,7 +32,7 @@ export class OverlayService {
   }
 
   /**
-   * Schließt das Projekt-Detail-Overlay.
+   * Closes the project overlay.
    */
   close() {
     this.activeProject.set(null);
@@ -34,7 +40,8 @@ export class OverlayService {
   }
 
   /**
-   * Schaltet zum nächsten Projekt in der Liste.
+   * Select the next project and update the active project
+   * Used for navigating through the project overlay.
    */
   next() {
     let current = this.activeProject();
@@ -47,8 +54,8 @@ export class OverlayService {
   }
 
   /**
-   * Öffnet ein Feedback-Overlay (Erfolg oder Fehler).
-   * @param data Ein Objekt vom Typ FeedbackData.
+   * Shows the feedback overlay with the given data.
+   * @param data Feedback object.
    */
   showFeedback(data: FeedbackData) {
     this.feedbackSignal.set(data);
@@ -60,6 +67,7 @@ export class OverlayService {
       document.body.style.overflow = '';
     }
   }
+
   disableScroll() {
     if (this.activeProject() || this.feedbackSignal()) {
       document.body.style.overflow = 'hidden';
@@ -67,7 +75,7 @@ export class OverlayService {
   }
 
   /**
-   * Schließt das Feedback-Overlay.
+   * Closes the feedback overlay.
    */
   closeFeedback(): void {
     this.feedbackSignal.set(null);
