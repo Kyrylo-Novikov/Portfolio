@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
-import { TranslationService } from './../../services/translate/translation.service';
 import { RouterModule } from '@angular/router';
 
 @Component({
@@ -11,22 +10,11 @@ import { RouterModule } from '@angular/router';
   styleUrl: './navbar.component.scss',
 })
 export class NavbarComponent {
-  constructor(private translateService: TranslationService) {
-    // translateService.initLanguage();
-  }
-
-  changeLanguage(lang: string) {
-    this.translateService.switchLanguage(lang);
-  }
-
+  @Input() isActive!: (lang: string) => boolean;
+  @Output() langChange = new EventEmitter<string>();
   aktivSection: string = '';
 
   setAktiv(section: string) {
     this.aktivSection = section;
-  }
-
-  isCurrentLang(lang: string): boolean {
-    const isMatch = this.translateService.isCurrentLang(lang);
-    return isMatch;
   }
 }

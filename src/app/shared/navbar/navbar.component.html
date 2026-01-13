@@ -3,17 +3,17 @@
     <input
       type="radio"
       name="language-desktop"
-      [checked]="isCurrentLang('en')"
+      [checked]="isActive('en')"
       id="eng-radio"
     />
-    <label for="eng-radio" (click)="changeLanguage('en')">EN</label>
+    <label for="eng-radio" (click)="langChange.emit('en')">EN</label>
     <input
       type="radio"
       name="language-desktop"
       id="deu-radio"
-      [checked]="isCurrentLang('de')"
+      [checked]="isActive('de')"
     />
-    <label for="deu-radio" (click)="changeLanguage('de')">DE</label>
+    <label for="deu-radio" (click)="langChange.emit('de')">DE</label>
   </div>
   <div class="header-links">
     <a

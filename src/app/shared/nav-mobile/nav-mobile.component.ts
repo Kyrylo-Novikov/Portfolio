@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
-import { TranslationService } from './../../services/translate/translation.service';
 import { RouterModule } from '@angular/router';
 
 @Component({
@@ -11,16 +10,10 @@ import { RouterModule } from '@angular/router';
   styleUrl: './nav-mobile.component.scss',
 })
 export class NavMobileComponent {
+  @Input() isActive!: (lang: string) => boolean;
+  @Output() langChange = new EventEmitter<string>();
   aktivSection: string = '';
   isOpen: boolean = false;
-
-  constructor(private translateService: TranslationService) {
-    // translateService.initLanguage();
-  }
-
-  changeLanguage(lang: string) {
-    this.translateService.switchLanguage(lang);
-  }
 
   setAktiv(section: string) {
     this.aktivSection = section;
@@ -29,10 +22,5 @@ export class NavMobileComponent {
 
   toggelNav() {
     this.isOpen = !this.isOpen;
-  }
-
-  isCurrentLang(lang: string): boolean {
-    const isMatch = this.translateService.isCurrentLang(lang);
-    return isMatch;
   }
 }
