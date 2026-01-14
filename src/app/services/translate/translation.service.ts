@@ -1,10 +1,12 @@
-import { Injectable } from '@angular/core';
+import { Injectable, signal } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 
 @Injectable({
   providedIn: 'root',
 })
 export class TranslationService {
+  currentLang = signal(localStorage.getItem('lang') || 'en');
+
   constructor(private translate: TranslateService) {}
 
   /**
@@ -14,8 +16,7 @@ export class TranslationService {
    * and sets it for the app.
    * */
   initLanguage(): void {
-    const currentLang = localStorage.getItem('lang') || 'en';
-    this.translate.use(currentLang);
+    this.translate.use(this.currentLang());
   }
 
   /**
@@ -23,8 +24,9 @@ export class TranslationService {
    * @param lang The language to switch to
    */
   switchLanguage(lang: string) {
-    this.translate.use(lang);
+    this.currentLang.set(lang);
     localStorage.setItem('lang', lang);
+    this.translate.use(lang);
   }
 
   /**
@@ -32,8 +34,7 @@ export class TranslationService {
    * @param lang language to check
    * @returns 'true' if the given language is currently active
    */
-  isCurrentLang(lang: string): boolean {
-    const isMatch = this.translate.currentLang === lang;
-    return isMatch;
+  isCurrentLang(lang: string) {
+    return this.currentLang() === lang;
   }
 }
