@@ -5,15 +5,17 @@ import { TranslateService } from '@ngx-translate/core';
   providedIn: 'root',
 })
 export class TranslationService {
-  currentLang = signal(localStorage.getItem('lang') || 'en');
+  /**
+   * Reactive signal holding the currently selected language.
+   * Initialized from localStorage.
+   */
+  readonly currentLang = signal<string>(localStorage.getItem('lang') || 'en');
 
   constructor(private translate: TranslateService) {}
 
   /**
    * Initializes the app language for internationalization (i18n).
-   * Loads the currently selected language from localStorage,
-   * or defaults to 'en' if none is set,
-   * and sets it for the app.
+   * Loads the currently selected language from currentLang,
    * */
   initLanguage(): void {
     this.translate.use(this.currentLang());
