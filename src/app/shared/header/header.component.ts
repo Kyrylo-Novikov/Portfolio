@@ -14,6 +14,29 @@ import { TranslationService } from './../../services/translate/translation.servi
 export class HeaderComponent {
   constructor(private translateService: TranslationService) {}
 
+  /**
+   * Reference to the language signal
+   * provided by TranslationService.
+   */
+  currentLang = this.translateService.currentLang;
+
+  /**
+   * Holds the currently active navigation section
+   */
+  activeSection: string = '';
+
+  /**
+   * Sets the active navigation section
+   * @param section Identifier of the active section
+   */
+  setActive(section: string) {
+    this.activeSection = section;
+  }
+
+  /**
+   * Changes the language.
+   * @param lang The selected language ('en', 'de').
+   */
   changeLanguage(lang: string) {
     this.translateService.switchLanguage(lang);
   }
@@ -25,7 +48,7 @@ export class HeaderComponent {
    * @param lang Language that bound to the radio button
    * @returns 'true' if both languages match.
    */
-  checkedCurrentLang(lang: string): boolean {
+  checkedCurrentLang(lang: string) {
     const isMatch = this.translateService.isCurrentLang(lang);
     return isMatch;
   }

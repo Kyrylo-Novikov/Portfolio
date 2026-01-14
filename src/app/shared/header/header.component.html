@@ -1,12 +1,16 @@
 <header>
   <div class="header-left">
     <app-navbar
-      [isActive]="checkedCurrentLang.bind(this)"
+      [activeSection]="activeSection"
+      [currentLang]="currentLang"
       (langChange)="changeLanguage($event)"
+      (sectionChange)="setActive($event)"
     ></app-navbar>
     <app-nav-mobile
-      [isActive]="checkedCurrentLang.bind(this)"
+      [activeSection]="activeSection"
+      [currentLang]="currentLang"
       (langChange)="changeLanguage($event)"
+      (sectionChange)="setActive($event)"
     ></app-nav-mobile>
   </div>
   <div class="header-right">
