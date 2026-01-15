@@ -10,5 +10,9 @@ import { CommonModule } from '@angular/common';
   styleUrl: './letter-name.component.scss',
 })
 export class LetterNameComponent {
-  @Input() hideNameOnMobile = true;
+  /**
+   * Controls whether the name is hidden on screens under 800px.
+   * Allows the parent component to configure the behavior
+   */
+  @Input() hideNameOnMobile!: boolean;
 }
