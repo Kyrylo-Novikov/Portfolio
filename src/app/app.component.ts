@@ -25,9 +25,17 @@ import { TranslationService } from './services/translate/translation.service';
   styleUrl: './app.component.scss',
 })
 export class AppComponent implements OnInit {
-  title = 'portfolio';
+  /**
+   * Reference to the cursor shadow element that follows the cursor.
+   */
   @ViewChild('shadow', { static: true }) shadowEle!: ElementRef<HTMLDivElement>;
 
+  /**
+   * Tracks the mouse position and moves a shadow element to follow the cursor.
+   * This creates a dynamic shadow effect around the element.
+   *
+   * @param event MouseEvent containing the current cursor coordinates
+   */
   @HostListener('mousemove', ['$event'])
   onMouseMove(event: MouseEvent) {
     this.shadowEle.nativeElement.style.top = event.clientY + `px`;
