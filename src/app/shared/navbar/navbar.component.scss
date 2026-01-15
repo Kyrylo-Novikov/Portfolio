@@ -29,6 +29,9 @@ nav {
     gap: 24px;
     display: flex;
     white-space: nowrap;
+    a:hover {
+      color: var(--color-1) !important;
+    }
   }
   .language-switch {
     @extend .d-flex-align-c;
