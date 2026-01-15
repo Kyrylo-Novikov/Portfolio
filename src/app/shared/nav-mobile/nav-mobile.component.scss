@@ -1,6 +1,4 @@
 @use "./../../shared/styles/index" as *;
-.burgermenu {
-}
 .overlay-mobile-nav {
   position: absolute;
   width: 100vw;
@@ -51,11 +49,15 @@
         opacity: 1;
       }
     }
+
     .header-links {
       gap: 24px;
       @extend .d-flex-align-c;
       white-space: nowrap;
       flex-direction: column;
+      a:hover {
+        color: var(--color-1) !important;
+      }
     }
     .language-switch {
       @extend .d-flex-align-c;
@@ -98,21 +100,17 @@
 }
 
 @media (max-width: 600px) {
-  // .burgermenu {
   .overlay-mobile-nav {
     .mobile-nav {
       left: 45vw;
       top: 5vh;
     }
-    // }
   }
 }
 @media (max-width: 450px) {
-  // .burgermenu {
   .overlay-mobile-nav {
     .mobile-nav {
       left: 22vw;
     }
-    // }
   }
 }
