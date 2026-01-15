@@ -3,7 +3,7 @@
     <input
       type="radio"
       name="language-desktop"
-      [checked]="isActive('en')"
+      [checked]="currentLang() === 'en'"
       id="eng-radio"
     />
     <label for="eng-radio" (click)="langChange.emit('en')">EN</label>
@@ -11,7 +11,7 @@
       type="radio"
       name="language-desktop"
       id="deu-radio"
-      [checked]="isActive('de')"
+      [checked]="currentLang() === 'de'"
     />
     <label for="deu-radio" (click)="langChange.emit('de')">DE</label>
   </div>
@@ -19,21 +19,21 @@
     <a
       [routerLink]="['/']"
       [fragment]="'about-me-section'"
-      [class.aktiv]="aktivSection === 'about-me'"
-      (click)="setAktiv('about-me')"
+      [class.aktiv]="activeSection === 'about-me'"
+      (click)="sectionChange.emit('about-me')"
       >{{ "NAV.ABOUT_ME" | translate }}</a
     >
     <a
       [routerLink]="['/']"
-      [class.aktiv]="aktivSection === 'skills'"
-      (click)="setAktiv('skills')"
+      [class.aktiv]="activeSection === 'skills'"
+      (click)="sectionChange.emit('skills')"
       [fragment]="'skill-section'"
       >{{ "NAV.SKILLS" | translate }}</a
     >
     <a
       [routerLink]="['/']"
-      [class.aktiv]="aktivSection === 'projects'"
-      (click)="setAktiv('projects')"
+      [class.aktiv]="activeSection === 'projects'"
+      (click)="sectionChange.emit('projects')"
       [fragment]="'portfolio-section'"
       >{{ "NAV.PROJECTS" | translate }}</a
     >

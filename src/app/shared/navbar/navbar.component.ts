@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output, Signal } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { RouterModule } from '@angular/router';
 
@@ -10,11 +10,27 @@ import { RouterModule } from '@angular/router';
   styleUrl: './navbar.component.scss',
 })
 export class NavbarComponent {
-  @Input() isActive!: (lang: string) => boolean;
-  @Output() langChange = new EventEmitter<string>();
-  aktivSection: string = '';
+  /**
+   * Reactive signal holding the currently selected language.
+   * Provided by the parent component.
+   */
+  @Input() currentLang!: Signal<string>;
 
-  setAktiv(section: string) {
-    this.aktivSection = section;
-  }
+  /**
+   * Indicates which section is currently active
+   * Used to applay the active styling to the matching link
+   */
+  @Input() activeSection!: string;
+
+  /**
+   * Emits the selected language to the parent component
+   * when a radio button is clicked
+   */
+  @Output() langChange = new EventEmitter<string>();
+
+  /**
+   * Emits the selected section to the parent component
+   * when a link is clicked
+   */
+  @Output() sectionChange = new EventEmitter<string>();
 }
