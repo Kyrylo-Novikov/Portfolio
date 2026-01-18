@@ -1,6 +1,8 @@
 @use "./../shared/styles/index" as *;
 
 section {
+  position: relative;
+  overflow-x: hidden;
   color: var(--color-2);
   display: flex;
   justify-content: center;
@@ -19,7 +21,7 @@ section {
   }
   .tech-info-head {
     @extend .d-flex-dirc-c;
-    width: 50%;
+    max-width: 50%;
     gap: 20px;
     align-items: flex-end;
     padding-right: 112px;
@@ -50,12 +52,12 @@ section {
     width: 520px;
   }
   .all-techs {
-    width: 50%;
+    // width: 50%;
     display: flex;
     flex-wrap: wrap;
-    max-width: 832px;
-    gap: 72px;
-    padding-top: 52px;
+    // max-width: 832px;
+    gap: 44px;
+    padding: 52px 20px;
     .tech {
       position: relative;
       @include font(FiraCode, var(--fontSize-2), 400, var(--color-2));
@@ -72,8 +74,7 @@ section {
         width: 60px;
         transition: all 0.125s ease-in;
         &:hover {
-          height: 64px;
-          width: 64px;
+          transform: scale(1.1);
         }
       }
     }
@@ -97,6 +98,8 @@ span {
   background-image: url(/assets/imgs/icon-interactiv/speech_bubble.png);
   top: -100%;
   left: 0%;
+  // left: 50%;
+  transform: translateX(-50%);
   z-index: 1;
   transform: translateX(-2%);
   @extend .d-flex-dirc-c;
@@ -170,7 +173,7 @@ p {
     }
     .tech-info-head {
       padding-right: 0px;
-      width: 100%;
+      max-width: 100%;
       h3 {
         font-size: var(--fontSize-2);
         font-weight: 400;
