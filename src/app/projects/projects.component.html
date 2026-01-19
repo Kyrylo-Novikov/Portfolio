@@ -9,43 +9,43 @@
         <p>{{ "PROJECTS.TEXT" | translate }}</p>
       </div>
       <div class="projects">
-        @for (project of projectsArray; track project.name ; let i = $index) {
-        <div>
-          <div
-            (click)="open(project)"
-            class="project"
-            (mouseover)="hoverdIndex = i"
-            (mouseleave)="hoverdIndex = null"
-            [style.background-color]="
-              hoverdIndex === i ? '#3DCFB64D' : 'transparent'
-            "
-          >
-            <div class="project-title">
-              <h2 class="project-name">{{ project.name }}</h2>
-              <img
-                src="/assets/imgs/icon-interactiv/arrow_outward.svg"
-                alt=""
-                [style.opacity]="hoverdIndex === i ? 1 : 0"
-              />
-            </div>
-
-            <div class="tech-for-project">
-              @for( tech of project.usedTechs;track tech; let last = $last){
-              {{ tech }}
-              @if(!last){
-              <span>|</span>}}
+        @for (project of projectsArray; track project.name; let i = $index) {
+          <div>
+            <div
+              (click)="open(project)"
+              class="project"
+              (mouseover)="hoverdIndex = i"
+              (mouseleave)="hoverdIndex = null"
+              [style.background-color]="
+                hoverdIndex === i ? '#3DCFB64D' : 'transparent'
+              "
+            >
+              <div class="project-title">
+                <h2 class="project-name">{{ project.name }}</h2>
+                <img
+                  src="/assets/imgs/icon-interactiv/arrow_outward.svg"
+                  alt=""
+                  [style.opacity]="hoverdIndex === i ? 1 : 0"
+                />
+              </div>
+              <div class="tech-for-project">
+                @for (tech of project.usedTechs; track tech; let last = $last) {
+                  {{ tech }}
+                  @if (!last) {
+                    <span>|</span>
+                  }
+                }
+              </div>
             </div>
           </div>
-        </div>
-        <div>
-          <div
-            class="project-img-wrapper"
-            [style.opacity]="hoverdIndex === i ? 1 : 0"
-          >
-            <img class="project-img" src="{{ project.imgPath }}" alt="" />
+          <div>
+            <div
+              class="project-img-wrapper"
+              [style.opacity]="hoverdIndex === i ? 1 : 0"
+            >
+              <img class="project-img" src="{{ project.imgPath }}" alt="" />
+            </div>
           </div>
-        </div>
-
         }
         <app-project-overlay></app-project-overlay>
       </div>

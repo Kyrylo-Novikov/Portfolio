@@ -12,11 +12,12 @@
         value: menuState,
         params: {
           animationDist: animationDist,
-        }
+        },
       }"
     >
       @for (ref of doubleRefArr(); track ref.name; let i = $index) {
-      <app-referenc [referenc]="ref" [active]="i === 2"></app-referenc>}
+        <app-referenc [referenc]="ref" [active]="i === 2"></app-referenc>
+      }
     </div>
   </div>
   <div class="slide-menu">
@@ -34,8 +35,8 @@
         "
       />
     </div>
-    @for (dot of [0,1,2]; track dot ; let i = $index) {
-    <div class="dot" [class.active]="i === currentIndex % 3">•</div>
+    @for (dot of [0, 1, 2]; track dot; let i = $index) {
+      <div class="dot" [class.active]="i === currentIndex % 3">•</div>
     }
     <div
       class="ref-slider"
