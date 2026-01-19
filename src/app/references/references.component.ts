@@ -37,10 +37,10 @@ import { Reference } from '../models/reference';
   animations: [
     trigger('slide', [
       state('left', style({ transform: 'translateX(-{{animationDist}})' }), {
-        params: { animationDist: '32%' },
+        params: { animationDist: 'animationDist' },
       }),
       state('right', style({ transform: 'translateX({{animationDist}})' }), {
-        params: { animationDist: '32%' },
+        params: { animationDist: 'animationDist' },
       }),
       transition('* => left, * => right', [animate('1s ease-in-out')]),
     ]),
@@ -63,25 +63,29 @@ export class ReferencesComponent {
   /**
    * Default distance the element moves during the slide animation.
    */
-  animationDist: string = '32%';
+  animationDist: string = '14.45%';
 
   /**
    * Changes animationDist depending on the width of the display.
    * For smooth animation on every screen width.
    */
   constructor(private screen: ScreenService) {
-    effect(() => {
-      const width = this.screen.windowW();
-      if (width >= 1024) {
-        this.animationDist = '32%';
-      } else if (width < 1024 && width > 800) {
-        this.animationDist = '24%';
-      } else if (width < 800 && width > 500) {
-        this.animationDist = '18%';
-      } else if (width < 500) {
-        this.animationDist = '16.8%';
-      }
-    });
+    // effect(() => {
+    // this.animationDist = '14.5%';
+    // const width = this.screen.windowW();
+    // if (width >= 800) {
+    //   this.animationDist = '14.5%';
+    // } else if (width < 1024 && width > 800) {
+    //     this.animationDist = '30%';
+    // } else if (
+    //   width < 800
+    //  && width > 500
+    // ) {
+    // this.animationDist = '10%';
+    //   } else if (width < 500) {
+    //     this.animationDist = '16.8%';
+    // }
+    // });
   }
 
   /**
@@ -134,7 +138,7 @@ export class ReferencesComponent {
     this.referenceArray.update((arr) =>
       change < 0
         ? [arr[arr.length - 1], ...arr.slice(0, -1)]
-        : [...arr.slice(1), arr[0]]
+        : [...arr.slice(1), arr[0]],
     );
     this.menuState = null;
   }
