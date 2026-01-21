@@ -5,7 +5,6 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
-import { debounceTime } from 'rxjs/operators';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 import { RouterModule } from '@angular/router';
@@ -44,14 +43,33 @@ export class FormComponent implements OnInit {
   @ViewChild('messageInput') messageInput!: ElementRef<HTMLInputElement>;
   @ViewChild('checkboxInput') checkboxInput!: ElementRef<HTMLInputElement>;
 
-  constructor(private fb: FormBuilder, public overlayService: OverlayService) {
+  private readonly FORM_DEFAULTS = {
+    name: '',
+    email: '',
+    message: '',
+    checkbox: false,
+  };
+
+  constructor(
+    private fb: FormBuilder,
+    public overlayService: OverlayService,
+  ) {
     const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
     this.contactForm = this.fb.group({
-      name: ['', [Validators.required, Validators.minLength(2)]],
-      email: ['', [Validators.required, Validators.pattern(emailPattern)]],
-      message: ['', [Validators.required, Validators.minLength(4)]],
-      checkbox: ['', Validators.requiredTrue],
+      name: [
+        this.FORM_DEFAULTS.name,
+        [Validators.required, Validators.minLength(2)],
+      ],
+      email: [
+        this.FORM_DEFAULTS.email,
+        [Validators.required, Validators.pattern(emailPattern)],
+      ],
+      message: [
+        this.FORM_DEFAULTS.message,
+        [Validators.required, Validators.minLength(4)],
+      ],
+      checkbox: [this.FORM_DEFAULTS.checkbox, Validators.requiredTrue],
     });
   }
 
@@ -98,6 +116,8 @@ export class FormComponent implements OnInit {
         .then((response) => this.handlingFormRespons(response))
         .catch(() => this.submitError())
         .finally(() => (this.isSubmitting = false));
+    } else {
+      this.errorBeforSubmit();
     }
   }
 
@@ -147,7 +167,7 @@ export class FormComponent implements OnInit {
       messageKey: 'FORM.SUCCESS.MESSAGEKEY',
       type: 'success',
     });
-    this.contactForm.reset();
+    this.contactForm.reset(this.FORM_DEFAULTS);
   }
 
   /**
@@ -156,7 +176,7 @@ export class FormComponent implements OnInit {
    */
   submitError() {
     this.overlayService.showFeedback({
-      titleKey: 'FORM.ERROR.MESSAGEKEY',
+      titleKey: 'FORM.ERROR.TITLEKEY',
       messageKey: 'FORM.ERROR.MESSAGEKEY',
       type: 'error',
     });

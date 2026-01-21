@@ -17,10 +17,11 @@
           [placeholder]="'FORM.PLACEHOLDER_NAME' | translate"
           #nameInput
           [class.error]="error('name')"
-        />@if(error('name')){
-        <div class="error input-error-mes">
-          {{ "FORM.INPUT_NAME_REQ" | translate }}
-        </div>
+        />
+        @if (error("name")) {
+          <div class="error input-error-mes">
+            {{ "FORM.INPUT_NAME_REQ" | translate }}
+          </div>
         }
       </div>
     </div>
@@ -30,20 +31,23 @@
         <input
           spellcheck="false"
           formControlName="email"
-          type="text"
+          type="email"
           name="email"
           autocomplete="email"
           [placeholder]="'FORM.PLACEHOLDER_EMAIL' | translate"
           #emailInput
-        />@if (error('email')) { @if(emailRequiredError){
-        <div class="input-error-mes error">
-          {{ "FORM.INPUT_EMAIL_REQ" | translate }}
-        </div>
-        } @else {
-        <div class="input-error-mes error">
-          {{ "FORM.INPUT_EMAIL_VALIDE" | translate }}
-        </div>
-        }}
+        />
+        @if (error("email")) {
+          @if (emailRequiredError) {
+            <div class="input-error-mes error">
+              {{ "FORM.INPUT_EMAIL_REQ" | translate }}
+            </div>
+          } @else {
+            <div class="input-error-mes error">
+              {{ "FORM.INPUT_EMAIL_VALIDE" | translate }}
+            </div>
+          }
+        }
       </div>
     </div>
     <div class="question" (click)="messageInput.focus()">
@@ -57,10 +61,11 @@
           [placeholder]="'FORM.PLACEHOLDER_TOPIC' | translate"
           #messageInput
           [class.error]="error('message')"
-        />@if(error("message")){
-        <div class="input-error-mes error">
-          {{ "FORM.INPUT_TOPIC_REQ" | translate }}
-        </div>
+        />
+        @if (error("message")) {
+          <div class="input-error-mes error">
+            {{ "FORM.INPUT_TOPIC_REQ" | translate }}
+          </div>
         }
       </div>
     </div>
@@ -103,27 +108,30 @@
     </div>
   </div>
   @if (overlayService.feedbackSignal(); as data) {
-  <div class="feedback-overlay" (click)="overlayService.closeFeedback()">
-    <div
-      class="feedback-card"
-      [class]="data.type"
-      (click)="$event.stopPropagation()"
-    >
-      <div class="icon-wrapper">
-        @if(data.type === 'success') { <span>✔️</span> } @else {
-        <span>⚠️</span> }
-        <h1>{{ data.titleKey | translate }}</h1>
-      </div>
-
-      <p>{{ data.messageKey | translate }}</p>
-      <button
-        type="button"
-        class="btn"
-        (click)="overlayService.closeFeedback()"
+    <div class="feedback-overlay" (click)="overlayService.closeFeedback()">
+      <div
+        class="feedback-card"
+        [class]="data.type"
+        (click)="$event.stopPropagation()"
       >
-        {{ "FORM.CLOSE" | translate }}
-      </button>
+        <div class="icon-wrapper">
+          @if (data.type === "success") {
+            <span>✔️</span>
+          } @else {
+            <span>⚠️</span>
+          }
+          <h1>{{ data.titleKey | translate }}</h1>
+        </div>
+
+        <p>{{ data.messageKey | translate }}</p>
+        <button
+          type="button"
+          class="btn"
+          (click)="overlayService.closeFeedback()"
+        >
+          {{ "FORM.CLOSE" | translate }}
+        </button>
+      </div>
     </div>
-  </div>
   }
 </form>
