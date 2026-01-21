@@ -1,27 +1,31 @@
-<section id="about-me-section">
-  <div class="about-me-wrapper">
-    <div class="img-wrapper">
-      <div class="foto">
-        <img src="../../assets/imgs/profil-img/coffee.jpg" alt="" />
+<section id="about-me-section" class="d-flex-c-c width-100">
+  <div class="about-me-wrapper d-flex-c-c max-width-1920 width-100">
+    <div class="img-wrapper d-flex-c-c border-rad-30">
+      <div class="foto pos-rel border-rad-30">
+        <img
+          class="width-100 height-100 pos-rel border-rad-30"
+          src="../../assets/imgs/profil-img/coffee.jpg"
+          alt=""
+        />
       </div>
     </div>
-    <div class="info-wrapper">
+    <div class="info-wrapper d-flex-align-c">
       <div class="about-me-info">
         <p>{{ "ABOUT_ME.HEADLINE" | translate }}</p>
-        <div class="about-me-text">
+        <div class="about-me-text border-rad-30">
           <h1 class="green-headline-700">{{ "ABOUT_ME.TITEL" | translate }}</h1>
-          <div class="about-me-descrption">
+          <div class="about-me-descrption d-flex-dirc-c">
             <p>
               {{ "ABOUT_ME.GENERAL_TEXT" | translate }}
             </p>
-            <div>
+            <div class="d-flex-dirc-c">
               @for (part of aboutMeArray; track $index) {
-              <div class="highlights">
-                <img [src]="part.src" alt="" />
-                <p>
-                  {{ part.text | translate }}
-                </p>
-              </div>
+                <div class="highlights d-flex-align-c width-100">
+                  <img [src]="part.src" alt="" />
+                  <p>
+                    {{ part.text | translate }}
+                  </p>
+                </div>
               }
             </div>
           </div>
