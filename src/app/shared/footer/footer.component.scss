@@ -1,32 +1,20 @@
 @use "./../../shared/styles/index" as *;
 
 section {
-  position: absolute;
-  color: var(--color-2);
-  width: 100%;
-  @extend .d-flex-dirc-c;
-  align-items: center;
+  margin: 0 auto;
   .footer-wrapper {
     padding: 0 96px;
     bottom: 42px;
-    position: absolute;
     min-height: 126px;
-    @extend .d-flex-align-c;
     justify-content: space-between;
-    width: 100%;
     .footer-info {
       width: 100px;
       height: 10px;
     }
     .links-to,
     .info-footer {
-      @extend .d-flex-dirc-c;
       gap: 8px;
       min-width: 180px;
-    }
-    .info-footer {
-      position: absolute;
-      bottom: 0;
     }
     .footer-name > p {
       @include font(FiraCode, var(--fontSize-2), 400, var(--color-1));
@@ -36,9 +24,7 @@ section {
     }
     .links-to a {
       @include font(Karla, var(--fontSize-1), 400, var(--color-2));
-      position: relative;
       text-decoration: none;
-      transition: all 0.125s ease-in;
       letter-spacing: 0.5px;
       &::before {
         content: "•";
@@ -59,8 +45,7 @@ section {
   }
 }
 
-app-letter-name {
-  position: absolute;
+.footer-letter {
   top: 0;
 }
 

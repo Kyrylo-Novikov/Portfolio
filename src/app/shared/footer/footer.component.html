@@ -1,10 +1,13 @@
-<section>
-  <div class="footer-wrapper">
+<section class="max-width-1920 width-100 pos-rel">
+  <div class="footer-wrapper pos-abs d-flex-align-c width-100">
     <div class="footer-info">
       <div>
-        <app-letter-name [hideNameOnMobile]="false"></app-letter-name>
+        <app-letter-name
+          class="pos-abs footer-letter"
+          [hideNameOnMobile]="false"
+        ></app-letter-name>
       </div>
-      <div class="info-footer">
+      <div class="info-footer d-flex-dirc-c pos-abs bottom-0">
         <p>Web Developer</p>
         <p>Berlin Germany</p>
       </div>
@@ -12,29 +15,39 @@
     <div class="footer-name">
       <p>&copy; Kyrylo Novikov</p>
     </div>
-    <div class="links-to">
+    <div class="links-to d-flex-dirc-c">
       <div>
         <a
+          class="pos-rel transition-125ms"
           target="_blank"
-          rel="nooperner noreferrer"
+          rel="noopener noreferrer"
           href="https://github.com/Kyrylo-Novikov"
           >Github</a
         >
       </div>
       <div>
         <a
+          class="pos-rel transition-125ms"
           target="_blank"
-          rel="nooperner noreferrer"
+          rel="noopener noreferrer"
           href="https://www.linkedin.com/in/kyrylo-novikov-831808368"
           >LinkedIn</a
         >
       </div>
-      <div><a href="mailto:kyrylonovikov@gmail.com">Email</a></div>
       <div>
-        <a routerLink="/legal-notice">{{ "LEGAL_NOTICE.TITEL" | translate }}</a>
+        <a
+          class="pos-rel transition-125ms"
+          href="mailto:kyrylonovikov@gmail.com"
+          >Email</a
+        >
       </div>
       <div>
-        <a class="policy" routerLink="/policy">{{
+        <a class="pos-rel transition-125ms" routerLink="/legal-notice">{{
+          "LEGAL_NOTICE.TITEL" | translate
+        }}</a>
+      </div>
+      <div>
+        <a class="policy pos-rel transition-125ms" routerLink="/policy">{{
           "POLICY.TITEL" | translate
         }}</a>
       </div>
