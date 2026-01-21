@@ -1,19 +1,21 @@
-<header>
-  <div class="header-left">
-    <app-navbar
-      [activeSection]="activeSection"
-      [currentLang]="currentLang"
-      (langChange)="changeLanguage($event)"
-      (sectionChange)="setActive($event)"
-    ></app-navbar>
-    <app-nav-mobile
-      [activeSection]="activeSection"
-      [currentLang]="currentLang"
-      (langChange)="changeLanguage($event)"
-      (sectionChange)="setActive($event)"
-    ></app-nav-mobile>
-  </div>
-  <div class="header-right">
-    <app-letter-name [hideNameOnMobile]="true"></app-letter-name>
+<header class="max-width-1920 width-100 pos-rel">
+  <div class="wrapper-header pos-abs d-flex-align-c width-100">
+    <div class="header-left">
+      <app-navbar
+        [activeSection]="activeSection"
+        [currentLang]="currentLang"
+        (langChange)="changeLanguage($event)"
+        (sectionChange)="setActive($event)"
+      ></app-navbar>
+      <app-nav-mobile
+        [activeSection]="activeSection"
+        [currentLang]="currentLang"
+        (langChange)="changeLanguage($event)"
+        (sectionChange)="setActive($event)"
+      ></app-nav-mobile>
+    </div>
+    <div class="header-right">
+      <app-letter-name [hideNameOnMobile]="true"></app-letter-name>
+    </div>
   </div>
 </header>
