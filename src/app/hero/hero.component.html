@@ -1,10 +1,10 @@
-<section>
-  <div class="content-hero" id="hero">
-    <div class="title-box">
+<section class="d-flex-c-c pos-rel">
+  <div class="pos-rel max-width-1920 width-100 height-100" id="hero">
+    <div class="title-box d-flex-c-c d-flex-dirc-c">
       <h2>{{ "HERO.TITEL" | translate }}</h2>
-      <div>
+      <div class="d-flex-dirc-c">
         <h1>Kyrylo Novikov</h1>
-        <div class="btn-container">
+        <div class="btn-container d-flex-c-c">
           <a href="#portfolio-section" class="btn"
             ><span>{{ "HERO.BTN1" | translate }}</span></a
           >
@@ -14,45 +14,49 @@
         </div>
       </div>
     </div>
-    <div class="side-left">
-      <div class="scroll">
-        <a href="#about-me-section"
+    <div class="side-left d-flex-align-c d-flex-dirc-c pos-abs bottom-0">
+      <div class="scroll d-flex-c-c">
+        <a class="d-flex-c-c" href="#about-me-section"
           ><img src="/assets/imgs/icon-interactiv/arrow.png" alt=""
         /></a>
       </div>
       <div class="separator"></div>
     </div>
-    <div class="side-right">
+    <div class="side-right d-flex-align-c d-flex-dirc-c bottom-0 pos-abs">
       <div class="email">
-        @if (screen.isMobile) {<a href="mailto:kyrylonovikov@gmail.com">
-          <img
-            class="mobile-mail-icon"
-            src="assets/imgs/icon-interactiv/mail.svg"
-            alt="writte me a mail"
-        /></a>
+        @if (screen.isMobile) {
+          <a href="mailto:kyrylonovikov@gmail.com">
+            <img
+              class="mobile-mail-icon"
+              src="assets/imgs/icon-interactiv/mail.svg"
+              alt="writte me a mail"
+          /></a>
         } @else {
-        <a href="mailto:kyrylonovikov@gmail.com">kyrylonovikov&#64;gmail.com</a
-        >}
+          <a href="mailto:kyrylonovikov@gmail.com"
+            >kyrylonovikov&#64;gmail.com</a
+          >
+        }
       </div>
 
-      <div class="social-icon">
+      <div class="social-icon pos-abs">
         <div
           class="git-icons"
           (mouseover)="isGitHoverd = true"
           (mouseleave)="isGitHoverd = false"
         >
           <a
+            class="icon-link-anker pos-abs opacity"
             href="https://github.com/Kyrylo-Novikov"
             target="_blank"
-            rel="nooperner noreferrer"
+            rel="noopener noreferrer"
             ><img
-              class="base"
+              class="base pos-abs transition-125ms"
               [style.opacity]="!isGitHoverd ? 1 : 0"
               src="/assets/imgs/icon-interactiv/git-icon.png"
               alt=""
             />
             <img
-              class="hover"
+              class="hover pos-abs transition-125ms"
               src="/assets/imgs/icon-interactiv/git-icon-hover.png"
               alt=""
               [style.opacity]="isGitHoverd ? 1 : 0"
@@ -60,23 +64,24 @@
           </a>
         </div>
         <div
-          class="in-icons"
+          class="in-icons pos-abs"
           (mouseover)="isInHoverd = true"
           (mouseleave)="isInHoverd = false"
         >
           <a
+            class="icon-link-anker pos-abs opacity"
             href="https://www.linkedin.com/in/kyrylo-novikov-831808368"
             target="_blank"
-            rel="nooperner noreferrer"
+            rel="noopener noreferrer"
           >
             <img
-              class="base"
+              class="base pos-abs transition-125ms"
               [style.opacity]="!isInHoverd ? 1 : 0"
               src="/assets/imgs/icon-interactiv/in-icon.png"
               alt=""
             />
             <img
-              class="hover"
+              class="hover pos-abs transition-125ms"
               src="/assets/imgs/icon-interactiv/in-icon-hover.png"
               alt=""
               [style.opacity]="isInHoverd ? 1 : 0"
@@ -84,15 +89,16 @@
           </a>
         </div>
       </div>
-      <div class="separator"></div>
+      <div class="separator bottom-0 pos-abs"></div>
     </div>
 
-    <div class="marquee-wrapper">
-      <div class="marquee">
-        <div class="marquee-content">
+    <div class="marquee-wrapper width-100">
+      <div class="marquee white-s-no pos-abs">
+        <div class="marquee-content white-s-no">
           @for (item of marqueenLoop; track $index) {
-          <span>{{ item | translate }}</span
-          ><span> &#183; </span> }
+            <span>{{ item | translate }}</span
+            ><span> &#183; </span>
+          }
         </div>
       </div>
     </div>

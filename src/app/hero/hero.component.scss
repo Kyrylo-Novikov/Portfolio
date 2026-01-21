@@ -1,38 +1,17 @@
 @use "./../shared/styles/index" as *;
 section {
-  @extend .d-flex-align-c;
   background: url(../../assets/imgs/background/Background.png) center center /
     cover no-repeat;
   height: 100vh;
-  width: 100%;
-  color: var(--color-2);
-  position: relative;
-  justify-content: center;
   font-family: "Karla";
-}
-
-.content-hero {
-  position: relative;
-  width: 100%;
-  max-width: 1920px;
-  height: 100%;
-}
-
-.btn-container {
-  justify-content: center;
+  overflow: hidden;
 }
 .title-box {
-  @extend .d-flex-align-c;
   color: #d9d9d9;
-  height: 268px;
-  flex-direction: column;
-  justify-content: center;
   height: 100%;
   gap: 12px;
   > div {
     gap: 40px;
-    display: flex;
-    flex-direction: column;
   }
 }
 h1 {
@@ -44,17 +23,11 @@ h2 {
 }
 
 .side-right {
-  @extend .d-flex-align-c;
-  position: absolute;
   min-height: 480px;
-  bottom: 0;
   right: 96px;
   gap: 24px;
-  flex-direction: column;
   width: 42px;
   .separator {
-    position: absolute;
-    bottom: 0;
     height: 186px;
     width: 1px;
     background-color: var(--color-1);
@@ -65,94 +38,53 @@ h2 {
   }
 }
 
-.hover,
-.base {
-  position: absolute;
-  transition: opacity 0.125s ease-in-out;
-}
-
 .in-icons {
   bottom: 24px;
-  position: absolute;
-  a {
-    position: absolute;
-    opacity: 1;
-    left: -14px;
-  }
   .base {
     left: 3px;
     top: 3px;
   }
 }
-.git-icons {
-  a {
-    position: absolute;
-    opacity: 1;
-    left: -14px;
-  }
+
+.icon-link-anker {
+  left: -14px;
 }
 
 .social-icon {
-  position: absolute;
-  height: 76px;
   bottom: 210px;
+  height: 76px;
   > img {
     width: 32px;
     height: 32px;
   }
 }
 
-.git-icons > .hover,
-.in-icons > .hover {
-  right: -30px;
-}
-.git-icons > .base {
-  right: -15px;
-}
-
-.in-icons > .base {
-  right: -15px;
-  top: 3px;
-}
-
 .side-left {
-  @extend .d-flex-align-c;
-  position: absolute;
   min-height: 312px;
   gap: 24px;
-  flex-direction: column;
-  height: 0px;
-  bottom: 0;
   left: 96px;
   .separator {
     height: 240px;
     width: 1px;
     background-color: var(--color-1);
   }
-  .scroll {
-    @extend .d-flex-align-c;
-    height: 48px;
+}
+
+.scroll {
+  height: 48px;
+  width: 30px;
+  border: 1px solid var(--color-1);
+  border-radius: 32px;
+  a {
     width: 30px;
-    border: 1px solid var(--color-1);
-    border-radius: 32px;
-    justify-content: center;
-    a {
-      width: 30px;
-      height: 48px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    img {
-      animation: scrollBtnAnimation 500ms ease-in 10ms infinite alternate;
-    }
+    height: 48px;
+  }
+  img {
+    animation: scrollBtnAnimation 500ms ease-in 10ms infinite alternate;
   }
 }
 
 .marquee-wrapper {
-  position: absolute;
-  width: 100%;
-  bottom: 0px;
   overflow: hidden;
   min-height: 200px;
 }
@@ -160,15 +92,13 @@ h2 {
 .marquee {
   position: absolute;
   bottom: 38px;
-  width: 110%;
-  margin-left: -5%;
+  left: 0;
+  width: 105%;
   height: 62px;
   padding: 12px 32px;
   background-color: #ffffff2c;
   backdrop-filter: blur(5.3px);
-  transform: rotate(-3deg);
-  gap: 56px;
-  white-space: nowrap;
+  transform: rotate(-3deg) translateX(-2px);
   overflow: hidden;
 }
 
@@ -176,7 +106,6 @@ h2 {
   @include font(Karla, var(--fontSize-5), 400, var(--color-1));
   display: inline-flex;
   animation: marquee 10s linear infinite;
-  white-space: nowrap;
   gap: 56px;
 }
 
