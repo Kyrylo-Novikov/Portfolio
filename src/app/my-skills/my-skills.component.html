@@ -1,14 +1,14 @@
-<section id="skill-section">
+<section id="skill-section " class="pos-rel">
   <div class="wrapper-skills">
-    <div class="tech-info-head">
+    <div class="tech-info-head d-flex-dirc-c">
       <h3>Technologies</h3>
-      <div class="tech-info">
+      <div class="tech-info border-rad-30 d-flex-dirc-c">
         <h1 class="green-headline-700">Skill Set</h1>
-        <div class="tech-text">
+        <div class="tech-text d-flex-dirc-c">
           <div>
             {{ "MY_SKILLS.INTRODUCTION" | translate }}
           </div>
-          <div class="call-to-contact">
+          <div class="call-to-contact d-flex-dirc-c">
             <h2>
               <span>{{ "MY_SKILLS.QUESTION_Y" | translate }}</span
               >{{ "MY_SKILLS.QUESTION_A" | translate }}
@@ -19,32 +19,39 @@
           </div>
         </div>
         <div class="btn-container">
-          <a class="btn" href="#contact-section"
+          <a class="btn white-s-no" href="#contact-section"
             ><span>{{ "MY_SKILLS.BTN" | translate }}</span></a
           >
         </div>
       </div>
     </div>
 
-    <div class="all-techs">
+    <div class="all-techs d-flex-align-c">
       @for (tech of techsArr; track $index) {
-      <div class="tech" [class.future-tech]="tech.name === 'Growth Mindset'">
-        <div class="speech-bubble">
-          <p>{{ "MY_SKILLS.BUBBLE" | translate }}</p>
-          <div>
-            <div>
-              <img src="/assets/imgs/tech-icon/futur/react.svg" alt="" />
-              <p>React</p>
-            </div>
-            <div>
-              <img src="/assets/imgs/tech-icon/futur/Vue Js.svg" alt="" />
-              <p>Vue</p>
+        <div
+          class="tech d-flex-dirc-c pos-rel"
+          [class.future-tech]="tech.name === 'Growth Mindset'"
+        >
+          <div class="speech-bubble d-flex-dirc-c transition-125ms">
+            <p>{{ "MY_SKILLS.BUBBLE" | translate }}</p>
+            <div class="d-flex-align-c">
+              <div class="d-flex-dirc-c">
+                <img src="/assets/imgs/tech-icon/futur/react.svg" alt="" />
+                <p>React</p>
+              </div>
+              <div class="d-flex-dirc-c">
+                <img src="/assets/imgs/tech-icon/futur/Vue Js.svg" alt="" />
+                <p>Vue</p>
+              </div>
             </div>
           </div>
+          <img
+            [src]="tech.path"
+            class="transition-125ms"
+            alt="{{ tech.name }}"
+          />
+          <p>{{ tech.name }}</p>
         </div>
-        <img [src]="tech.path" alt="{{ tech.name }}" />
-        <p>{{ tech.name }}</p>
-      </div>
       }
     </div>
   </div>
