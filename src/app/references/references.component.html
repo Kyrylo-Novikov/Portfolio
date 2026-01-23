@@ -1,57 +1,61 @@
-<section>
-  <h1>{{ "REFERENZES.TITEL" | translate }}</h1>
-  <div class="references">
-    <img
-      src="/assets/imgs/icon-interactiv/quotes.svg"
-      alt=""
-      class="quotes-icon"
-    />
-    <div
-      class="slide-container"
-      [@slide]="{
-        value: menuState,
-        params: {
-          animationDist: animationDist,
-        },
-      }"
-    >
-      @for (ref of doubleRefArr(); track ref.name; let i = $index) {
-        <app-referenc [referenc]="ref" [active]="i === 2"></app-referenc>
-      }
-    </div>
-  </div>
-  <div class="slide-menu">
-    <div
-      class="ref-slider"
-      (click)="slide(+1)"
-      (mouseover)="leftArrowIsHovered = true"
-      (mouseleave)="leftArrowIsHovered = false"
-    >
+<section class="d-flex-dirc-c d-flex-align-c">
+  <div class="wrapper-referenzes max-width-1920 d-flex-c-c d-flex-dirc-c">
+    <h1>{{ "REFERENZES.TITEL" | translate }}</h1>
+    <div class="references pos-rel">
       <img
-        [src]="
-          leftArrowIsHovered
-            ? 'assets/imgs/icon-interactiv/left-arrow-hover.png'
-            : 'assets/imgs/icon-interactiv/left-arrow.png'
-        "
-      />
-    </div>
-    @for (dot of [0, 1, 2]; track dot; let i = $index) {
-      <div class="dot" [class.active]="i === currentIndex % 3">•</div>
-    }
-    <div
-      class="ref-slider"
-      (click)="slide(-1)"
-      (mouseover)="rightArrowIsHovered = true"
-      (mouseleave)="rightArrowIsHovered = false"
-    >
-      <img
-        [src]="
-          rightArrowIsHovered
-            ? 'assets/imgs/icon-interactiv/right-arrow-hover.png'
-            : 'assets/imgs/icon-interactiv/right-arrow.png'
-        "
+        src="/assets/imgs/icon-interactiv/quotes.svg"
         alt=""
+        class="quotes-icon pos-abs"
       />
+      <div
+        class="slide-container d-flex-align-c"
+        [@slide]="{
+          value: menuState,
+          params: {
+            animationDist: animationDist,
+          },
+        }"
+      >
+        @for (ref of doubleRefArr(); track ref.name; let i = $index) {
+          <app-referenc [referenc]="ref" [active]="i === 2"></app-referenc>
+        }
+      </div>
+    </div>
+    <div class="slide-menu d-flex-c-c">
+      <div
+        class="ref-slider"
+        (click)="slide(+1)"
+        (mouseover)="leftArrowIsHovered = true"
+        (mouseleave)="leftArrowIsHovered = false"
+      >
+        <img
+          [src]="
+            leftArrowIsHovered
+              ? 'assets/imgs/icon-interactiv/left-arrow-hover.png'
+              : 'assets/imgs/icon-interactiv/left-arrow.png'
+          "
+        />
+      </div>
+      @for (dot of [0, 1, 2]; track dot; let i = $index) {
+        <div class="dot d-flex-align-c" [class.active]="i === currentIndex % 3">
+          •
+        </div>
+      }
+      <div
+        class="ref-slider"
+        (click)="slide(-1)"
+        (mouseover)="rightArrowIsHovered = true"
+        (mouseleave)="rightArrowIsHovered = false"
+      >
+        <img
+          [src]="
+            rightArrowIsHovered
+              ? 'assets/imgs/icon-interactiv/right-arrow-hover.png'
+              : 'assets/imgs/icon-interactiv/right-arrow.png'
+          "
+          alt=""
+        />
+      </div>
     </div>
   </div>
 </section>
