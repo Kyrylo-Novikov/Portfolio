@@ -1,7 +1,7 @@
-<section id="portfolio-section" class="portfolio">
-  <div>
-    <div class="content-portfolio">
-      <div class="portfolio-header">
+<section id="portfolio-section" class="portfolio d-flex-c-c">
+  <div class="max-width-1920 width-100">
+    <div class="content-portfolio d-flex-dirc-c">
+      <div class="portfolio-header d-flex-dirc-c width-100">
         <h2>Portfolio</h2>
         <h1 class="green-headline-700">{{ "PROJECTS.TITEL" | translate }}</h1>
       </div>
@@ -10,19 +10,20 @@
       </div>
       <div class="projects">
         @for (project of projectsArray; track project.name; let i = $index) {
-          <div>
+          <div class="pos-rel">
             <div
               (click)="open(project)"
-              class="project"
+              class="project d-flex-align-c transition-125ms"
               (mouseover)="hoverdIndex = i"
               (mouseleave)="hoverdIndex = null"
               [style.background-color]="
                 hoverdIndex === i ? '#3DCFB64D' : 'transparent'
               "
             >
-              <div class="project-title">
+              <div class="project-title d-flex-align-c">
                 <h2 class="project-name">{{ project.name }}</h2>
                 <img
+                  class="transition-125ms"
                   src="/assets/imgs/icon-interactiv/arrow_outward.svg"
                   alt=""
                   [style.opacity]="hoverdIndex === i ? 1 : 0"
@@ -40,10 +41,14 @@
           </div>
           <div>
             <div
-              class="project-img-wrapper"
+              class="project-img-wrapper pos-abs transition-125ms"
               [style.opacity]="hoverdIndex === i ? 1 : 0"
             >
-              <img class="project-img" src="{{ project.imgPath }}" alt="" />
+              <img
+                class="project-img pos-abs"
+                src="{{ project.imgPath }}"
+                alt=""
+              />
             </div>
           </div>
         }
