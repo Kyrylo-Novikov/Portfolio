@@ -1,13 +1,11 @@
 @use "./../../shared/styles/index" as *;
 nav {
-  @extend .d-flex-align-c;
   gap: 24px;
   width: 409px;
   height: 28px;
   font-family: "FiraCode";
   a {
     text-decoration: none;
-    position: relative;
     color: #ffffff;
     font-size: var(--fontSize-3);
     &::after {
@@ -28,13 +26,11 @@ nav {
   .header-links {
     gap: 24px;
     display: flex;
-    white-space: nowrap;
     a:hover {
       color: var(--color-1) !important;
     }
   }
   .language-switch {
-    @extend .d-flex-align-c;
     font-size: var(--fontSize-1);
     line-height: 120%;
     height: 28px;
@@ -42,7 +38,6 @@ nav {
     border-radius: 100px;
     border: 1px solid var(--color-1);
     color: #3dcfb680;
-    transition: 0.125s;
     input[type="radio"] {
       display: none;
       &:checked + label {
@@ -60,8 +55,6 @@ nav {
       border: 1px solid var(--color-2);
     }
     label {
-      @extend .d-flex-align-c;
-      justify-content: center;
       width: 40px;
       cursor: pointer;
     }

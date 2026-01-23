@@ -1,22 +1,27 @@
-<nav>
-  <div class="language-switch">
+<nav class="d-flex-align-c">
+  <div class="language-switch d-flex-align-c transition-125ms">
     <input
       type="radio"
       name="language-desktop"
       [checked]="currentLang() === 'en'"
       id="eng-radio"
     />
-    <label for="eng-radio" (click)="langChange.emit('en')">EN</label>
+    <label class="d-flex-c-c" for="eng-radio" (click)="langChange.emit('en')"
+      >EN</label
+    >
     <input
       type="radio"
       name="language-desktop"
       id="deu-radio"
       [checked]="currentLang() === 'de'"
     />
-    <label for="deu-radio" (click)="langChange.emit('de')">DE</label>
+    <label class="d-flex-c-c" for="deu-radio" (click)="langChange.emit('de')"
+      >DE</label
+    >
   </div>
-  <div class="header-links">
+  <div class="header-links white-s-no">
     <a
+      class="pos-rel"
       [routerLink]="['/']"
       [fragment]="'about-me-section'"
       [class.aktiv]="activeSection === 'about-me'"
@@ -24,6 +29,7 @@
       >{{ "NAV.ABOUT_ME" | translate }}</a
     >
     <a
+      class="pos-rel"
       [routerLink]="['/']"
       [class.aktiv]="activeSection === 'skills'"
       (click)="sectionChange.emit('skills')"
@@ -31,6 +37,7 @@
       >{{ "NAV.SKILLS" | translate }}</a
     >
     <a
+      class="pos-rel"
       [routerLink]="['/']"
       [class.aktiv]="activeSection === 'projects'"
       (click)="sectionChange.emit('projects')"
