@@ -1,6 +1,8 @@
 @use "./../shared/styles/index" as *;
 
 section {
+  display: flex;
+  justify-content: center;
   overflow-x: hidden;
   color: var(--color-2);
   align-items: self-start;
@@ -135,7 +137,7 @@ p {
 
 @media (max-width: 900px) {
   section {
-    flex-direction: column;
+    display: block;
     padding: 28px;
     .wrapper-skills {
       flex-direction: column;
