@@ -1,51 +1,61 @@
 <div class="burgermenu">
   @if (!isOpen) {
-  <div (click)="toggelNav()">
-    <img src="assets/imgs/icon-interactiv/menu.svg" alt="menu button" />
-  </div>
-  } @else{
-  <div class="overlay-mobile-nav" (click)="isOpen = false">
-    <nav class="mobile-nav" (click)="$event.stopPropagation()">
-      <div class="language-switch">
-        <input
-          type="radio"
-          name="language-mobile"
-          id="eng-radio-small"
-          [checked]="currentLang() === 'en'"
-        />
-        <label for="eng-radio-small" (click)="langChange.emit('en')">EN</label>
-        <input
-          type="radio"
-          name="language-mobile"
-          id="deu-radio-small"
-          [checked]="currentLang() === 'de'"
-        />
-        <label for="deu-radio-small" (click)="langChange.emit('de')">DE</label>
-      </div>
-      <div class="header-links">
-        <a
-          [routerLink]="['/']"
-          [fragment]="'about-me-section'"
-          [class.aktiv]="activeSection === 'about-me'"
-          (click)="onSelectSection('about-me')"
-          >{{ "NAV.ABOUT_ME" | translate }}</a
-        >
-        <a
-          [routerLink]="['/']"
-          [class.aktiv]="activeSection === 'skills'"
-          (click)="onSelectSection('skills')"
-          [fragment]="'skill-section'"
-          >{{ "NAV.SKILLS" | translate }}</a
-        >
-        <a
-          [routerLink]="['/']"
-          [class.aktiv]="activeSection === 'projects'"
-          (click)="onSelectSection('projects')"
-          [fragment]="'portfolio-section'"
-          >{{ "NAV.PROJECTS" | translate }}</a
-        >
-      </div>
-    </nav>
-  </div>
+    <div (click)="toggelNav()">
+      <img src="assets/imgs/icon-interactiv/menu.svg" alt="menu button" />
+    </div>
+  } @else {
+    <div class="overlay-mobile-nav pos-abs" (click)="isOpen = false">
+      <nav
+        class="mobile-nav pos-rel d-flex-align-c"
+        (click)="$event.stopPropagation()"
+      >
+        <div class="language-switch d-flex-align-c transition-125ms">
+          <input
+            type="radio"
+            name="language-mobile"
+            id="eng-radio-small"
+            [checked]="currentLang() === 'en'"
+          />
+          <label for="eng-radio-small" (click)="langChange.emit('en')"
+            >EN</label
+          >
+          <input
+            type="radio"
+            name="language-mobile"
+            id="deu-radio-small"
+            [checked]="currentLang() === 'de'"
+          />
+          <label for="deu-radio-small" (click)="langChange.emit('de')"
+            >DE</label
+          >
+        </div>
+        <div class="header-links d-flex-align-c d-flex-dirc-c white-s-no">
+          <a
+            class="pos-rel"
+            [routerLink]="['/']"
+            [fragment]="'about-me-section'"
+            [class.aktiv]="activeSection === 'about-me'"
+            (click)="onSelectSection('about-me')"
+            >{{ "NAV.ABOUT_ME" | translate }}</a
+          >
+          <a
+            class="pos-rel"
+            [routerLink]="['/']"
+            [class.aktiv]="activeSection === 'skills'"
+            (click)="onSelectSection('skills')"
+            [fragment]="'skill-section'"
+            >{{ "NAV.SKILLS" | translate }}</a
+          >
+          <a
+            class="pos-rel"
+            [routerLink]="['/']"
+            [class.aktiv]="activeSection === 'projects'"
+            (click)="onSelectSection('projects')"
+            [fragment]="'portfolio-section'"
+            >{{ "NAV.PROJECTS" | translate }}</a
+          >
+        </div>
+      </nav>
+    </div>
   }
 </div>

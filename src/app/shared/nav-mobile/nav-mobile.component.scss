@@ -1,6 +1,5 @@
 @use "./../../shared/styles/index" as *;
 .overlay-mobile-nav {
-  position: absolute;
   width: 100vw;
   height: 100vh;
   line-height: 120%;
@@ -10,8 +9,6 @@
   top: 0;
   background-color: #00000080;
   .mobile-nav {
-    position: relative;
-    @extend .d-flex-align-c;
     flex-direction: column-reverse;
     gap: 24px;
     width: 236px;
@@ -31,7 +28,6 @@
     );
     a {
       text-decoration: none;
-      position: relative;
       color: #ffffff;
       font-size: var(--fontSize-3);
       &::after {
@@ -52,15 +48,11 @@
 
     .header-links {
       gap: 24px;
-      @extend .d-flex-align-c;
-      white-space: nowrap;
-      flex-direction: column;
       a:hover {
         color: var(--color-1) !important;
       }
     }
     .language-switch {
-      @extend .d-flex-align-c;
       font-size: var(--fontSize-1);
       line-height: 120%;
       height: 28px;
@@ -68,7 +60,6 @@
       border-radius: 100px;
       border: 1px solid var(--color-1);
       color: #3dcfb680;
-      transition: 0.125s;
       input[type="radio"] {
         display: none;
         &:checked + label {
