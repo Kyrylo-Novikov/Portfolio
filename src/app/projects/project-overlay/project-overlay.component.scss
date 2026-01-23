@@ -1,26 +1,16 @@
 @use "../../shared/styles/index" as *;
 .project-overlay {
   position: fixed;
-  width: 100%;
-  height: 100%;
   z-index: 999;
   left: 0;
   right: 0;
   bottom: 0;
   top: 0;
   background-color: rgba(0, 0, 0, 0.137);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
   .content {
-    @extend .d-flex-dirc-c;
-
-    border-radius: 30px;
     border: 1px solid var(--color-1);
     padding: 80px;
     width: 90vw;
-    // gap: 44px;
     background-image: linear-gradient(
       45deg,
       var(--color-3) 0%,
@@ -34,14 +24,11 @@
     }
     .left-overlay {
       width: 50%;
-      @extend .d-flex-dirc-c;
       gap: 40px;
       .project-header {
-        @extend .d-flex-dirc-c;
         gap: 24px;
         > h1 {
           @include font(Karla, var(--fontSize-8), 700, var(--color-1));
-          // height: 100px;
           max-width: 156px;
           line-height: 100px;
         }
@@ -53,10 +40,8 @@
         }
       }
       .project-information {
-        @extend .d-flex-dirc-c;
         gap: 32px;
         .project-info-text {
-          @extend .d-flex-dirc-c;
           gap: 20px;
           @include font(Karla, var(--fontSize-2), 100, var(--color-2));
           > h3 {
@@ -69,7 +54,6 @@
         @include font(Karla, var(--fontSize-1), 100, var(--color-2));
         gap: 12px;
         flex-wrap: wrap;
-        // justify-content: center;
         .tech {
           display: flex;
           gap: 4px;
@@ -79,7 +63,6 @@
         gap: 8px;
         img {
           transform: translate(0%, 0%);
-          transition: all 100ms ease-in;
         }
         &:hover img {
           transform: translate(30%, -30%);
@@ -91,15 +74,9 @@
       display: flex;
       flex-direction: column;
       align-items: end;
-      // justify-content: space-between;
       .project-img-wrapper {
-        width: 100%;
-        border-radius: 30px;
         min-height: 370px;
         img {
-          width: 100%;
-          // max-width: 520px;
-          border-radius: 30px;
           min-height: 370px;
         }
       }
@@ -109,7 +86,6 @@
         width: 48px;
         background: url(/assets/imgs/icon-interactiv/close_small.svg) center
           no-repeat;
-        transition: all 0.125s ease-in;
         transform: translateY(-100%);
         &:hover {
           background: url(/assets/imgs/icon-interactiv/close.svg) center
@@ -120,26 +96,26 @@
   }
 }
 
-.next-project {
-  @include font(Karla, var(--fontSize-2), 400, var(--color-1));
-  @extend .d-flex-align-c;
-  // width: 151px;
-  height: 22px;
-  gap: 8px;
-  transform: translateY(150%);
+.wrapper-next {
+  display: flex;
   justify-content: end;
-  transition: all 100ms ease-in;
-  cursor: pointer;
-  img {
-    height: 32px;
-    transform: translateY(0);
-    transition: all 100ms ease-in;
-  }
-  &:hover {
-    color: var(--color-2);
+  .next-project {
+    @include font(Karla, var(--fontSize-2), 400, var(--color-1));
+    @extend .d-flex-align-c;
+    height: 22px;
+    gap: 8px;
+    transform: translateY(150%);
+    cursor: pointer;
     img {
-      scale: 1.2;
-      transform: translateX(10%);
+      height: 32px;
+      transform: translateY(0);
+    }
+    &:hover {
+      color: var(--color-2);
+      img {
+        scale: 1.2;
+        transform: translateX(10%);
+      }
     }
   }
 }
@@ -148,13 +124,6 @@
   .project-overlay {
     .content {
       padding: 44px 28px;
-      .left-overlay {
-        .project-header {
-          > h2 {
-            white-space: nowrap;
-          }
-        }
-      }
     }
   }
 }
@@ -186,7 +155,6 @@
           min-height: 200px;
           img {
             position: relative;
-            width: 100%;
             align-self: center;
             min-height: 200px;
             max-height: 250px;
@@ -200,10 +168,6 @@
 @media (max-width: 400px) {
   .project-overlay {
     .content {
-      padding: 44px 20px;
-      .wrapper-both-sids {
-        flex-direction: column-reverse;
-      }
       .left-overlay {
         gap: 8px;
         .project-header {
@@ -220,7 +184,6 @@
         .project-img-wrapper {
           img {
             position: relative;
-            width: 100%;
             align-self: center;
             min-height: 200px;
             max-height: 250px;

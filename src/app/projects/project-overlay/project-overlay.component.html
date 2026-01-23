@@ -1,50 +1,73 @@
-@if(project(); as data){
-<section class="project-overlay" (click)="close()">
-  <div class="content" (click)="$event.stopPropagation()">
-    <div class="wrapper-both-sids">
-      <div class="left-overlay">
-        <div class="project-header">
-          <h1>0{{ data.id }}</h1>
-          <h2>{{ data.name }}</h2>
-        </div>
-        <div class="project-information">
-          <div class="project-info-text">
-            <h3>{{ "PROJECTS_OVERLAY.QUESTION_OVERLAY" | translate }}</h3>
-            <p>{{ data.description | translate }}</p>
+@if (project(); as data) {
+  <section class="project-overlay d-flex-c-c" (click)="close()">
+    <div
+      class="content d-flex-dirc-c border-rad-30"
+      (click)="$event.stopPropagation()"
+    >
+      <div class="wrapper-both-sids">
+        <div class="left-overlay d-flex-dirc-c">
+          <div class="project-header d-flex-dirc-c white-s-no">
+            <h1>0{{ data.id }}</h1>
+            <h2>{{ data.name }}</h2>
           </div>
-          <div class="all-techs">
-            @for (tech of data.usedTechs; track $index) {
-            <div class="tech">
-              <img src="assets/imgs/tech-icon/overlay/{{ tech }}.svg" alt="" />
-              <p>{{ tech }}</p>
+          <div class="project-information d-flex-dirc-c">
+            <div class="project-info-text d-flex-dirc-c">
+              <h3>{{ "PROJECTS_OVERLAY.QUESTION_OVERLAY" | translate }}</h3>
+              <p>{{ data.description | translate }}</p>
             </div>
-            }
+            <div class="all-techs">
+              @for (tech of data.usedTechs; track $index) {
+                <div class="tech">
+                  <img
+                    src="assets/imgs/tech-icon/overlay/{{ tech }}.svg"
+                    alt=""
+                  />
+                  <p>{{ tech }}</p>
+                </div>
+              }
+            </div>
+          </div>
+          <div>
+            <div class="btn-container">
+              <a href="{{ data.gitLink }}" class="btn"
+                >GitHub
+                <img
+                  class="transition-125ms"
+                  src="assets/imgs/icon-interactiv/arrow_green.svg"
+                  alt=""
+              /></a>
+              <a href="{{ data.url }}" class="btn">
+                Live Test
+                <img
+                  class="transition-125ms"
+                  src="assets/imgs/icon-interactiv/arrow_green.svg"
+                  alt=""
+                />
+              </a>
+            </div>
           </div>
         </div>
-        <div>
-          <div class="btn-container">
-            <a href="{{ data.gitLink }}" class="btn"
-              >GitHub
-              <img src="assets/imgs/icon-interactiv/arrow_green.svg" alt=""
-            /></a>
-            <a href="{{ data.url }}" class="btn">
-              Live Test
-              <img src="assets/imgs/icon-interactiv/arrow_green.svg" alt="" />
-            </a>
+        <div class="right-overlay">
+          <div (click)="close()" class="close transition-125ms"></div>
+          <div class="project-img-wrapper width-100 border-rad-30">
+            <img
+              class="width-100 border-rad-30"
+              src="{{ data.imgPath }}"
+              alt=""
+            />
           </div>
         </div>
       </div>
-      <div class="right-overlay">
-        <div (click)="close()" class="close"></div>
-        <div class="project-img-wrapper">
-          <img src="{{ data.imgPath }}" alt="" />
+      <div class="wrapper-next width-100">
+        <div class="next-project transition-125ms" (click)="next()">
+          <p>{{ "PROJECTS_OVERLAY.BTN" | translate }}</p>
+          <img
+            class="transition-125ms"
+            src="assets/imgs/icon-interactiv/right-arrow-hover.png"
+            alt=""
+          />
         </div>
       </div>
     </div>
-    <div class="next-project" (click)="next()">
-      <p>{{ "PROJECTS_OVERLAY.BTN" | translate }}</p>
-      <img src="assets/imgs/icon-interactiv/right-arrow-hover.png" alt="" />
-    </div>
-  </div>
-</section>
+  </section>
 }
