@@ -3,8 +3,6 @@ section {
   color: var(--color-2);
   padding: 20px 96px 260px;
   background-color: var(--color-3);
-  @extend .d-flex-dirc-c;
-  align-items: center;
   .green-headline-700 {
     white-space: normal;
     overflow-wrap: break-word;
@@ -13,19 +11,15 @@ section {
   .contact-wrapper {
     display: flex;
     gap: 64px;
-    max-width: 1920px;
     justify-content: space-between;
-    width: 100%;
   }
   .call-to-action-wrapper {
-    @extend .d-flex-dirc-c;
     gap: 40px;
     width: 47%;
     .headline-wrapper h2 {
       @include font(Karla, var(--fontSize-4), 500, var(--color-1));
     }
     .call-to-action {
-      @extend .d-flex-dirc-c;
       gap: 16px;
       h2 {
         @include font(FiraCode, var(--fontSize-4), 700, var(--color-1));
