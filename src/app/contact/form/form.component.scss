@@ -1,22 +1,16 @@
 @use "./../../shared/styles/index" as *;
 
 form {
-  @extend .d-flex-dirc-c;
   gap: 40px;
   .question-wrapper {
-    width: 100%;
     max-width: 36vw;
-    display: flex;
-    flex-direction: column;
     .question {
       border-width: 1px 0px 1px 0px;
       border-style: solid;
       border-color: #3dcfb680;
       > .wrapper-sing-question {
-        @extend .d-flex-dirc-c;
         gap: 16px;
         padding: 32px;
-        position: relative;
         cursor: pointer;
         > h2 {
           @include font(FiraCode, var(--fontSize-4), 500, #3dcfb6);
@@ -29,12 +23,9 @@ form {
           cursor: pointer;
         }
         .input-error-mes {
-          position: absolute;
           bottom: 20px;
           background-color: var(--color-3);
-          height: 50px;
-          display: flex;
-          align-items: center;
+          height: 42px;
         }
       }
       input:focus + .error {
@@ -46,20 +37,13 @@ form {
   .feedback-overlay {
     @include font(FIRACODE, var(--fontSize-2), 400, var(--color-2));
     position: fixed;
-    width: 100%;
-    height: 100%;
     z-index: 999;
     inset: 0;
     background-color: rgba(0, 0, 0, 0.4);
-    display: flex;
-    align-items: center;
-    justify-content: center;
     p {
       font-family: "Karla";
     }
     .feedback-card {
-      @extend .d-flex-dirc-c;
-      border-radius: 30px;
       padding: 40px 20px;
       width: 70vw;
       max-width: 500px;
@@ -92,15 +76,9 @@ form {
   }
   .error {
     @include font(Karla, var(--fontSize-2), 400, var(--color-4));
-    width: 100%;
   }
   .send-wrapper {
-    @extend .d-flex-dirc-c;
     gap: 16px;
-    width: 100%;
-    .policy-check {
-      width: 100%;
-    }
     .btn-container {
       justify-content: center;
     }
@@ -121,8 +99,6 @@ form {
         cursor: pointer;
       }
       .checkbox {
-        @extend .d-flex-align-c;
-        justify-content: center;
         height: var(--fontSize-4);
         width: var(--fontSize-4);
         &:hover {
