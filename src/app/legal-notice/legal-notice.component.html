@@ -1,17 +1,15 @@
-<section>
-  <div class="content">
-    <div class="notice-headline">
+<section class="d-flex-c-c">
+  <div class="content d-flex-dirc-c max-width-1920">
+    <div class="notice-headline d-flex-c-c width-100">
       <h1
-        class="green-headline-700"
-        [innerHTML]="'LEGAL_NOTICE.TITEL' | translate | highlight : legalWords"
+        class="green-headline-700 white-s-no"
+        [innerHTML]="'LEGAL_NOTICE.TITEL' | translate | highlight: legalWords"
       ></h1>
     </div>
-    <div class="text-content">
+    <div class="text-content d-flex-dirc-c">
       <h2
         class="sub-headline"
-        [innerHTML]="
-          'LEGAL_NOTICE.IMPRINT' | translate | highlight : legalWords
-        "
+        [innerHTML]="'LEGAL_NOTICE.IMPRINT' | translate | highlight: legalWords"
       ></h2>
       <div>
         <div class="d-flex-align-c">
@@ -29,21 +27,30 @@
       </div>
       <h2
         class="sub-headline"
-        [innerHTML]="
-          'LEGAL_NOTICE.CONTACT' | translate | highlight : legalWords
-        "
+        [innerHTML]="'LEGAL_NOTICE.CONTACT' | translate | highlight: legalWords"
       ></h2>
       <p>Email:kyrylonovikov&#64;gmail.com</p>
       <div>
         <h2
           class="sub-headline"
           [innerHTML]="
-            'LEGAL_NOTICE.ACCEPT' | translate | highlight : legalWords
+            'LEGAL_NOTICE.ACCEPT' | translate | highlight: legalWords
           "
         ></h2>
         <p
           [innerHTML]="
-            'LEGAL_NOTICE.ACCEPT_TEXT' | translate | highlight : legalWords
+            'LEGAL_NOTICE.ACCEPT_TEXT' | translate | highlight: legalWords
+          "
+        ></p>
+      </div>
+      <div>
+        <h2
+          class="sub-headline"
+          [innerHTML]="'LEGAL_NOTICE.OWNER' | translate | highlight: legalWords"
+        ></h2>
+        <p
+          [innerHTML]="
+            'LEGAL_NOTICE.OWNER_TEXT' | translate | highlight: legalWords
           "
         ></p>
       </div>
@@ -51,12 +58,23 @@
         <h2
           class="sub-headline"
           [innerHTML]="
-            'LEGAL_NOTICE.OWNER' | translate | highlight : legalWords
+            'LEGAL_NOTICE.PROPRIETARY' | translate | highlight: legalWords
           "
         ></h2>
         <p
           [innerHTML]="
-            'LEGAL_NOTICE.OWNER_TEXT' | translate | highlight : legalWords
+            'LEGAL_NOTICE.PROPRIETARY_TEXT' | translate | highlight: legalWords
+          "
+        ></p>
+      </div>
+      <div>
+        <h2
+          class="sub-headline"
+          [innerHTML]="'LEGAL_NOTICE.USE' | translate | highlight: legalWords"
+        ></h2>
+        <p
+          [innerHTML]="
+            'LEGAL_NOTICE.USE_TEXT' | translate | highlight: legalWords
           "
         ></p>
       </div>
@@ -64,23 +82,12 @@
         <h2
           class="sub-headline"
           [innerHTML]="
-            'LEGAL_NOTICE.PROPRIETARY' | translate | highlight : legalWords
+            'LEGAL_NOTICE.DISCLAIMER' | translate | highlight: legalWords
           "
         ></h2>
         <p
           [innerHTML]="
-            'LEGAL_NOTICE.PROPRIETARY_TEXT' | translate | highlight : legalWords
-          "
-        ></p>
-      </div>
-      <div>
-        <h2
-          class="sub-headline"
-          [innerHTML]="'LEGAL_NOTICE.USE' | translate | highlight : legalWords"
-        ></h2>
-        <p
-          [innerHTML]="
-            'LEGAL_NOTICE.USE_TEXT' | translate | highlight : legalWords
+            'LEGAL_NOTICE.DISCLAIMER_TEXT' | translate | highlight: legalWords
           "
         ></p>
       </div>
@@ -88,36 +95,23 @@
         <h2
           class="sub-headline"
           [innerHTML]="
-            'LEGAL_NOTICE.DISCLAIMER' | translate | highlight : legalWords
+            'LEGAL_NOTICE.INDEMNITY' | translate | highlight: legalWords
           "
         ></h2>
-        <p
-          [innerHTML]="
-            'LEGAL_NOTICE.DISCLAIMER_TEXT' | translate | highlight : legalWords
-          "
-        ></p>
-      </div>
-      <div>
-        <h2
-          class="sub-headline"
-          [innerHTML]="
-            'LEGAL_NOTICE.INDEMNITY' | translate | highlight : legalWords
-          "
-        ></h2>
-        <div class="indemnity-text-container">
+        <div class="indemnity-text-container d-flex-dirc-c">
           <p
             [innerHTML]="
-              'LEGAL_NOTICE.INDEMNITY_TEXT' | translate | highlight : legalWords
+              'LEGAL_NOTICE.INDEMNITY_TEXT' | translate | highlight: legalWords
             "
           ></p>
           <p
             [innerHTML]="
-              'LEGAL_NOTICE.CONTACT_CALL' | translate | highlight : legalWords
+              'LEGAL_NOTICE.CONTACT_CALL' | translate | highlight: legalWords
             "
           ></p>
           <p
             [innerHTML]="
-              'LEGAL_NOTICE.DATE' | translate | highlight : legalWords
+              'LEGAL_NOTICE.DATE' | translate | highlight: legalWords
             "
           ></p>
         </div>
