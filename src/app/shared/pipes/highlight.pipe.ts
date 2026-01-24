@@ -32,7 +32,7 @@ export class HighlightPipe implements PipeTransform {
       this.defineRegex(highlightWord),
       (match: string) => {
         return `<span class="highlight-legal-words"> ${match}</span>`;
-      }
+      },
     );
     return this.sanitizer.bypassSecurityTrustHtml(replaced);
   }
