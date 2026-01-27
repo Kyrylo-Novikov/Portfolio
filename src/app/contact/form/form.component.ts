@@ -131,7 +131,7 @@ export class FormComponent implements OnInit {
   sendFormData(): Promise<Response> {
     const { name, email, message } = this.contactForm.value;
     const dataToSend = { name, email, message };
-    return fetch('https://formspree.io/f/mwpgbywv', {
+    return fetch('/api/send', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
