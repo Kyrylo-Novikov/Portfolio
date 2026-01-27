@@ -18,10 +18,10 @@
   "ABOUT_ME": {
     "HEADLINE": "Who I Am",
     "TITEL": "About me",
-    "GENERAL_TEXT": "Hello, I’m Kyrylo. Whenever a project I’ve worked on comes together and finally works, I get a childlike sense of joy. Programming feels like a blank sheet of paper where any idea can become reality. Challenges can seem intimidating at first, but the many different solution paths in IT inspire and motivate me to keep learning.",
-    "LOCATION": "I enjoy exploring new technologies and venturing into unfamiliar areas. Every challenge is an opportunity to expand my skills and discover creative approaches.",
-    "MINDSET": "When facing problems, I carefully analyze the situation, test different methods, and pursue solutions until they are both efficient and elegant. Analytical thinking, persistence, and creativity guide me, and I always take lessons from every challenge to refine my approach.",
-    "PROBLEM_SOLVING": "Programming fascinates me because it allows me to turn ideas into reality and exercise creative freedom. Understanding complex systems and developing solutions motivates me to continuously learn new concepts."
+    "GENERAL_TEXT": "Hello, I’m Kyrylo an frontend developer with an interest in modern web technologies and clean, maintainable code. I am passionate about coding because it allows me to turn ideas directly into functional applications and achieve visible results.",
+    "LOCATION": "I am based in Berlin and am flexible in terms of time and organization. In addition to on-site work, I am also open to remote or hybrid working models.",
+    "MINDSET": "I am open to new technologies and enjoy continuous learning. By exploring new tools and concepts, I steadily improve my skills and refine my way of working.",
+    "PROBLEM_SOLVING": "When solving problems, I take a structured and analytical approach, break complex tasks into clear steps, and test solutions systematically. Through logical thinking, persistence, and collaboration, I develop efficient and stable solutions and learn from every challenge."
   },
   "MY_SKILLS": {
     "INTRODUCTION": "I am a motivated front-end developer with experience in HTML, CSS/SCSS, JavaScript, TypeScript, and Angular. I focus on building clean, responsive, and maintainable user interfaces while continuously improving my code and workflows. Alongside front-end development, I am currently expanding my knowledge of back-end technologies to better understand full application architectures. Staying open to new technologies and keeping up with the fast-changing world of web development is essential to me.",
