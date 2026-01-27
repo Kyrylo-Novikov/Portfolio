@@ -125,7 +125,7 @@ export class FormComponent implements OnInit {
    * Deconstructs the form inputs
    * To pick only the wanted values
    * Converts the data to a JSON
-   * Sends the data to 'https://formspree.io/f/mwpgbywv'
+   * Sends the data to '/api/send'
    * @returns Promise from the fetch request
    */
   sendFormData(): Promise<Response> {
