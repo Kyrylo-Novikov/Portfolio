@@ -19,7 +19,7 @@ export default async function handler(request: Request) {
     console.log('Sende jetzt an Resend für:', name);
 
     const { data, error } = await resend.emails.send({
-      from: 'Portfolio <portfolio@send.kyrylo-novikov.com>',
+      from: 'Portfolio <contact@kyrylo-novikov.com>',
       to: ['contact@kyrylo-novikov.com'],
       subject: `Neue Anfrage von ${name}`,
       replyTo: email,
