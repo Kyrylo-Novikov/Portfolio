@@ -16,6 +16,7 @@ export default async function handler(request: Request) {
   }
   try {
     const { name, email, message } = await request.json();
+    console.log('Daten empfangen für:', name);
     const data = await resend.emails.send({
       from: 'Portfolio <portfolio@send.kyrylo-novikov.com>',
       to: ['contact@kyrylo-novikov.com'],
