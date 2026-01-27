@@ -18,7 +18,7 @@ export default async function handler(request: Request) {
     const { name, email, message } = await request.json();
     const data = await resend.emails.send({
       from: 'Portfolio <contact@kyrylo-novikov.com>',
-      to: ['contact@kyrylo-novikov.com'],
+      to: ['novikovkyrylo@gmail.com'],
       subject: `Neue Anfrage von ${name}`,
       replyTo: email,
 
