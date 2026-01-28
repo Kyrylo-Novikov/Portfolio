@@ -151,7 +151,21 @@ h2 {
     min-height: 118px;
   }
 }
-@media (max-width: 450px) {
+
+@media (max-height: 700px) {
+  .title-box {
+    justify-content: flex-start;
+    padding-top: 160px;
+  }
+}
+
+@media (max-height: 700px) and (max-width: 400px) {
+  .title-box {
+    padding-top: 90px;
+  }
+}
+
+@media (max-width: 580px) {
   h1 {
     font-size: var(--fontSize-6);
     text-align: center;
