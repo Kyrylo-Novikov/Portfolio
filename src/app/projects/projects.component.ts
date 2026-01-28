@@ -45,7 +45,7 @@ export class ProjectsComponent implements OnInit {
       usedTechs: [TechName.HTML, TechName.CSS, TechName.JavaScript],
       imgPath: '/assets/imgs/projects/el-pollo-loco.svg',
       gitLink: 'https://github.com/Kyrylo-Novikov/El-pollo-loco',
-      url: 'https://kyrylo-novikov.github.io/El-pollo-loco/',
+      url: 'https://el-pollo-loco.kyrylo-novikov.com',
     },
     {
       id: 2,
@@ -59,7 +59,7 @@ export class ProjectsComponent implements OnInit {
       ],
       imgPath: '/assets/imgs/projects/join.svg',
       gitLink: 'https://github.com/Kyrylo-Novikov/Join',
-      url: 'https://kyrylo-novikov.github.io/Join/',
+      url: 'https://join.kyrylo-novikov.com',
     },
 
     {
@@ -69,7 +69,7 @@ export class ProjectsComponent implements OnInit {
       usedTechs: [TechName.HTML, TechName.CSS, TechName.JavaScript],
       imgPath: '/assets/imgs/projects/pokedex.png',
       gitLink: 'https://github.com/Kyrylo-Novikov/Pokedex',
-      url: 'https://kyrylo-novikov.github.io/Pokedex/',
+      url: 'pokedex.kyrylo-novikov.com',
     },
   ];
 
