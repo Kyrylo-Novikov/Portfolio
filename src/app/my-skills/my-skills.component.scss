@@ -67,13 +67,11 @@ section {
     }
   }
 }
-span {
-  color: var(--color-2);
-}
+
 .speech-bubble {
   position: absolute;
   height: 129px;
-  width: 188px;
+  width: 200px;
   opacity: 0;
   background-image: url(/assets/imgs/icon-interactiv/speech_bubble.png);
   top: -100%;
@@ -196,7 +194,7 @@ p {
       gap: 16px;
       .tech {
         gap: 8px;
-        margin: 0 auto;
+        // margin: 0 auto;
         > p {
           font-size: var(--fontSize-1);
         }
