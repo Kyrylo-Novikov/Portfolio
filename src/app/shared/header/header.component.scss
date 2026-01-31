@@ -14,7 +14,7 @@ app-nav-mobile {
   display: none;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 900px) or (max-height: 600px) {
   .wrapper-header {
     flex-direction: row-reverse;
     padding: 0 48px;
