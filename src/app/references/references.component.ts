@@ -61,6 +61,10 @@ export class ReferencesComponent {
   rightArrowIsHovered: boolean = false;
 
   /**
+   * Prevents multiple animation triggers by tracking the current animation.
+   */
+  onAnimation: boolean = false;
+  /**
    * Default distance the element moves during the slide animation.
    */
   animationDist: string = '14.45%';
@@ -121,9 +125,12 @@ export class ReferencesComponent {
    * - positive value: slide to the next item 'left'.
    */
   slide(change: number) {
+    if (this.onAnimation) return;
+    this.onAnimation = true;
     this.menuState = change < 0 ? 'right' : 'left';
     setTimeout(() => {
       this.arrayUpdate(change);
+      this.onAnimation = false;
     }, 1000);
     this.currentIndex = (this.currentIndex + change + 3) % 3;
   }
