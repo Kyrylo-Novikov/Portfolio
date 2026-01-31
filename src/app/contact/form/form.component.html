@@ -10,6 +10,7 @@
       <div class="wrapper-sing-question d-flex-dirc-c pos-rel">
         <h2>{{ "FORM.QUESTION_NAME" | translate }}</h2>
         <input
+          class="width-100"
           spellcheck="false"
           formControlName="name"
           type="text"
@@ -27,9 +28,10 @@
       </div>
     </div>
     <div class="question" (click)="emailInput.focus()">
-      <div class="wrapper-sing-question pos-rel">
+      <div class="wrapper-sing-question d-flex-dirc-c pos-rel">
         <h2>{{ "FORM.QUESTION_EMAIL" | translate }}</h2>
         <input
+          class="width-100"
           spellcheck="false"
           formControlName="email"
           type="email"
@@ -52,9 +54,12 @@
       </div>
     </div>
     <div class="question" (click)="messageInput.focus()">
-      <div class="wrapper-sing-question pos-rel">
+      <div class="wrapper-sing-question d-flex-dirc-c pos-rel">
         <h2>{{ "FORM.QUESTION_TOPIC" | translate }}</h2>
-        <input
+        <textarea
+          (focus)="messageFocused = true"
+          (blur)="messageFocused = false"
+          class="width-100"
           spellcheck="false"
           formControlName="message"
           type="text"
@@ -62,9 +67,11 @@
           [placeholder]="'FORM.PLACEHOLDER_TOPIC' | translate"
           #messageInput
           [class.error]="error('message')"
-        />
-        @if (error("message")) {
-          <div class="error width-100 input-error-mes pos-abs d-flex-align-c">
+        ></textarea>
+        @if (error("message") && !messageFocused) {
+          <div
+            class="error width-100 input-error-mes pos-abs d-flex-align-c textarea-error"
+          >
             {{ "FORM.INPUT_TOPIC_REQ" | translate }}
           </div>
         }

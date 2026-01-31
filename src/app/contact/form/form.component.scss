@@ -15,7 +15,8 @@ form {
         > h2 {
           @include font(FiraCode, var(--fontSize-4), 500, #3dcfb6);
         }
-        > input {
+        > input,
+        textarea {
           @include font(Karla, var(--fontSize-2), 400, var(--color-2));
           background-color: transparent;
           border: none;
@@ -27,6 +28,9 @@ form {
           background-color: var(--color-3);
           height: 42px;
         }
+        .input-error-mes.textarea-error {
+          height: 78px;
+        }
       }
       input:focus + .error {
         opacity: 0;
@@ -34,6 +38,7 @@ form {
       }
     }
   }
+
   .feedback-overlay {
     @include font(FIRACODE, var(--fontSize-2), 400, var(--color-2));
     position: fixed;

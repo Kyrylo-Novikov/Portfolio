@@ -28,6 +28,7 @@ export class FormComponent implements OnInit {
    */
   contactForm!: FormGroup;
 
+  messageFocused: boolean = true;
   /**
    * boolean to lock the submitting proces
    * Used to prevent double submissions
@@ -103,6 +104,7 @@ export class FormComponent implements OnInit {
    * Enabled displaying validation errors
    */
   errorBeforSubmit() {
+    this.messageFocused = false;
     this.contactForm.markAllAsTouched();
   }
 
