@@ -14,10 +14,16 @@ export class HeroComponent {
    * Tracks if the LinkedIn element is hovered.
    */
   isInHoverd: boolean = false;
+
   /**
    * Tracks if the Git element is hovered.
    */
   isGitHoverd: boolean = false;
+
+  /**
+   * Tracks if the mail element is hovered.
+   */
+  isMailHoverd: boolean = false;
 
   /**
    * Inject screenService for monitoring of the screen width

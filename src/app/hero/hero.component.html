@@ -23,12 +23,22 @@
       <div class="separator"></div>
     </div>
     <div class="side-right d-flex-align-c d-flex-dirc-c bottom-0 pos-abs">
-      <div class="email">
+      <div
+        class="email"
+        (mouseover)="isMailHoverd = true"
+        (mouseleave)="isMailHoverd = false"
+      >
         @if (screen.isMobile) {
           <a href="mailto:contact@kyrylo-novikov.com">
             <img
-              class="mobile-mail-icon"
+              class="mobile-mail-icon pos-abs transition-125ms"
               src="assets/imgs/icon-interactiv/mail.svg"
+              [style.opacity]="!isMailHoverd ? 1 : 0"
+              alt="writte me a mail" />
+            <img
+              class="mobile-mail-icon transition-125ms"
+              [style.opacity]="isMailHoverd ? 1 : 0"
+              src="assets/imgs/icon-interactiv/mail-hover.svg"
               alt="writte me a mail"
           /></a>
         } @else {
