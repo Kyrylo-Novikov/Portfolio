@@ -69,7 +69,7 @@ export class ProjectsComponent implements OnInit {
       usedTechs: [TechName.HTML, TechName.CSS, TechName.JavaScript],
       imgPath: '/assets/imgs/projects/pokedex.png',
       gitLink: 'https://github.com/Kyrylo-Novikov/Pokedex',
-      url: 'pokedex.kyrylo-novikov.com',
+      url: 'https://pokedex.kyrylo-novikov.com',
     },
   ];
 
