@@ -1,7 +1,6 @@
 @use "./../shared/styles/index" as *;
 section {
   color: var(--color-2);
-  padding: 20px 96px 260px;
   background-color: var(--color-3);
   .green-headline-700 {
     white-space: normal;
@@ -12,6 +11,7 @@ section {
     display: flex;
     gap: 64px;
     justify-content: space-between;
+    padding: 20px 96px 260px;
   }
   .call-to-action-wrapper {
     gap: 40px;
