@@ -24,7 +24,7 @@ h2 {
 
 .side-right {
   min-height: 480px;
-  right: 96px;
+  right: var(--pad-wide);
   gap: 24px;
   width: 42px;
   .separator {
@@ -62,7 +62,7 @@ h2 {
 .side-left {
   min-height: 312px;
   gap: 24px;
-  left: 96px;
+  left: var(--pad-wide);
   .separator {
     height: 240px;
     width: 1px;
@@ -85,21 +85,22 @@ h2 {
 }
 
 .marquee-wrapper {
-  overflow: hidden;
+  // overflow: hidden;
   min-height: 200px;
+  position: absolute;
+  bottom: 20px;
 }
 
 .marquee {
   position: absolute;
-  bottom: 38px;
-  left: 0;
-  width: 105%;
+  top: 72px;
   height: 62px;
   padding: 12px 32px;
   background-color: #ffffff2c;
   backdrop-filter: blur(5.3px);
-  transform: rotate(-3deg) translateX(-2px);
-  overflow: hidden;
+  left: 50%;
+  transform: translateX(-50%) rotate(-3deg);
+  // overflow: hidden;
 }
 
 .marquee-content {
@@ -109,29 +110,36 @@ h2 {
   gap: 56px;
 }
 
-@media (max-width: 1150px) {
+@media (max-width: 1100px) {
   h1 {
     font-size: 82px;
+  }
+  .side-left {
+    left: var(--pad-1100);
+  }
+  .side-right {
+    right: var(--pad-1100);
   }
 }
 
 @media (max-width: 800px) {
-  h2 {
-    font-size: var(--fontSize-4);
-  }
   h1 {
-    font-size: var(--fontSize-7);
+    font-size: var(--fontSize-6);
+    text-align: center;
+  }
+  h2 {
+    font-size: var(--fontSize-3);
   }
   .side-left {
     min-height: 296px;
-    left: 48px;
+    left: var(--pad-800);
     .separator {
       height: 224px;
     }
   }
   .side-right {
     min-height: 256px;
-    right: 48px;
+    right: var(--pad-800);
     .separator {
       height: 112px;
     }
@@ -159,32 +167,24 @@ h2 {
   }
 }
 
-@media (max-height: 750px) and (max-width: 500px) {
+@media (max-height: 850px) and (max-width: 500px) {
   .title-box {
     padding-top: 90px;
   }
 }
 
-@media (max-height: 700px) and (max-width: 400px) {
+@media (max-height: 800px) and (max-width: 400px) {
   .title-box {
     padding-top: 130px;
   }
 }
 
-@media (max-width: 580px) {
-  h1 {
-    font-size: var(--fontSize-6);
-    text-align: center;
-  }
-  h2 {
-    font-size: var(--fontSize-3);
-  }
-
+@media (max-width: 400px) {
   .side-left {
-    left: 16px;
+    left: var(--pad-400);
   }
   .side-right {
-    right: 16px;
+    right: var(--pad-400);
   }
   .btn-container {
     gap: 8px;
