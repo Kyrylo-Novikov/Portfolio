@@ -18,9 +18,9 @@
             <p>
               {{ "ABOUT_ME.GENERAL_TEXT" | translate }}
             </p>
-            <div class="d-flex-dirc-c">
+            <div class="d-flex-dirc-c width-100">
               @for (part of aboutMeArray; track $index) {
-                <div class="highlights d-flex-align-c width-100">
+                <div class="highlights d-flex-align-c">
                   <img [src]="part.src" alt="" />
                   <p>
                     {{ part.text | translate }}
