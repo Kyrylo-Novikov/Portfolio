@@ -17,7 +17,7 @@ form {
           min-height: 66px;
           @include font(FiraCode, var(--fontSize-4), 500, #3dcfb6);
         }
-        > input,
+        input,
         textarea {
           @include font(Karla, var(--fontSize-2), 400, var(--color-2));
           background-color: transparent;
@@ -26,6 +26,10 @@ form {
           cursor: pointer;
           resize: none;
           overflow: hidden;
+        }
+        textarea::placeholder,
+        input::placeholder {
+          font-size: var(--fontSize-0);
         }
 
         .input-error-mes {
