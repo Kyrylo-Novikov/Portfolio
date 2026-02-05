@@ -2,16 +2,11 @@
 section {
   color: var(--color-2);
   background-color: var(--color-3);
-  .green-headline-700 {
-    white-space: normal;
-    overflow-wrap: break-word;
-  }
-
   .contact-wrapper {
     display: flex;
     gap: 64px;
     justify-content: space-between;
-    padding: 20px 96px 260px;
+    padding: 20px var(--pad-wide) 260px;
   }
   .call-to-action-wrapper {
     gap: 40px;
@@ -39,10 +34,36 @@ app-form {
   width: 47%;
 }
 
+@media (max-width: 1400px) {
+  section {
+    .green-headline-700 {
+      font-size: var(--fontSize-6-ext);
+    }
+  }
+}
+
+@media (max-width: 1250px) {
+  section {
+    .green-headline-700 {
+      font-size: var(--fontSize-6);
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  section {
+    .contact-wrapper {
+      padding: 20px var(--pad-1100) 220px;
+    }
+  }
+}
 @media (max-width: 800px) {
   section {
-    padding: 20px 56px 220px;
+    .green-headline-700 {
+      font-size: var(--fontSize-5);
+    }
     .contact-wrapper {
+      padding: 20px var(--pad-800) 220px;
       flex-direction: column;
       .call-to-action-wrapper {
         width: 100%;
@@ -61,10 +82,9 @@ app-form {
 
 @media (max-width: 400px) {
   section {
-    padding: 20px 0px 200px;
     align-items: center;
     .contact-wrapper {
-      width: 90vw;
+      padding: 20px var(--pad-400) 200px;
     }
   }
 }
