@@ -4,14 +4,12 @@ form {
   padding-bottom: 40px;
   gap: 40px;
   .question-wrapper {
-    // max-width: 36vw;
     .question {
       border-width: 1px 0px 1px 0px;
       border-style: solid;
       border-color: #3dcfb680;
       > .wrapper-sing-question {
         height: 174px;
-        // justify-content: space-between;
         gap: 2px;
         padding: var(--pad-container-wide);
         cursor: pointer;
@@ -108,7 +106,6 @@ form {
       @include font(Karla, var(--fontSize-0), 400, var(--color-2));
       .policy {
         @include font(FiraCode, var(--fontSize-0), 400, var(--color-1));
-        // padding: 5px 4px 5px 0;
         cursor: pointer;
       }
       .checkbox {
@@ -169,7 +166,6 @@ input:invalid:-webkit-autofill {
           padding: 32px var(--pad-container-1100);
           .input-error-mes.textarea-error {
             height: 46px;
-            // bottom: 38px;
           }
         }
       }
