@@ -94,11 +94,14 @@ h2 {
   position: absolute;
   top: 72px;
   height: 62px;
-  padding: 12px 32px;
+  padding: 12px 0;
   background-color: #ffffff2c;
   backdrop-filter: blur(5.3px);
   left: 50%;
-  transform: translateX(-50%) rotate(-3deg);
+  transform: translateX(-50%);
+  overflow: hidden;
+  transform-origin: center;
+  contain: paint;
 }
 
 .marquee-content {
@@ -106,6 +109,7 @@ h2 {
   display: inline-flex;
   animation: marquee 10s linear infinite;
   gap: 56px;
+  padding-inline: 32px;
 }
 
 @media (max-width: 1100px) {
@@ -153,9 +157,6 @@ h2 {
     height: 76px;
     bottom: 136px;
   }
-  .marquee-wrapper {
-    min-height: 118px;
-  }
 }
 
 @media (max-height: 700px) {
@@ -179,10 +180,10 @@ h2 {
 
 @media (max-width: 400px) {
   .side-left {
-    left: var(--pad-400);
+    left: calc(var(--pad-400) + 2px);
   }
   .side-right {
-    right: var(--pad-400);
+    right: calc(var(--pad-400) + 2px);
   }
   .btn-container {
     gap: 8px;
