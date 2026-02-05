@@ -10,3 +10,9 @@
   transform: translate(-50%, -50%);
   pointer-events: none;
 }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
