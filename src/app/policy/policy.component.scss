@@ -10,21 +10,15 @@ section {
   line-height: 120%;
   @include font(Karla, 16px, 400, var(--color-1));
   height: 100vh;
-  // display: flex;
-  // align-items: center;
-  // justify-content: center;
   .content {
-    // @extend .d-flex-dirc-c;
     height: 84vh;
-    // max-width: 1920px;
-    padding: 88px 96px 120px;
+    padding: 88px var(--pad-wide) 144px;
     // width: 100%;
     gap: 24px;
     .text-content {
-      overflow: auto; /* oder scroll, je nach Bedarf */
+      overflow: auto;
       scrollbar-width: none; /* Firefox */
-      -ms-overflow-style: none; /* IE/Edge (alt) */
-      // @extend .d-flex-dirc-c;
+      -ms-overflow-style: none; /* IE/Edge  */
       gap: 24px;
       padding-bottom: 20px;
       h2 {
@@ -37,7 +31,7 @@ section {
     .policy-headline {
       display: flex;
       justify-content: center;
-      height: 142px;
+      height: 100px;
       .green-headline-700 {
         overflow-wrap: break-word;
         word-break: normal;
@@ -48,10 +42,18 @@ section {
   }
 }
 
-@media (max-width: 868px) {
+@media (max-width: 1100px) {
   section {
     .content {
-      padding: 88px 28px 120px;
+      padding: 88px var(--pad-1100) 144px;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  section {
+    .content {
+      padding: 60px var(--pad-800) 168px;
       .green-headline-700 {
         font-size: var(--fontSize-6);
       }
@@ -68,10 +70,10 @@ section {
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 400px) {
   section {
     .content {
-      padding: 88px 14px 120px;
+      padding: 40px var(--pad-400) 172px;
       .green-headline-700 {
         font-size: var(--fontSize-4);
       }
