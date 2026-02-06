@@ -5,13 +5,12 @@ section {
   .about-me-wrapper {
     gap: 64px;
     padding: 76px var(--pad-wide);
+    justify-content: space-between;
     > .img-wrapper {
       width: 100%;
-      flex: 1;
       align-self: self-start;
       .foto {
         aspect-ratio: 1;
-        max-height: 568px;
         max-width: 568px;
         > img {
           z-index: 1;
@@ -41,14 +40,10 @@ section {
     }
     .info-wrapper {
       max-width: 50%;
-      flex: 1;
-      display: flex;
-      min-height: 708px;
       .about-me-info {
         align-self: self-end;
         color: var(--color-1);
         gap: 20px;
-        max-width: 568px;
         > p {
           @include font(Karla, var(--fontSize-4), 500, var(--color-1));
         }
