@@ -11,6 +11,8 @@ import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { TranslateModule } from '@ngx-translate/core';
 import { TranslationService } from './services/translate/translation.service';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -45,5 +47,6 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.translateService.initLanguage();
+    AOS.init();
   }
 }
