@@ -4,7 +4,7 @@ section {
   background-color: var(--color-3);
   .about-me-wrapper {
     gap: 64px;
-    padding: 76px var(--pad-wide);
+    padding: 80px var(--pad-wide);
     justify-content: space-between;
     > .img-wrapper {
       width: 100%;
@@ -79,7 +79,7 @@ section {
   section {
     .about-me-wrapper {
       gap: 44px;
-      padding: 76px var(--pad-1100);
+      padding: 80px var(--pad-1100);
       .img-wrapper,
       .info-wrapper {
         align-self: center;
@@ -105,7 +105,7 @@ section {
   section {
     .about-me-wrapper {
       flex-direction: column;
-      padding: 76px var(--pad-800);
+      padding: 20px var(--pad-800);
       .info-wrapper {
         min-height: 460px;
         max-width: 100%;
@@ -150,7 +150,7 @@ section {
   section {
     .about-me-wrapper {
       gap: 40px;
-      padding: 76px var(--pad-400);
+      padding: 20px var(--pad-400);
     }
   }
 }
