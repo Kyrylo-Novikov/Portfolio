@@ -13,6 +13,7 @@ section {
     .links-to,
     .info-footer {
       gap: 8px;
+      bottom: 8px;
     }
     .footer-name > p {
       @include font(FiraCode, var(--fontSize-2), 400, var(--color-1));
@@ -67,6 +68,9 @@ section {
   section {
     .footer-wrapper {
       bottom: 52px;
+      .links-to {
+        align-items: end;
+      }
       .footer-name {
         position: absolute;
         bottom: -46px;
