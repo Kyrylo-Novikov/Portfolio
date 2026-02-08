@@ -2,6 +2,7 @@
 
 section {
   background-color: var(--color-3);
+  overflow-x: hidden;
   .wrapper-projects {
     padding: 128px var(--pad-wide);
   }
