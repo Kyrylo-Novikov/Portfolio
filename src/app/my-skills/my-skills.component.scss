@@ -3,19 +3,18 @@
 section {
   display: flex;
   justify-content: center;
-  overflow-x: hidden;
   color: var(--color-2);
   align-items: self-start;
   font-family: "Karla";
-  padding: 24px 96px 98px;
+
   background: radial-gradient(
     circle 320px at center left,
     var(--color-5),
     var(--color-3)
   );
-  > div {
+  .wrapper-skills {
     display: flex;
-    max-width: 1720px;
+    padding: 80px var(--pad-wide) 98px;
   }
   .tech-info-head {
     max-width: 50%;
@@ -25,7 +24,7 @@ section {
     .tech-info {
       background-color: #3dcfb61a;
       border: 1px solid var(--color-1);
-      padding: 32px;
+      padding: var(--pad-container-wide);
       gap: 40px;
       .tech-text {
         gap: 32px;
@@ -41,9 +40,6 @@ section {
     align-self: baseline;
     @include font(FiraCode, var(--fontSize-4), 700, var(--color-1));
   }
-  h3 {
-    width: 520px;
-  }
   .all-techs {
     flex-wrap: wrap;
     gap: 44px;
@@ -54,6 +50,7 @@ section {
       width: 104px;
       gap: 8px;
       letter-spacing: -3%;
+      margin: 0 auto;
       p {
         text-align: center;
       }
@@ -70,35 +67,37 @@ section {
 
 .speech-bubble {
   position: absolute;
-  height: 129px;
-  width: 200px;
+  height: 132px;
+  aspect-ratio: 3/2;
   opacity: 0;
   background-image: url(/assets/imgs/icon-interactiv/speech_bubble.png);
   top: -100%;
-  left: 0%;
-  transform: translateX(-50%);
   z-index: 1;
-  transform: translateX(-2%);
+  transform: translateX(22%);
   align-items: center;
   gap: 8px;
   padding: 8px;
-  p {
-    @include font(Karla, var(--fontSize-1), 400, var(--color-1));
-  }
-  > div {
-    height: 50px;
-    width: 84px;
-    justify-content: center;
-    gap: 16px;
+
+  .bubble-content {
+    align-items: center;
+    p {
+      @include font(Karla, var(--fontSize-1), 400, var(--color-1));
+    }
     > div {
-      gap: 5px;
-      width: 33px;
-      > img {
-        width: 32px;
-        height: 32px;
-      }
-      > p {
-        @include font(Karla, 12px, bold, var(--color-1));
+      height: 50px;
+      width: 84px;
+      justify-content: center;
+      gap: 16px;
+      > div {
+        gap: 5px;
+        width: 33px;
+        > img {
+          width: 32px;
+          height: 32px;
+        }
+        > p {
+          @include font(Karla, 12px, bold, var(--color-1));
+        }
       }
     }
   }
@@ -121,28 +120,35 @@ p {
   }
 }
 
-@media (max-width: 1190px) {
+@media (max-width: 1100px) {
   section {
-    padding: 0 28px;
+    .wrapper-skills {
+      padding: 80px var(--pad-1100) 98px;
+    }
     .tech-info-head {
       padding-right: 42px;
-    }
-    .all-techs {
-      gap: 52px;
+      .tech-info {
+        padding: 32px var(--pad-container-1100);
+      }
+      .all-techs {
+        gap: 52px;
+      }
     }
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 800px) {
   section {
+    .speech-bubble {
+      transform: translateX(-22%) scaleX(-1);
+      .bubble-content {
+        transform: scaleX(-1);
+      }
+    }
     display: block;
-    padding: 28px;
     .wrapper-skills {
       flex-direction: column;
-    }
-    .tech-info {
-      padding: 32px 24px;
-      gap: 32px;
+      padding: 20px var(--pad-800) 98px;
     }
     .tech-info-head {
       padding-right: 0px;
@@ -150,6 +156,10 @@ p {
       h3 {
         font-size: var(--fontSize-2);
         font-weight: 400;
+      }
+      .tech-info {
+        padding: 32px var(--pad-container-800);
+        gap: 32px;
       }
     }
     .all-techs {
@@ -161,9 +171,6 @@ p {
 
 @media (max-width: 550px) {
   section {
-    .speech-bubble {
-      transform: translateX(-9%);
-    }
     h2 {
       font-size: 20px;
     }
@@ -184,9 +191,13 @@ p {
 @media (max-width: 400px) {
   section {
     flex-direction: column;
+    .wrapper-skills {
+      padding: 20px var(--pad-400);
+    }
     .tech-info-head {
       .tech-info {
         gap: 32px;
+        padding: 24px 8px;
       }
     }
     .all-techs {
