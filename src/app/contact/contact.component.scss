@@ -2,6 +2,7 @@
 section {
   color: var(--color-2);
   background-color: var(--color-3);
+  overflow-y: hidden;
   .contact-wrapper {
     display: flex;
     gap: 64px;
