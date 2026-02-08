@@ -2,6 +2,7 @@
 section {
   font-family: "Karla";
   background-color: var(--color-3);
+  overflow-x: hidden;
   .about-me-wrapper {
     gap: 64px;
     padding: 80px var(--pad-wide);
