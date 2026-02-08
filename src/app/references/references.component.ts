@@ -73,24 +73,7 @@ export class ReferencesComponent {
    * Changes animationDist depending on the width of the display.
    * For smooth animation on every screen width.
    */
-  constructor(private screen: ScreenService) {
-    // effect(() => {
-    // this.animationDist = '14.5%';
-    // const width = this.screen.windowW();
-    // if (width >= 800) {
-    //   this.animationDist = '14.5%';
-    // } else if (width < 1024 && width > 800) {
-    //     this.animationDist = '30%';
-    // } else if (
-    //   width < 800
-    //  && width > 500
-    // ) {
-    // this.animationDist = '10%';
-    //   } else if (width < 500) {
-    //     this.animationDist = '16.8%';
-    // }
-    // });
-  }
+  constructor(private screen: ScreenService) {}
 
   /**
    * Reactive list of references using i18n keys.
