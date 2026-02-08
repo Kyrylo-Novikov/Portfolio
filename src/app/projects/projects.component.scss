@@ -2,9 +2,10 @@
 
 section {
   background-color: var(--color-3);
-  overflow: hidden;
+
   .wrapper-projects {
     padding: 128px var(--pad-wide);
+    overflow: hidden;
   }
   .content-portfolio {
     width: var(--project-size-1);
