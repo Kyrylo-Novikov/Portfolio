@@ -2,13 +2,13 @@
 
 section {
   background-color: var(--color-3);
-  padding: 128px var(--pad-wide);
+  .wrapper-projects {
+    padding: 128px var(--pad-wide);
+  }
   .content-portfolio {
-    // padding: 0 98px;
     width: var(--project-size-1);
     @include font(Karla, var(--fontSize-4), 400, var(--color-2));
     padding-bottom: 8vh;
-    gap: 42px;
     .portfolio-header {
       gap: 20px;
       h2 {
@@ -115,10 +115,11 @@ app-project-overlay {
 
 @media (max-width: 1100px) {
   section {
-    padding: 80px var(--pad-1100);
+    .wrapper-projects {
+      padding: 80px var(--pad-1100);
+    }
     .content-portfolio {
       width: var(--project-size-3);
-      // padding: 0 0 0 64px;
       .project {
         flex-direction: column;
         padding: 32px 0;
@@ -140,7 +141,9 @@ app-project-overlay {
 
 @media (max-width: 800px) {
   section {
-    padding: 60px var(--pad-800);
+    .wrapper-projects {
+      padding: 20px var(--pad-800);
+    }
     .content-portfolio {
       width: 100%;
       .green-headline-700 {
@@ -156,49 +159,11 @@ app-project-overlay {
   }
 }
 
-// @media (max-width: 600px) {
-//   section {
-//     .content-portfolio {
-//       width: 90vw;
-//       // padding: 0 0 0 18px;
-//       .projects {
-//         width: 90vw;
-//       }
-//     }
-//   }
-// }
-
-// @media (max-width: 500px) {
-//   .green-headline-700 {
-//     font-size: var(--fontSize-5);
-//   }
-//   section {
-//     .content-portfolio {
-//       width: 100vw;
-//       padding: 0;
-//       .portfolio-header,
-//       .project-instruct {
-//         padding: 0 8px;
-//       }
-//       .projects {
-//         width: 100vw;
-//       }
-//       .project {
-//         padding: 16px 8px;
-//         height: 80px;
-//         .project-name {
-//           font-size: var(--fontSize-3);
-//         }
-//         .tech-for-project {
-//           font-size: var(--fontSize-0);
-//         }
-//       }
-//     }
-//   }
-// }
 @media (max-width: 400px) {
   section {
-    padding: 40px var(--pad-400);
+    .wrapper-projects {
+      padding: 20px var(--pad-400);
+    }
     .content-portfolio {
       .green-headline-700 {
         font-size: var(--fontSize-4);
