@@ -120,6 +120,9 @@ h2 {
   .side-right {
     right: var(--pad-1100);
   }
+  .marquee {
+    top: 30px;
+  }
 }
 
 @media (max-width: 800px) {
