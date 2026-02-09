@@ -82,7 +82,7 @@
     "POLICY_CHECK": {
       "FIRST": "I've read the ",
       "SECOND": "policy",
-      "THIRD": "and agree to the processing of my data as outlined."
+      "THIRD": " and agree to the processing of my data as outlined."
     },
     "POLICY_CHECK_REQ": "Please accept the privacy policy",
     "INPUT_TOPIC_REQ": "What do you need to develop?",
