@@ -82,7 +82,7 @@
     "POLICY_CHECK": {
       "FIRST": "Ich habe die",
       "SECOND": "Datenschutzrichtlinien",
-      "THIRD": "gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu"
+      "THIRD": " gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu"
     },
     "POLICY_CHECK_REQ": "Bitte akzeptieren Sie die Datenschutzrichtlinien.",
     "INPUT_TOPIC_REQ": "Was soll entwickelt werden?",
