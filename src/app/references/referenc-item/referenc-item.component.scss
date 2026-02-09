@@ -48,9 +48,6 @@
 @media (max-width: 400px) {
   .referenc {
     padding: 32px var(--pad-container-800);
-    p {
-      font-size: var(--fontSize-0);
-    }
   }
   .referenc.active {
     transform: scale(1.12);
