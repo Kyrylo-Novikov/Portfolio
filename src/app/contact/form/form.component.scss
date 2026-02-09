@@ -10,12 +10,14 @@ form {
       border-color: #3dcfb680;
       > .wrapper-sing-question {
         height: 174px;
-        gap: 2px;
         padding: var(--pad-container-wide);
         cursor: pointer;
         > h2 {
           min-height: 66px;
           @include font(FiraCode, var(--fontSize-4), 500, #3dcfb6);
+        }
+        input {
+          height: 42px;
         }
         input,
         textarea {
@@ -29,7 +31,7 @@ form {
         }
         textarea::placeholder,
         input::placeholder {
-          font-size: var(--fontSize-0);
+          font-size: var(--fontSize-1);
         }
 
         .input-error-mes {
@@ -38,8 +40,8 @@ form {
           height: 42px;
         }
         .input-error-mes.textarea-error {
-          height: 54px;
-          bottom: 30px;
+          height: 38px;
+          bottom: 46px;
         }
       }
       input:focus + .error {
@@ -107,9 +109,9 @@ form {
     .policy-check {
       display: flex;
       gap: 8px;
-      @include font(Karla, var(--fontSize-0), 400, var(--color-2));
+      @include font(Karla, var(--fontSize-1), 400, var(--color-2));
       .policy {
-        @include font(FiraCode, var(--fontSize-0), 400, var(--color-1));
+        @include font(FiraCode, var(--fontSize-1), 400, var(--color-1));
         cursor: pointer;
       }
       .checkbox {
@@ -161,15 +163,15 @@ input:invalid:-webkit-autofill {
 @media (max-width: 1100px) {
   form {
     .error.checkbox-req {
-      font-size: var(--fontSize-0);
+      font-size: var(--fontSize-2);
       padding: 0 8px;
     }
     .question-wrapper {
       .question {
         .wrapper-sing-question {
           padding: 32px var(--pad-container-1100);
-          .input-error-mes.textarea-error {
-            height: 46px;
+          .textarea-error {
+            bottom: 42px;
           }
         }
       }
@@ -192,10 +194,10 @@ input:invalid:-webkit-autofill {
             font-size: var(--fontSize-1);
           }
           .error {
-            font-size: var(--fontSize-0);
+            font-size: var(--fontSize-1);
           }
           .input-error-mes {
-            bottom: 14px;
+            bottom: 8px;
           }
           .input-error-mes.textarea-error {
             bottom: 18px;
