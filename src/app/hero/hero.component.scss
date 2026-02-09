@@ -14,7 +14,7 @@ section {
   }
 }
 h1 {
-  @include font(Karla, 128px, 700, var(--color-2));
+  @include font(Karla, var(--fontSize-8), 700, var(--color-2));
   letter-spacing: -2px;
 }
 h2 {
