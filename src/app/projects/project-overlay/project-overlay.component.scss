@@ -40,9 +40,10 @@
         }
       }
       .project-information {
-        gap: 32px;
+        gap: 12px;
         .project-info-text {
           gap: 20px;
+          min-height: 220px;
           @include font(Karla, var(--fontSize-2), 100, var(--color-2));
           > h3 {
             @include font(FiraCode, var(--fontSize-4), 700, var(--color-1));
@@ -60,6 +61,8 @@
         }
       }
       .btn {
+        @extend .btn;
+        @include font(Karla, var(--fontSize-2), 100, var(--color-2));
         gap: 8px;
         img {
           transform: translate(0%, 0%);
@@ -74,10 +77,10 @@
       display: flex;
       flex-direction: column;
       align-items: end;
+      gap: 80px;
       .project-img-wrapper {
-        min-height: 370px;
         img {
-          min-height: 370px;
+          object-fit: cover;
         }
       }
       .close {
@@ -124,6 +127,9 @@
   .project-overlay {
     .content {
       padding: 20px 38px;
+      .wrapper-both-sids {
+        gap: 40px;
+      }
       .right-overlay {
         .close {
           transform: translateY(0);
@@ -154,7 +160,7 @@
       }
       .left-overlay {
         width: 100%;
-        gap: 12px;
+        gap: 0px;
         .project-header {
           gap: 6px;
           flex-direction: row;
@@ -170,14 +176,15 @@
           }
         }
         .project-information {
-          gap: 12px;
+          gap: 0px;
         }
       }
       .right-overlay {
+        gap: 40px;
         width: 100%;
         .project-img-wrapper {
           display: flex;
-          min-height: 200px;
+          min-height: 0px;
           justify-content: center;
           img {
             position: relative;
@@ -192,10 +199,13 @@
   }
 }
 
+.tech-wrapper {
+  min-height: 60px;
+}
+
 @media (max-width: 420px) {
   .project-overlay {
     .content {
-      // min-height: calc(100% - 16px);
       min-width: calc(100% - 16px);
       .wrapper-both-sids {
         .left-overlay {
@@ -206,7 +216,6 @@
           }
         }
         .right-overlay {
-          // height: 220px;
           .project-img-wrapper {
             img {
               position: relative;

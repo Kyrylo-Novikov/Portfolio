@@ -15,16 +15,18 @@
               <h3>{{ "PROJECTS_OVERLAY.QUESTION_OVERLAY" | translate }}</h3>
               <p>{{ data.description | translate }}</p>
             </div>
-            <div class="all-techs">
-              @for (tech of data.usedTechs; track $index) {
-                <div class="tech">
-                  <img
-                    src="assets/imgs/tech-icon/overlay/{{ tech }}.svg"
-                    alt=""
-                  />
-                  <p>{{ tech }}</p>
-                </div>
-              }
+            <div class="tech-wrapper">
+              <div class="all-techs">
+                @for (tech of data.usedTechs; track $index) {
+                  <div class="tech">
+                    <img
+                      src="assets/imgs/tech-icon/overlay/{{ tech }}.svg"
+                      alt=""
+                    />
+                    <p>{{ tech }}</p>
+                  </div>
+                }
+              </div>
             </div>
           </div>
           <div>
@@ -64,7 +66,6 @@
               loading="lazy"
               class="width-100 border-rad-30"
               src="{{ data.imgPath }}"
-              alt=""
             />
           </div>
         </div>
