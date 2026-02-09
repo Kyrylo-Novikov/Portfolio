@@ -18,6 +18,7 @@ section {
       }
     }
     .project-instruct {
+      padding: 30px 0 60px;
       p {
         @include font($size: var(--fontSize-2));
       }
